@@ -1,0 +1,15 @@
+<response>
+<return>
+<int tag="0">1</int>
+</return>
+<parameters>
+<vector tag="3">
+<double tag="0">18.3457</double>
+<double tag="0">17.1235</double>
+<double tag="0">17.1</double>
+<double tag="0">17</double>
+<double tag="0">17.012</double>
+<double tag="0">17.34</double>
+</vector>
+</parameters>
+</response>

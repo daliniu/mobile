@@ -1,0 +1,12 @@
+<response>
+<return>
+<int tag="0">1</int>
+</return>
+<parameters>
+<vector tag="3">
+<string tag="0">中国19</string>
+<string tag="0">小日本18</string>
+<string tag="0">韩国17</string>
+</vector>
+</parameters>
+</response>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../../" default="all">
+	<property file="build.properties" />
+
+	<!-- source -->
+	<property name="dir.src.root" location="." />
+	<property name="dir.src" location="java/tafserver" />
+	<property name="dir.dist" value="java/dist" />
+	<property name="dir.lib" value="java/lib" />
+	<property name="dir.build" value="java/build" />
+	<property name="version.major"         value="1" />
+	<property name="version.minor"         value="0" />
+	<property name="version.build"         value="0" />
+	<property name="version"               value="1.0.0" />
+	<property name="version.number"        value="${version.major}.${version.minor}.${version.build}" />
+
+	<target name="clean">
+		<delete dir="${dir.build}" />
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${dir.build}" />	
+		<mkdir dir="${dir.dist}" />
+	</target>
+
+	<path id="libs">
+		<fileset dir="${dir.lib}" includes="**/*.jar" />
+		<fileset dir="${dir.dist}" includes="**/*.jar" />
+	</path>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${dir.src}" target="1.5" destdir="${dir.build}" debug="true" encoding="UTF-8">
+			<classpath refid="libs">
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="buildjar" depends="compile">
+	    <tstamp>      
+	      <format property="TimeSign" pattern="yyyy-MM-dd HH:mm:ss" />
+	    </tstamp>   
+	    <filter token="VERSION" value="${version}"/>
+	    <filter token="VERSION_NUMBER" value="${version.number}"/>
+	    <filter token="VERSION_BUILT" value="${TimeSign}"/>
+		<copy todir="${dir.build}" filtering="true">
+			<fileset dir="${dir.src}">
+				<include name="**/*.properties" />
+				<include name="**/*.manifest" />
+			</fileset>
+	    </copy>
+		<copy todir="${dir.build}/src" filtering="true">
+				<fileset dir="${dir.src}"/>
+		</copy>
+		<jar destfile="${dir.dist}/taf-server-1.0.0-SNAPSHOT.jar" basedir="${dir.build}" manifest="${dir.src}/manifest">
+			
+			<manifest>
+				<attribute name="BuildTime" value="${TimeSign}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="all" depends="buildjar">
+	</target>
+</project>

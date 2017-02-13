@@ -1,0 +1,23 @@
+module taf
+{
+    struct BusCommuKey
+    {
+        0 require string CommuKey;              //已经保存的IPC通讯组件名称
+        1 require string IdName;                //客户端的标志名称
+        2 require string ServantName;           //服务端的ServantName
+    };
+
+    struct BusCommuData
+    {
+        0 require string        CommuKey;       //真实的IPC通讯组件名称
+        1 require string        ErrorInfo;      //协商接口的错误消息
+        
+        2 require string        c2sMmapName;    //客户端到服务端MMAP名称
+        3 require unsigned int  c2sMmapSize;    //客户端到服务端MMAP大小
+        4 require string        c2sFifoName;    //客户端到服务端FIFO名称
+        
+        5 require string        s2cMmapName;    //服务端到客户端MMAP名称
+        6 require unsigned int  s2cMmapSize;    //服务端到客户端MMAP大小
+        7 require string        s2cFifoName;    //服务端到客户端FIFO名称
+    };
+};

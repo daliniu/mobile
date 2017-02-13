@@ -1,0 +1,175 @@
+#include "/home/tafjce/QUAN/SecretServer/SecretBase.jce"
+
+module QUAN
+{
+    enum FRDRELAT
+    {
+        ONE = 0,
+        TWO = 1,
+        ALL = 3
+    };
+
+    // 获取好友列表请求
+    struct FriendsListReq
+    {
+        0  optional   UserId   tUserId;      //   用户id
+        1  optional   int      iRelat;       //   关系   0 - 1度  1 - 2度  3 - 1度+2度	
+    };
+
+
+    struct CacheKey
+    {
+        0 optional long lId;
+    };
+
+    struct FriendListCacheValue
+    {
+        0 optional vector<FriendsList> vPostFriends;
+        1 optional vector<FriendsList> vFavorFriends;
+        2 optional int iTimespan=-1;
+    };
+
+    struct FollowerListCacheValue
+    {
+        0 optional vector<FriendsList> vFollowers;
+        1 optional int iTimespan=-1;
+    };
+
+    struct UserInfoCacheValue
+    {
+        0 optional int iPostTime=-1;
+        1 optional int iFavorTime=-1;
+        2 optional int iVisitTime=-1;
+        3 optional int iRegistTime=-1;
+    };
+
+    // 获取好友列表返回
+    struct FriendsListRsp
+    {
+        0  optional  vector<FriendsList>   vFriends;    // 好友列表
+    };
+
+    struct UpdatePostTimeReq
+    {
+        0 optional long lId;
+        1 optional vector<long> vFollowerId;
+    };
+
+    struct UpdateFavorTimeReq
+    {
+        0 optional long lId;
+        1 optional vector<long> vFollowerId;
+    };
+
+    struct GetActiveFriendsReq
+    {
+        0 optional long lId;
+        1 optional bool bLoadFromDb=false;
+    };
+
+    struct GetActiveFriendsRsp
+    {
+        0 optional vector<FriendsList> vPostFriends;
+        1 optional vector<FriendsList> vFavorFriends;
+        2 optional int iRegistTime;
+    };
+
+    struct GetActiveFollowersReq 
+    {
+        0 optional long lId;
+    };
+
+    struct GetActiveFollowersRsp
+    {
+        0 optional vector<FriendsList> vFollowers;
+    };
+
+    struct SetActiveReq
+    {
+        0 optional long lId;
+    };
+
+    interface UserInfo
+    {
+        /**
+        * 用户注册
+        * @param tReq    
+        * @param tRsp   
+        * @return int     0成功，-1失败
+        */
+        int postUserEnroll(UserEnrollReq  tReq, out UserEnrollRsp tRsp);
+
+        /**
+        * 用户登陆
+        * @param tReq    
+        * @param tRsp   
+        * @return int     0成功，-1失败
+        */
+        int postUserLogin(UserLoginReq  tReq, out UserLoginRsp tRsp);
+
+        /**
+        * 用户通讯录上传
+        * @param tReq    
+        * @param tRsp   
+        * @return int     0成功，-1失败
+        */
+        int postAddressList(PostAddressListReq  tReq, out PostAddressListRsp tRsp);
+    
+        /**
+        * 获取好友列表
+        * @param tReq    
+        * @param tRsp   
+        * @return int     0成功，-1失败
+        */
+        int getFriendsList(FriendsListReq tReq, out FriendsListRsp tRsp);
+
+        /**
+        * 验证token
+        * @param tId
+        * @return int     0成功，-1失败
+        */
+        int verifyToken(UserId tId,out long lUId);
+
+        /**
+        * 更新发贴时间
+        * @param tReq 
+        * @return int     0成功，-1失败
+        */
+        int updatePostTime(UpdatePostTimeReq tReq);
+
+        /**
+        * 更新点赞时间
+        * @param tReq 
+        * @return int     0成功，-1失败
+        */
+        int updateFavorTime(UpdateFavorTimeReq tReq);
+
+
+        /**
+        * 取得活跃的好友列表
+        * @param tReq 
+        * @return int     0成功，-1失败
+        */
+        int getActiveFriends(GetActiveFriendsReq tReq,out GetActiveFriendsRsp tRsp);
+
+
+        /**
+        * 取得活跃的粉丝列表
+        * @param tReq 
+        * @return int     0成功，-1失败
+        */
+        int getActiveFollowers(GetActiveFollowersReq tReq,out GetActiveFollowersRsp tRsp);
+
+
+
+        /**
+        * 设置一个用户为活跃
+        * @param tReq 
+        * @return int     0成功，-1失败
+        */
+        int setActive(SetActiveReq tReq);
+
+        int clearUserCache(long lUId);
+    };
+
+}; 

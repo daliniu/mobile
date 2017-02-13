@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../" default="all">
+	<property name="updateDesc" value="修正ManagedExecutor单线程问题"/>
+	<property name="dir.src" location="src" />
+	<property name="dir.dist" value="doc" />
+	<property name="dir.lib" value="lib" />
+	<property name="dir.build" value="ant/build" />
+	<property name="dir.build.src" value="ant/build/src" />
+	<property name="changeLog" value="doc/change.log" />
+	
+	<target name="clean">
+		<delete dir="${dir.build}" />
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${dir.build}" />	
+		<mkdir dir="${dir.build.src}" />	
+	</target>
+
+	<path id="libs">
+		<fileset dir="${dir.lib}" includes="**/*.jar" />
+	</path>
+	
+	<tstamp prefix="datetime">
+        <format property="full" pattern="yyyy-MM-dd HH:mm:ss"/>
+    </tstamp>
+    
+	<target name="compile" depends="init">
+		<javac srcdir="${dir.src}" target="1.6" destdir="${dir.build}" debug="true" encoding="UTF-8">
+			<classpath refid="libs">
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="buildjar" depends="compile">
+		<tstamp/>
+		<copy todir="${dir.build.src}" >
+				<fileset dir="${dir.src}">
+				</fileset>
+		</copy>
+		<jar destfile="${dir.dist}/taf-server-1.0.0-SNAPSHOT.jar" basedir="${dir.build}">
+			<include name="src/com/qq/taf/server/**" />
+			<include name="com/qq/taf/server/**" />
+			<manifest> 
+				<attribute name="Built-By" value="${user.name}" /> 
+				<attribute name="Built-Time" value="${datetime.full}"/>
+				<attribute name="Built-Desc" value="${updateDesc}"/>
+			</manifest> 
+		</jar>
+		
+	</target>
+
+	<target name="all" depends="buildjar">
+		<echo message="${datetime.full}:[server] ${updateDesc}&#10;" file="${changeLog}" append="true"/>
+	</target>
+	
+</project>

@@ -1,0 +1,21 @@
+<response>
+<return>
+<int tag="0">1</int>
+</return>
+<parameters>
+<map tag="3">
+<entry>
+<int tag="0">10000</int>
+<string tag="1">mqq200000</string>
+</entry>
+<entry>
+<int tag="0">20000</int>
+<string tag="1">mqq400000</string>
+</entry>
+<entry>
+<int tag="0">50000</int>
+<string tag="1">mqq600000</string>
+</entry>
+</map>
+</parameters>
+</response>

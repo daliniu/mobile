@@ -1,0 +1,6 @@
+MIDlet-Version: 1.0.0
+MIDlet-Vendor: Midlet Suite Vendor
+MIDlet-Jar-URL: kjava_taf.jar
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: IMP-1.0
+MIDlet-Name: kjava_taf Midlet Suite

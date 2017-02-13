@@ -1,0 +1,279 @@
+<response>
+<return>
+<int tag="0">0</int>
+</return>
+<parameters>
+<vector tag="2">
+<struct tag="0">
+<string tag="0">/WapGame/ResourceServer/ResourceServer</string>
+<int tag="1">27526445</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Umad/UmadServer/UmadServer</string>
+<int tag="1">17494713</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Tmps/PayServer/PayServer.conf</string>
+<int tag="1">12818</int>
+<bool tag="2">false</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Tmps/PayServer/PayServer</string>
+<int tag="1">17605947</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Tmps/GoodsAgentServer/GoodsAgentServer</string>
+<int tag="1">18061712</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Tmps/ControlServer/ControlServer</string>
+<int tag="1">20286071</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Test/TestServer/TestServer</string>
+<int tag="1">15650138</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Test/HelloRouteServer/HelloRouteServer</string>
+<int tag="1">13947884</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Test/Hello3rdServer/Hello3rdServer</string>
+<int tag="1">13727543</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/SuperMsg/SuperMsgServerServer/SuperMsgServerServer</string>
+<int tag="1">23018287</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/SuperMsg/SuperMsgServer/SuperMsgServer</string>
+<int tag="1">22932089</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/SmsQZone/SuperGoldUiServer/SuperGoldUiServer</string>
+<int tag="1">19751883</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/SmsQZone/MyUi/MyUi</string>
+<int tag="1">19689185</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQPIM/UserDataServer/UserDataServer</string>
+<int tag="1">27566441</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQPIM/SessionServer/SessionServer</string>
+<int tag="1">20945121</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQPIM/DataMigrationServer/DataMigrationServer</string>
+<int tag="1">16667774</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQPIM/DMServer/DMServer</string>
+<int tag="1">20340552</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQPIM/AuthServer/AuthServer</string>
+<int tag="1">21713551</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQMusic/QQMusicQueryServer/QQMusicQueryServer</string>
+<int tag="1">20279716</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQMusic/QQMusicAppServer/QQMusicAppServer</string>
+<int tag="1">17079101</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQMusic/FanGroupServer/FanGroupServer</string>
+<int tag="1">20108701</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/QQClub/QQClubUiServer/QQClubUiServer</string>
+<int tag="1">30184022</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/OiCall/SendServer/SendServer</string>
+<int tag="1">19086529</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/OiCall/ProcessServer/ProcessServer</string>
+<int tag="1">21738585</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/NGage/WebStoreServer/WebStoreServer</string>
+<int tag="1">23229309</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/NGage/ShipGNPServer/ShipGNPServer</string>
+<int tag="1">25950891</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/NGage/NoticeServer/NoticeServer</string>
+<int tag="1">17552108</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/NGage/MobileStoreServer/MobileStoreServer</string>
+<int tag="1">22830237</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/NGage/ACServer/ACServer</string>
+<int tag="1">16596329</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MobileOnlineGame/LoginServer/LoginServer</string>
+<int tag="1">21242296</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MobileMusic/UserAgentQueryServer/UserAgentQueryServer</string>
+<int tag="1">16968860</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MobileMusic/MobileMusicServer/MobileMusicServer</string>
+<int tag="1">26068582</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MiniPay/PayServer/PayServer</string>
+<int tag="1">17109532</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MQQ/WeatherServer/WeatherServer</string>
+<int tag="1">18801002</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MQQ/SuperQQInfoServer/SuperQQInfoServer</string>
+<int tag="1">17497461</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MQQ/SuperGoldUiServer/SuperGoldUiServer</string>
+<int tag="1">55283323</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MQQ/GuidOpen/GuidOpen</string>
+<int tag="1">19033294</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/UmadNoticeServer/UmadNoticeServer</string>
+<int tag="1">14793517</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/ServiceBitsServer/ServiceBitsServer</string>
+<int tag="1">15290312</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/MProfileTestServer/MProfileTestServer</string>
+<int tag="1">13668250</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/MProfileServiceBitsServer/MProfileServiceBitsServer</string>
+<int tag="1">15290312</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/MProfileOidbNoticeServer/MProfileOidbNoticeServer</string>
+<int tag="1">15785111</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/MProfileBaseInfoServer/MProfileBaseInfoServer</string>
+<int tag="1">15990417</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/MProfileBaseInfoDbServer/MProfileBaseInfoDbServer</string>
+<int tag="1">16296346</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/BaseInfoServer/BaseInfoServer</string>
+<int tag="1">15990349</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MProfile/BaseInfoDbServer/BaseInfoDbServer</string>
+<int tag="1">16293854</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/MLive/FeedInitServer/FeedInitServer</string>
+<int tag="1">16123853</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Iopen/IopenNotice/iopen_notice2.0</string>
+<int tag="1">18503768</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/DCache/RouterServer/RouterServer</string>
+<int tag="1">19177907</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/DCache/ProxyServer/ProxyServer</string>
+<int tag="1">17040716</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Comm/XmlProxyServer/XmlProxyServer</string>
+<int tag="1">13798136</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Comm/UmadServer/UmadServer</string>
+<int tag="1">17504694</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Comm/AccountServer/AccountServer.conf</string>
+<int tag="1">804</int>
+<bool tag="2">true</bool>
+</struct>
+<struct tag="0">
+<string tag="0">/Comm/AccountServer/AccountServer</string>
+<int tag="1">18586890</int>
+<bool tag="2">true</bool>
+</struct>
+</vector>
+</parameters>
+</response>

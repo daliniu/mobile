@@ -1,0 +1,11 @@
+
+module Test
+{
+
+interface BServant
+{
+    int test();
+    string dohandle(string s);
+};
+
+}; 

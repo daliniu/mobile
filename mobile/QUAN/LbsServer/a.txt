@@ -1,0 +1,1 @@
+g++ -m64 -g -Wno-deprecated -Wall  -I/home/tafjce/MDW/HeziUIServer -I/home/tafjce/MDW/UserInfoServer -I/usr/local/taf-version/taf-2.1.4.3/include -I./ -I/usr/include/mysql -o LbsImp.64.o -c LbsImp.cpp

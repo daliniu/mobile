@@ -1,0 +1,110 @@
+
+module hessian
+{
+    struct tagStruct
+    {
+        string  s;
+        string  c;
+		byte    by;
+		bool    b;
+        short   si;
+        float   f;        
+        double  d;
+        int     i;
+        long    l;
+
+        vector<string>  sa;
+        string          ca;
+		binary          bya;
+		vector<bool>    ba;
+        vector<short>   sia;
+        vector<float>   fa;        
+        vector<double>  da;
+        vector<int>     ia;
+        vector<long>    la;
+    };
+
+    struct tagStruct1
+    {
+        string  s;
+        string  c;
+		byte    by;
+		bool    b;
+        short   si;
+        float   f;        
+        double  d;
+        int     i;
+        long    l;
+        vector<string>     ls;
+        map<string,string> ms;
+        map<int, string>   mi;
+    };
+
+    struct tagStruct2
+    {
+        string     s;
+        int        i;
+        tagStruct  ts;
+    };
+
+    struct tagStruct3
+    {
+//      vector<int> ii;
+//      vector<int> ii1;
+//		vector<byte>    byby;
+		vector<bool> bb;
+//		vector<float>   ff;
+    };
+
+    interface TestHessian
+    {
+        int testInt(int i);
+        string testChar(string i);
+        bool testBool(bool i);
+        byte testByte(byte i);
+        short testShort(short i);
+        float testFloat(float i);
+        double testDouble(double i);
+        long testLong(long i);
+        string testString(string i);
+        string testStringEmpty();
+        vector<string> testList(vector<string> ls);
+        map<string, string> testMap(map<string, string> m);
+        map<string, vector<string>> testComplexMap(map<string, vector<string>> m);
+
+        //////////////////////////////////////////////////
+        vector<bool> testBooleanList(vector<bool> ls);
+        vector<bool> testBooleanArray(vector<bool> ls);
+
+        vector<byte> testByteList(vector<byte> ls);
+        binary testByteArray(binary ls);
+
+        vector<short> testShortList(vector<short> ls);
+        vector<short> testShortArray(vector<short> ls);
+
+        vector<int> testIntList(vector<int> ls);
+        vector<int> testIntArray(vector<int> ls);
+
+        vector<long> testLongList(vector<long> ls);
+        vector<long> testLongArray(vector<long> ls);
+
+        vector<float> testFloatList(vector<float> ls);
+        vector<float> testFloatArray(vector<float> ls);
+
+        vector<double> testDoubleList(vector<double> ls);
+        vector<double> testDoubleArray(vector<double> ls);
+
+        vector<string> testStringList(vector<string> ls);
+        vector<string> testStringArray(vector<string> ls);
+
+        ///////////////////////////////////////////////////
+        tagStruct testStruct(tagStruct ts);
+        vector<tagStruct> testListStruct(vector<tagStruct> ts);
+        map<string, vector<tagStruct>> testMapListStruct(map<string, vector<tagStruct>> ts);
+
+        tagStruct1 testStruct1(tagStruct1 ts);
+        tagStruct2 testStruct2(tagStruct2 ts);
+        tagStruct3 testStruct3(tagStruct3 ts);
+    };
+};
+

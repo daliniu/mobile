@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Jce For Javascript</title>
+       	<link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+		<h4>输出流Taf.JceOutputStream暴露了哪些接口？</h4>
+		<hr />
+
+		Taf.JceOutputStream用于组织JCE请求：
+		<table style="margin-left:0px;margin-top:10px; margin-bottom: 10px" cellpadding="2px" cellspacing="4px" summary="">
+			<tr>
+				<td width="200px">函数</td>
+				<td width="500px">描述</td>
+			</tr>
+
+			<tr>
+				<td>构造函数</td>
+				<td>
+					开发者调用  var os = new Taf.JceOutputStram()，声明一个输出流对象。<br /><br />
+					
+					输入参数类型：无
+				</td>
+			</tr>
+			
+			<tr>
+				<td>getBinBuffer()</td>
+				<td>
+					开发者调用Taf.JceoutputStram其他write函数，写入字段之后，使用该函数获取协议数据流。<br /><br />
+					返回数据类型：Taf.BinBuffer					
+				</td>
+			</tr>
+			
+			<tr>
+				<td>getBuffer()</td>
+				<td>
+					开发者调用Taf.JceoutputStram其他write函数，写入字段之后，使用该函数获取协议数据流。<br /><br />
+					返回数据类型：ArrayBuffer					
+				</td>
+			</tr>
+
+			<tr>
+				<td>writeBoolean(tag, value)</td>
+				<td>
+					向数据流中写一个Boolean类型的字段。<br /><br />
+					
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Boolean<br /><br />
+
+					返回数据类型：void
+				</td>
+			</tr>
+			<tr>
+				<td>writeInt8(tag, value)</td>
+				<td>
+					向数据流中写一个Int8类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Int8<br /><br />
+
+					返回数据类型：void
+				</td>
+			</tr>
+			<tr>
+				<td>writeInt16(tag, value)</td>
+				<td>
+					向数据流中写一个Int16类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Int16<br /><br />
+
+					返回数据类型：void
+				</td>
+			</tr>
+			
+			<tr>
+				<td>writeInt32(tag, value)</td>
+				<td>
+					向数据流中写一个Int32类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Int32<br /><br />
+
+					返回数据类型：void
+				</td>
+			</tr>
+
+			<tr>
+				<td>writeInt64(tag, value)</td>
+				<td>
+					向数据流中写一个Int64类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Int64<br /><br />
+
+					返回数据类型：void					
+				</td>
+			</tr>
+			
+			<tr>
+				<td>writeUInt8(tag, value)</td>
+				<td>
+					向数据流中写一个UInt8类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value UInt8<br /><br />
+
+					返回数据类型：void					
+					
+				</td>
+			</tr>
+			
+			<tr>
+				<td>writeUInt16(tag, value)</td>
+				<td>
+					向数据流中写一个UInt16类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value UInt16<br /><br />
+
+					返回数据类型：void						
+				</td>
+			</tr>
+			
+			<tr>
+				<td>writeUInt32(tag, value)</td>
+				<td>
+					向数据流中写一个UInt32类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value UInt32<br /><br />
+
+					返回数据类型：void							
+				</td>
+			</tr>
+			
+			<tr>
+				<td>writeString(tag, value)</td>
+				<td>
+					向数据流中写一个String类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value String<br /><br />
+
+					返回数据类型：void								
+				</td>
+			</tr>
+			
+			<tr>
+				<td>writeStruct(tag, value)</td>
+				<td>
+					向数据流中写一个自定义结构体的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Struct<br /><br />
+
+					返回数据类型：void							
+				</td>
+			</tr>
+
+			<tr>
+				<td>writeBytes(tag, value)</td>
+				<td>
+					向数据流中写一个Taf.BinBuffer（vector&lt;byte&gt;）的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Taf.BinBuffer<br /><br />
+
+					返回数据类型：void						
+				</td>
+			</tr>
+
+			<tr>
+				<td>writeVector(tag, value)</td>
+				<td>
+					向数据流中写一个Taf.Vector&lt;T&gt;（T不可为byte）类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Taf.Vector&lt;T&gt;<br /><br />
+
+					返回数据类型：void						
+				</td>
+			</tr>
+
+			<tr>
+				<td>writeMap(tag, value)</td>
+				<td>
+					向数据流中写一个Taf.Map&lt;KT, VT&gt;类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值: tag byte<br />
+					字段数据值：value Taf.Map&lt;KT, VT&gt;<br /><br />
+
+					返回数据类型：void						
+				</td>
+			</tr>		
+			
+		</table>
+
+</body>
+</html>

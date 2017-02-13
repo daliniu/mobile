@@ -1,0 +1,61 @@
+#include "./MsgBase.jce"
+
+module QUAN
+{
+    enum MSGOP 
+    {
+        CONT  = 0,      // 评论
+        FAVOR = 1,      // 点赞
+        CONT_FAVOR = 2  // 评论和点赞
+    };
+
+    enum MSGSTAT 
+    {
+        NOTRD  = 0,    // 未读
+        READED = 1     // 已读
+    };
+
+    struct AddMsgReq 
+    {
+        0  optional  UserId   tUserId;     // 用户ID
+        1  optional  long     lSId;        // 帖子ID
+        2  optional  int      iOp;         // 操作 0-评论 1-点赞
+    };
+ 
+    struct ChangeMsgReq 
+    {
+        0  optional  UserId   tUserId;     // 用户ID
+        1  optional  long     lSId;        // 帖子ID
+        2  optional  int      iOp;         // 操作 0-未读 1-已读
+    }; 
+    
+    interface Msg
+    {
+        int test();
+
+        /**
+        * 获取消息提醒列表
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int getPushMsg(PushMsgReq tReq, out PushMsgRsp tRsp);
+        
+        /**
+        * 插入消息提醒
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int addMsg(AddMsgReq tReq);
+
+        /**
+        * 更新消息提醒状态  (未读变为已读)
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int changeMsgStatus(ChangeMsgReq tReq);
+    };
+
+}; 

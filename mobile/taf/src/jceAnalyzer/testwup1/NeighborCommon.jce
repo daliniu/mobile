@@ -1,0 +1,251 @@
+/*
+* 附近人相关jce协议共用部分
+* Copyright (C) 2011 qq.com
+* Created	by edgarzhu, 2011.11
+* Info: 1. 用户ID类型为long，由客户端按照业务类型来生成：1个字节版本号（目前为0）
+*           +1个字节业务类型（0:手机QQ; 1:微聊; 2:微博; 3:邮箱）+6个字节业务内部的id
+* Change list:
+*/
+
+//注释都是有用的，看的人一定要仔细!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//注释都是有用的，看的人一定要仔细!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//注释都是有用的，看的人一定要仔细!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+module NeighborComm
+{
+/************************位置相关数据结构************************/
+	enum GPSTYPE
+	{
+		GPS_WGS84 = 0,		// WGS-84系统的坐标(一般手机硬件读到数值的是该系统)
+		GPS_MARS  = 1,		// 火星坐标(按保密局要求加扰后的坐标，
+					             // 用于国内地图展示或POI相对位置处理等)
+					             // by roycelin @ 2011-06-01 17:44:19
+		GPS_WGS_REAL = 2	// 确认输入为硬件读出来的GPS，而不是像iphone或android自己使用cell,wifi定位的数值
+	};
+
+	// 1.以下经度、纬度数值均为相应坐标*1,000,000，
+	//   即去掉小数点(WUP的float精确度支持不够)
+	// 2.默认值为非法值,表示该无该字段属性
+	struct GPS
+	{
+		0 require int iLat = 900000000; // 纬度
+		1 require int iLon = 900000000; // 经度
+		2 require int iAlt = -10000000; // 海拨
+		3 optional GPSTYPE eType = GPS_WGS84; // 如果是从手机硬件读出来的，要设置此gps为GPS_WGS84
+								// 如果是使用LBS组提供的SDK组件获取的，此字段需要用QLBSGPSInfo::getType() 获取
+	};
+	
+	// 以下属性手机终端可以读出,详见wikipedia
+	struct Cell
+	{
+		0 require short shMcc = -1; // 国家码, mobile country code.中国是460
+		1 require short shMnc = -1; // 网络码, mobile network code.移动是0, 联通是1
+		2 require int iLac    = -1; // 区域码, location area code
+		3 require int iCellId = -1; // cell id
+	};
+
+	// 这里是一级分类，便于程序使用。
+	// 二级、三级分类由于条数太多，需要的请向roycelin索取详细文件
+	// 接口输入的“接受分类”属性可以输入任意级别的分类
+	enum POITYPE
+	{
+		POI_FOOD     = 100000, // 餐饮酒楼
+		POI_ORG      = 120000, // 机构团体
+		POI_SHOPPING = 130000, // 购物
+		POI_SERVICE  = 140000, // 生活服务
+		POI_ENTM     = 160000, // 休闲娱乐
+		POI_CULTURE  = 170000, // 教育学校,文化场馆
+		POI_HEALTH   = 200000, // 医疗保健
+		POI_HOTEL    = 210000, // 酒店宾馆
+		POI_TOUR     = 220000, // 旅游景点
+		POI_PLACE    = 260000, // 地名地址
+		POI_INFRA    = 270000, // 交通设施
+		POI_WORK     = 280000  // 办公
+	};
+
+	struct PoiInfo
+	{
+		0 require long lId;           // poiID
+		1 require string strName;     // poi名称
+		2 require int iType;          // 类型id
+		3 require string strTypeName; // 类型名称
+		4 require string strAddress;  // poi地址
+		5 require int iDistrictCode;  // 行政区划编码，与身份证号前6位意义相同
+		6 require int iLat;           // 纬度,为float坐标去除小数点的
+		7 require int iLon;           // 经度,为float坐标*1000000
+		8 require int iDistance;      // 离输入点距离,单位:米
+		9 optional int iHotValue = 0; // 热度值,by roycelin @ 2011-04-07 20:25:12
+		10 optional string strPhone;  // 电话, by roycelin @ 2011-10-03 11:20:42
+	};
+/*--------------------------------------------------------------------------------*/
+
+/*******************************业务类型*******************************/
+	enum BusinessType
+	{
+		BusinessType_MQQ = 0,
+		BusinessType_Friend = 1,
+		BusinessType_MGroup = 2
+	};
+
+	enum MqqSysType
+	{
+		MqqSysType_default = 0,
+		MqqSysType_Iphone = 1,
+		MqqSysType_Android = 2,
+		MqqSysType_Symbian_V5 = 3,
+		MqqSysType_WP7 = 4,
+		MqqSysType_Symbian_V3 = 5,
+		MqqSysType_HD = 6,
+		MqqSysType_HD_MINI = 7,
+		MqqSysType_HD_MTK = 8
+	};
+/*--------------------------------------------------------------------------------*/
+
+/*************************************************************************/
+	enum REPLYCODE
+	{
+		REPLYCODE_SUCC = 0,
+		REPLYCODE_ERROR_EXCEPTION = 1,
+		REPLYCODE_ERROR_FUNCNAME = 2,
+		REPLYCODE_ERR_CHECKIN_TIMEOUT = 3,
+		REPLYCODE_ERR_GETNBS_TIMEOUT = 4,
+		REPLYCODE_ERR_NO_Robot = 5,
+		REPLYCODE_ERR_TAF_rpc_call_async = 6,
+		REPLYCODE_ERR_Session_TimeOut = 7, //通知客户端用户需要重新拉取新列表
+
+		REPLYCODE_ERR_MG_Action = 51, //圈子行为与数据不符
+		REPLYCODE_ERR_MG_NextPage = 52, //圈子翻页失败
+
+		REPLYCODE_ERR_LBS_EXCEPTION     = 101, // LBS系统异常
+		REPLYCODE_ERR_LBS_POSITION_FAIL = 102, // LBS系统无法根据输入定位
+		REPLYCODE_ERR_LBS_RESP_TIMEOUT  = 103,  // LBS输入条件不足
+		REPLYCODE_ERR_LBS_AUTH_FAIL     = 201, // LBS鉴权失败
+		REPLYCODE_ERR_LBS_INPUT_ERROR   = 202,  // LBS输入条件不足
+
+		REPLYCODE_SUCC_NOPENGYOU_INFO = 300 //没有查到朋友资料
+	};
+/*--------------------------------------------------------------------------------*/
+
+
+/*******************************固定包头*******************************/
+	//req包头
+	struct ReqHeader
+	{
+		0 require short shVersion = 1;                                              //版本号
+		1 require long lMID;                                                      //用户ID
+		2 require unsigned int  iAppID;                                       //客户端appid
+		3 optional BusinessType eBusiType = BusinessType_MQQ;  //业务类型	
+		4 optional MqqSysType eMqqSysType = MqqSysType_default; //phone system
+		5 optional unsigned int uClientIp = 0;                             //网关IP
+		6 optional unsigned int uClientPort = 0;                          //网关port
+	}; 
+
+	//resp包头
+	struct RespHeader
+	{
+		0 require short shVersion;      //版本号
+		1 require long lMID;            //用户ID
+		2 require REPLYCODE eReplyCode;//返回码
+		3 optional string strResult;		//返回结果说明,注：utf-8编码		
+	}; 
+/*--------------------------------------------------------------------------------*/
+
+/*****************************公用结构体*****************************/
+	enum LocalInfoType   //客户端上报位置信息的形式
+	{
+		LocalInfoType_Decode = 0,     //stGps, vMacs, vCells
+		LocalInfoType_Encode = 1      //vLBSKeyData
+	};
+
+	//req包体部分，三个字段均为必填项，客户端无法取得的数据:1、stGps使用默认值；2、vMacs和vCells size为0
+	struct LocalInfoForLBS
+	{
+		0 require string strAuthName;      // 调用方身份认证名称(提前申请分配)
+		1 require string strAuthPassword;  // 调用方身份认证密码(提前申请分配)
+		2 require LocalInfoType eLocalInfo = LocalInfoType_Decode;
+		3 optional GPS stGps;              // GPS经纬度(WGS坐标,手机默认的输入)
+		4 optional vector<long> vMacs;     // 在同一时刻同一地点能搜到wifi的mac地址
+		                                  // 1.建议按信号强度从强到弱排序
+		                                  // 2.每个mac填充long的低0-6位, demo:AB-CD-12-34-56-78 -> 188897262065272
+		                                  // 3.如无扫描到的wifi macs, 保留为空即可
+		5 optional vector<Cell> vCells;    // 用户当前连接的基站CELLIDs
+		                                  // 1.可一次性获得多个cell的平台直接在这里填写
+		                                  // 2.只能读一个cell的平台，放入一个cell即可
+		6 optional vector<byte> vLBSKeyData; // 终端读出来的定位数据
+	};
+
+	//客户端可能会用的一些位置信息
+	struct UserDetailLocalInfo
+	{
+		0 optional string strProvince;  // 省、直辖市、自治区、特别行政区
+		1 optional string strCity;      // 地区、地级市、自治州、盟
+		2 optional string strDistrict;  // 县级市、自治县、旗、自治旗、特区、林区，以及市辖区
+		3 optional string strTown;      // 乡、镇、民族乡、街道
+		4 optional string strRoad;     // 路,街道
+		5 optional string strPremises; // 周边地标,不推荐直接使用。大多为空,如"腾讯大厦;XX茶餐厅".以; 分隔。建议仅在描述当前点时使用
+                                       // 地标这个字段一般建议这样使用：
+                                       // 你在XX市XX区XX路附近，(如果路字段为空)周边可能有：地标1,地标2
+	};
+
+	//返回用户自身信息，req、resp共用部分
+	struct UserSelfData
+	{
+		0 require int lTime = 0;      //用户入队列时间点
+		1 require int iLat = 900000000; // 纬度
+		2 require int iLon = 900000000; // 经度
+		3 optional long lOriginGrid = 0; //用户所在大格子id
+		4 optional long lNextGrid = 0; //1、翻页拉取的起始BidGridId，客户端收到后，下次请求上传给svc即可
+								//2、当lNextGrid = -1 时，表明svc无下页数据，svc收到这样的请求不会返回有效数据
+		5 optional long lNextMid = 0;//client第一次请求添0；svc下发回包时添下次拉取的起始mid
+								//当lNextMid = -1 时，表明svc无下页数据，svc收到这样的请求不会返回有效数据
+		6 optional string strProvince;  // 省、直辖市、自治区、特别行政区
+		7 optional vector<byte> strCookie;//svc返回此用户的当前信息，客户端拉取翻页时原样上传struct EctCookie
+										//RespCrtGrp, RespMdfGrp 用UserDetailLocalInfo
+	};
+
+	enum NewListType
+	{
+		NewListType_Nomal = 0,
+		NewListType_Only_Female = 1,
+		NewListType_Only_Male = 2
+	};
+
+	enum MerchantType
+	{
+		MerchantType_Nomal = 0
+	};
+
+	struct EctFragmentation
+	{
+		0 require int iTotalNum = 0; //本次请求总应答包数
+		1 require int iSelfIndex = 0; //此包在总包数中的索引，从0开始
+	};
+/*--------------------------------------------------------------------------------*/
+
+/*********************************cmd*************************************/
+	enum CMDTYPE
+	{
+		CMD_INIT = 0
+	};
+
+/*--------------------------------------------------------------------------------*/
+
+/*************************************************************************/
+    struct PassTime
+    {
+        0 require long lGridId;                               // 擦肩所处格子ID
+        1 require int iTime;                                  // 擦肩时间
+        2 optional int iDistance = 0;                         // 与用户之间的距离
+        3 optional string strDescription;                     // 对时间距离的描述
+        4 optional vector<PoiInfo> vLocation;                 // 擦肩位置
+    };
+    
+    enum PositionType
+    {
+        PosType_DEC = 0,   // 上报明文位置信息
+        PosType_ENC = 1    // 上报加密位置信息
+    };
+/*--------------------------------------------------------------------------------*/
+
+};
+

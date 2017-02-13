@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Jce For Javascript</title>
+        <script type="text/javascript" src="../lib/libutil.js"></script>
+        <script type="text/javascript" src="../lib/libjce.js"></script>
+        <script type="text/javascript" src="../lib/libext.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+    <body>
+        <h1>测试Vector</h1>
+        <h4 style="margin-top: -7px">元素类型为boolean/int16/int32/int64/uint8/uint16/uint32/string</h4>
+
+<pre class="pre_style" >
+function TestVectorInt32()
+{
+    var vb = new Taf.Vector(new Taf.INT32());
+    vb.val.push(65512);
+    vb.val.push(65513);
+
+    var os = new Taf.JceOutputStream();
+    os.writeVector(5, vb);
+
+    os.getBinBuffer().position = 0;
+    var is = new Taf.JceInputStream(os.getBinBuffer());
+    var vi = is.readVector(5, true, new Taf.Vector(new Taf.INT32()));
+    for (var i = 0; i < vec.val.length; i++)
+    {
+        console.log("vec[" + i + "]:" + vec.val[i]);
+    }
+}
+</pre>
+        
+        
+        <script>
+        	function printVector(vec)
+        	{
+        		for (var i = 0; i < vec.val.length; i++)
+        		{
+        			console.log("vec[" + i + "]:" + vec.val[i]);
+        		}
+        	}
+        	function TestVectorInt32()
+        	{
+        		var vb = new Taf.Vector(new Taf.INT32());
+				vb.val.push(65512);
+				vb.val.push(65513);
+
+				var os = new Taf.JceOutputStream();
+  		     	os.writeVector(5, vb);
+
+				os.getBinBuffer().position = 0;
+        		var is = new Taf.JceInputStream(os.getBinBuffer());
+				var vi = is.readVector(5, true, new Taf.Vector(new Taf.INT32()));
+				printVector(vi);
+        	}
+        	TestVectorInt32();
+        </script>
+    </body>
+</html>

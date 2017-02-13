@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gbk"?>
+<?xml-stylesheet href="XmlProxy.xsl" type="text/xsl"?>
+<request>
+<!--
+    <locator>taf.tafregistry.QueryObj@tcp -h 172.27.205.110 -p 17890 -t 3000</locator>
+-->
+    <servant>Test.TestServer.TestExtObj</servant>
+    <return>
+        <int/>
+    </return>
+    <function_name>testMyInfo</function_name>
+    <parameters>        
+        <int in="true" name="id">1</int>
+        <struct in="true" name="vi">
+			<int tag="0">100000</int>
+			<string tag="1">this is an string</string>
+		</struct>
+        <struct out="true" name="vo">
+			<int tag="0"/>
+			<string tag="1"/>
+		</struct>
+    </parameters>
+</request>

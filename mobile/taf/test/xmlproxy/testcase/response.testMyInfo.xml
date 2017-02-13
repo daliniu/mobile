@@ -1,0 +1,11 @@
+<response>
+<return>
+<int tag="0">1</int>
+</return>
+<parameters>
+<struct tag="3">
+<int tag="0">100000</int>
+<string tag="1">this is an string</string>
+</struct>
+</parameters>
+</response>

@@ -1,0 +1,2761 @@
+DROP DATABASE IF EXISTS `db_mbox_user_0`;
+DROP DATABASE IF EXISTS `db_mbox_user_1`;
+DROP DATABASE IF EXISTS `db_mbox_user_2`;
+DROP DATABASE IF EXISTS `db_mbox_user_3`;
+DROP DATABASE IF EXISTS `db_mbox_user_4`;
+DROP DATABASE IF EXISTS `db_mbox_user_5`;
+DROP DATABASE IF EXISTS `db_mbox_user_6`;
+DROP DATABASE IF EXISTS `db_mbox_user_7`;
+DROP DATABASE IF EXISTS `db_mbox_user_8`;
+DROP DATABASE IF EXISTS `db_mbox_user_9`;
+DROP DATABASE IF EXISTS `db_mbox_misc`;
+
+
+CREATE DATABASE `db_mbox_user_0` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_1` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_2` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_3` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_4` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_5` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_6` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_7` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_8` DEFAULT CHARACTER SET utf8;
+CREATE DATABASE `db_mbox_user_9` DEFAULT CHARACTER SET utf8;
+
+CREATE DATABASE `db_mbox_misc` DEFAULT CHARACTER SET utf8;
+
+
+USE `db_mbox_user_0`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_1`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_2`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_3`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_4`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_5`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_6`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_7`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_8`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+USE `db_mbox_user_9`;
+
+CREATE TABLE `t_user_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_user_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `yynum` bigint(20) NOT NULL DEFAULT '0',
+  `dwname` varchar(30) DEFAULT '',
+  `phone` varchar(20) DEFAULT '',
+  `nick` varchar(30) DEFAULT '',
+  `iconurl` varchar(124) DEFAULT '',
+  `constellation` varchar(30) DEFAULT '',
+  `remark` varchar(200) DEFAULT '',
+  `birth` date DEFAULT '1970-01-01',
+  `extended` blob,
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `gender` enum('MALE','FEMALE') DEFAULT 'MALE',
+  `first_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `last_login_time` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`yyuid`),
+  UNIQUE KEY `yynum` (`yynum`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_0` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_1` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_2` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_3` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_4` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_5` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_6` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_7` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_8` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_friends_9` (
+  `yyuid` bigint(20) NOT NULL DEFAULT '0',
+  `friend_list` blob,
+  `modify_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`yyuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+USE `db_mbox_misc`;
+
+CREATE TABLE `t_sysmsg` (
+  `msgid` bigint(20) NOT NULL DEFAULT '0',
+  `msgtype` smallint(6) NOT NULL DEFAULT '0',
+  `sndryyuid` bigint(20) NOT NULL DEFAULT '0',
+  `rcvryyuid` bigint(20) NOT NULL DEFAULT '0',
+  `msg` blob,
+  `state` tinyint(4) NOT NULL DEFAULT '0',
+  `needACK` tinyint(4) NOT NULL DEFAULT '0',
+  `ctime` int(11) NOT NULL DEFAULT '0',
+  `mtime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`msgid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_uniq_id` (
+  `id` bigint(11) NOT NULL DEFAULT '0',
+  `app_id` varchar(50) DEFAULT '',
+  `lock_flag` enum('F','L') DEFAULT 'F',
+  `modify_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY `name` (`id`,`app_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_0` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_1` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_2` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_3` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_4` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_5` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_6` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_7` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_8` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `t_gamematch_9` (
+  `server` char(64) NOT NULL DEFAULT '',
+  `name` char(64) NOT NULL DEFAULT '',
+  `teammates` blob,
+  `competitors` blob,
+  PRIMARY KEY (`server`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

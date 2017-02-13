@@ -1,0 +1,368 @@
+#include "SecretImp.h"
+#include "servant/Application.h"
+#include <algorithm>
+
+using namespace std;
+
+struct GreatSecret
+{
+    bool operator()(const SecretInfo &e1, const SecretInfo &e2)
+    {
+        return e1.lSId > e2.lSId;
+    }
+};
+struct LessSecret
+{
+    bool operator()(const SecretInfo &e1, const SecretInfo &e2)
+    {
+        return e2.lSId > e1.lSId;
+    }
+};
+
+//////////////////////////////////////////////////////
+void SecretImp::initialize()
+{
+	//initialize servant here:
+	//...
+
+    // 用户信息句柄
+    _pUserProxy = Application::getCommunicator()->stringToProxy<UserInfoPrx>("QUAN.UserInfoServer.UserInfoObj");
+
+    // 获取配置信息
+    TC_Config tConf;
+    __TRY__
+    tConf.parseFile(ServerConfig::BasePath + "SecretServer.conf");
+    __CATCH__
+
+    //最大缓存帖子数
+    _uMaxSecretsNum = TC_Common::strto<size_t>(tConf.get("/main/<MaxSecretsNum>", "500"));
+
+    // 24小时系统推荐帖子个数
+    _u24SecretsNum = TC_Common::strto<size_t>(tConf.get("/main/<24SecretsNum>", "3"));
+
+    // 72小时系统推荐帖子个数
+    _u72SecretsNum = TC_Common::strto<size_t>(tConf.get("/main/<72SecretsNum>", "60"));
+
+    // 获取判断好友数量
+    _uMaxFriendsNum = TC_Common::strto<size_t>(tConf.get("/main/<MaxFriendsNum>", "3"));
+
+    // 获取好友点赞数
+    _uMaxFrdsFvrNum = TC_Common::strto<size_t>(tConf.get("/main/<MaxFrdsFvrNum>", "3"));
+
+    // 获取好友点赞数
+    _uMinFrdsFvrNum = TC_Common::strto<size_t>(tConf.get("/main/<MinFrdsFvrNum>", "1"));
+
+    // 数据库句柄初始化
+    _DbHandle.init();
+}
+
+int SecretImp::checkUserId(const QUAN::UserId &tId,int *platform)
+{
+    if(tId.sUA.find("ios")!=string::npos)
+    {   
+        if(platform) *platform=1;
+    }   
+    else if(tId.sUA.find("adr")!=string::npos)
+    {   
+        if(platform) *platform=2;
+    }   
+    else
+    {   
+        if(platform) *platform=2;
+    }   
+    return SUCCESS;
+}
+
+
+//////////////////////////////////////////////////////
+void SecretImp::destroy()
+{
+	//destroy servant here:
+	//...
+}
+
+//////////////////////////////////////////////////////
+taf::Int32 SecretImp::mergeSecrets(vector<SecretInfo>& vRmdScrts, vector<SecretInfo>& vFvrScrts, vector<SecretInfo>& vFrdsScrts, vector<SecretInfo>& vSecrets)
+{
+
+    vector<SecretInfo>   vTmps(vRmdScrts.size() + vFvrScrts.size());
+
+    // 排序
+    sort(vRmdScrts.begin(),  vRmdScrts.end(),  GreatSecret());
+    sort(vFvrScrts.begin(),  vFvrScrts.end(),  GreatSecret());
+    sort(vFrdsScrts.begin(), vFrdsScrts.end(), GreatSecret());
+
+    // 合并
+    merge(vRmdScrts.begin(), vRmdScrts.end(), vFvrScrts.begin(), vFvrScrts.end(), vTmps.begin(), GreatSecret());
+    merge(vFrdsScrts.begin(), vFrdsScrts.end(), vTmps.begin(), vTmps.end(), vSecrets.begin(), GreatSecret());
+
+    // 去重
+    vSecrets.erase(unique(vSecrets.begin(), vSecrets.end()), vSecrets.end());
+
+    return SUCCESS;
+}
+
+taf::Int32 SecretImp::getRecommendSecrets(vector<SecretInfo>& tSecrets)
+{
+
+    return SUCCESS;
+}
+
+taf::Int32 SecretImp::getFriendsSecretsNum(UserId const& tUserId, int& iFrdsScrtNum)
+{
+
+    return SUCCESS;
+}
+
+taf::Int32 SecretImp::getFriendsFavorSecrets(UserId const& tUserId, int FrdsFvrNum, vector<UserId> const& vFrds, vector<SecretInfo>& vFvrScrts)
+{
+
+    return SUCCESS;
+}
+
+taf::Int32 SecretImp::getSecrets(SecretListReq const& tReq, vector<UserId> const& vFrdsAll, vector<SecretInfo>& vSecrets)
+{
+    return SUCCESS;
+}
+
+taf::Int32 SecretImp::getFriendsList(UserId const& tUserId, vector<UserId>& vFrds1, vector<UserId>& vFrdsAll)
+{
+    int iRet = -1;
+
+    LOG->debug() << __FUNCTION__<< " begin "<<endl;
+
+    PROC_BEGIN
+    __TRY__
+
+    FriendsListReq tFrdsReq;
+    FriendsListRsp tFrdsRsp1;           // 1度关系
+    FriendsListRsp tFrdsRspAll;         // 1+2度关系
+    tFrdsReq.tUserId = tUserId;
+    tFrdsReq.iRelat = ONE;
+    iRet = _pUserProxy->getFriendsList(tFrdsReq, tFrdsRsp1);    
+    if (iRet)
+    {
+        LOG->debug() << __FUNCTION__<< " 获取1度好友列表失败！"<<endl;
+        break;
+    }
+    tFrdsReq.iRelat = ALL;
+    iRet = _pUserProxy->getFriendsList(tFrdsReq, tFrdsRspAll);    
+    if (iRet)
+    {
+        LOG->debug() << __FUNCTION__<< " 获取2度好友列表失败！"<<endl;
+        break;
+    }
+
+    vFrds1   = tFrdsRsp1.vFriends;
+    vFrdsAll = tFrdsRspAll.vFriends;
+
+    iRet = SUCCESS;
+    __CATCH__
+    PROC_END
+
+    LOG->debug() << __FUNCTION__<< " end "<<endl;
+
+    return SUCCESS;
+}
+
+//////////////////////////////////////////////////////
+taf::Int32 SecretImp::getSecretList(const QUAN::SecretListReq & tReq,QUAN::SecretListRsp &tRsp,taf::JceCurrentPtr current)
+{
+    int iRet = -1;
+    int platform = -1;
+
+    // 输出参数
+    ostringstream os1; tReq.displaySimple(os1);
+    LOG->debug() << __FUNCTION__<< " begin "<<os1.str()<<endl;
+
+    PROC_BEGIN
+    __TRY__
+
+    // 检查用户ID
+    if(!checkUserId(tReq.tUserId,&platform))
+    {   
+        LOG->debug() << __FUNCTION__<< " 判断版本号失败 ! "<<endl;
+        break;
+    }   
+
+    // 获取好友列表 
+    vector<UserId> vFrds1;
+    vector<UserId> vFrdsAll;
+    iRet = getFriendsList(tReq.tUserId, vFrds1, vFrdsAll);
+    if (iRet)
+    {
+        LOG->debug() << __FUNCTION__<< " 获取好友列表失败! "<<endl;
+        break;
+    }
+
+    vector<SecretInfo>    vRmdScrts;        // 系统推荐帖子
+    vector<SecretInfo>    vFvrScrts;        // 好友赞过帖子
+    vector<SecretInfo>    vFrdsScrts;       // 用户,好友,好友的好友的帖子
+
+    // 获取系统推荐帖子        
+    iRet = this->getRecommendSecrets(vRmdScrts);  
+    if (iRet)
+    {
+        LOG->debug() << __FUNCTION__<< " 获取系统推荐帖子失败! "<<endl;
+        break;
+    }
+
+    // 判断好友数量
+    size_t iFrdsNum = vFrdsAll.size();
+
+    if (iFrdsNum < _uMaxFriendsNum)
+    {
+        //查询朋友的帖子数;
+        int iFrdsScrtNum = 0;
+        iRet = this->getFriendsSecretsNum(tReq.tUserId, iFrdsScrtNum); 
+        if (iRet)
+        {
+            LOG->debug() << __FUNCTION__<< " 获取好友帖子数量失败! "<<endl;
+            break;
+        }
+
+        //获取1个好友赞过的帖子列表 1度关系 
+        iRet = this->getFriendsFavorSecrets(tReq.tUserId, _uMinFrdsFvrNum, vFrds1, vFvrScrts); 
+        if (iRet)
+        {
+            LOG->debug() << __FUNCTION__<< " 获取好友 1个赞 点赞帖子失败! "<<endl;
+            break;
+        }
+    }
+    else 
+    {
+        // 获取3个好友赞过的帖子列表 1度关系  
+        iRet = this->getFriendsFavorSecrets(tReq.tUserId, _uMaxFrdsFvrNum, vFrds1, vFvrScrts); 
+        if (iRet)
+        {
+            LOG->debug() << __FUNCTION__<< " 获取好友 3个赞 点赞帖子失败! "<<endl;
+            break;
+        }
+
+        // 将用户加入好友列表
+        vFrdsAll.push_back(tReq.tUserId);
+        // 获取帖子列表;  
+        iRet = this->getSecrets(tReq, vFrdsAll, vFrdsScrts); 
+        if (iRet)
+        {
+            LOG->debug() << __FUNCTION__<< " 获取用户，好友，好友好友帖子列表失败! "<<endl;
+            break;
+        }
+    }
+
+    // 汇总排序后帖子列表
+    tRsp.vSecrets.resize(vRmdScrts.size() + vFvrScrts.size() + vFrdsScrts.size());
+    iRet = this->mergeSecrets(vRmdScrts, vFvrScrts, vFrdsScrts, tRsp.vSecrets);
+    if (iRet)
+    {
+        LOG->debug() << __FUNCTION__<< " 获取用户，好友，好友好友帖子列表失败! "<<endl;
+        break;
+    }
+    // 限制条数
+    tRsp.vSecrets.resize(tReq.iCount);
+    
+    iRet = SUCCESS;
+    __CATCH__
+    PROC_END
+
+    LOG->debug() << __FUNCTION__<< " end "<<endl;
+
+    return iRet;
+}
+
+
+taf::Int32 SecretImp::getSecretContent(const QUAN::ContentListReq & tReq,QUAN::ContentListRsp &tRsp,taf::JceCurrentPtr current)
+{
+    LOG->debug() << __FUNCTION__<< " begin "<<endl;
+
+    int platform;
+    if(!checkUserId(tReq.tUserId,&platform))
+    {   
+        return 1;
+    }   
+    //int iBegin=tReq.tRange.iBeginId;
+    //int iEnd=tReq.tRange.iEndId;
+
+#if 0
+    if(tReq.iCount<=0)
+    {   
+        FDLOG()<<"-1|"<<__FUNCTION__<<"("<<tReq.tRange.iEndId<<","<<tReq.tRange.iBeginId<<"] ERR: ICOUNT=0"<<endl;
+    }   
+    try 
+    {   
+#if 0
+        int count = min(tReq.iCount,20);
+        DataSource::getSingletonPtr()->getRecomAppInRange(iBegin,iEnd,count,tReq.eType,platform,tRsp.vApp);
+
+        tRsp.tRange.iBeginId=iBegin;
+        if((int)tRsp.vApp.size()>=count || tReq.iCount>count)
+        {   
+            tRsp.tRange.iEndId=tRsp.vApp.back().iId-1;
+        }   
+        else
+        {   
+            tRsp.tRange.iEndId=iEnd;
+        }   
+#endif
+        QUAN::ContentInfo tSTmp;
+        tSTmp.lCId = 0;
+        tSTmp.lSId = 0;
+        tSTmp.lUId = 0;
+        tSTmp.isFirst = true;
+        tSTmp.Time = "19910101"; 
+        tSTmp.sContent = "test"; 
+        tSTmp.iFavorNum = 0;
+        tSTmp.iCmtNum = 0;
+        tSTmp.isFavor = true;
+
+        tRsp.vContents.push_back(tSTmp);
+        tRsp.tRange.iBeginId = -1;
+        tRsp.tRange.iEndId = -1;
+
+        FDLOG()<<"0|"<<__FUNCTION__<<"("<<tReq.tRange.iEndId<<","<<tReq.tRange.iBeginId<<"] Got:"<<tRsp.vContents.size()<<"/"<<tReq.iCount<<endl;
+    }   
+    catch(exception &ex)
+    {   
+        FDLOG()<<"-1|"<<__FUNCTION__<<"("<<tReq.tRange.iEndId<<","<<tReq.tRange.iBeginId<<"] ERR:"<<ex.what()<<endl;
+    }
+
+#endif
+    LOG->debug() << __FUNCTION__<< " end "<<endl;
+
+    return 0;
+}
+
+taf::Int32 SecretImp::postSecret(const QUAN::PostSecretReq & tReq,QUAN::PostSecretRsp &tRsp,taf::JceCurrentPtr current)
+{
+    LOG->debug() << __FUNCTION__<< " begin "<<endl;
+
+    tRsp.iStatus = 0;
+
+    LOG->debug() << __FUNCTION__<< " end "<<endl;
+    return 0;
+}
+
+taf::Int32 SecretImp::postContent(const QUAN::PostContentReq& tReq, QUAN::PostContentRsp& tRsp, taf::JceCurrentPtr current)
+{
+    return SUCCESS;
+}
+
+taf::Int32 SecretImp::postFavor(const QUAN::PostFavorReq& tReq, QUAN::PostFavorRsp& tRsp, taf::JceCurrentPtr current)
+{
+    return SUCCESS;
+}
+        
+taf::Int32 SecretImp::postReport(const QUAN::PostReportReq& tReq, QUAN::PostReportRsp& tRsp, taf::JceCurrentPtr current)
+{
+    return SUCCESS;
+}
+
+taf::Int32 SecretImp::cleanTrail(const QUAN::CleanTrailReq& tReq, QUAN::CleanTrailRsp& tRsp, taf::JceCurrentPtr current)
+{
+    return SUCCESS;
+}
+        
+taf::Int32 SecretImp::removeSecret(const QUAN::RemoveSecretReq& tReq, QUAN::RemoveSecretRsp& tRsp, taf::JceCurrentPtr current)
+{
+    return SUCCESS;
+}

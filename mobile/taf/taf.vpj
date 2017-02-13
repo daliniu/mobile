@@ -1,0 +1,2513 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+	Version="10.0"
+	VendorName="SlickEdit"
+	WorkingDir=".">
+	<Config
+		Name="Debug"
+		Type="gnuc"
+		DebugCallbackName="gdb"
+		Version="1"
+		OutputFile="%bdtaf.exe"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='g++ -c %xup  %defd -g -o "%bd%n%oe" %i "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link"
+				ShowOnMenu="Never"
+				Dialog="_gnuc_options_form Link"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='g++ %xup -g -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" "%w" "%r" -t build'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" "%w" "%r" -t rebuild'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+			<Target
+				Name="dash"
+				MenuCaption="-"
+				Deletable="0">
+				<Exec/>
+			</Target>
+			<Target
+				Name="GNU C Options"
+				MenuCaption="GNU C &amp;Options..."
+				ShowOnMenu="HideIfNoCmdLine"
+				Deletable="0"
+				SaveOption="SaveNone">
+				<Exec
+					CmdLine="gnucoptions"
+					Type="Slick-C"/>
+			</Target>
+		</Menu>
+	</Config>
+	<Config
+		Name="Release"
+		Type="gnuc"
+		DebugCallbackName="gdb"
+		Version="1"
+		OutputFile="%bdtaf.exe"
+		CompilerConfigName="Latest Version">
+		<Menu>
+			<Target
+				Name="Compile"
+				MenuCaption="&amp;Compile"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				OutputExts="*.o"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='g++ -c %xup %defd -o "%bd%n%oe" %i "%f"'/>
+			</Target>
+			<Target
+				Name="Link"
+				MenuCaption="&amp;Link"
+				ShowOnMenu="Never"
+				Dialog="_gnuc_options_form Link"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveCurrent"
+				RunFromDir="%rw">
+				<Exec CmdLine='g++ %xup -o "%o" %f %libs'/>
+			</Target>
+			<Target
+				Name="Build"
+				MenuCaption="&amp;Build"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" "%w" "%r" -t build'/>
+			</Target>
+			<Target
+				Name="Rebuild"
+				MenuCaption="&amp;Rebuild"
+				Dialog="_gnuc_options_form Compile"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%(VSLICKBIN1)vsbuild" "%w" "%r" -t rebuild'/>
+			</Target>
+			<Target
+				Name="Debug"
+				MenuCaption="&amp;Debug"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveNone"
+				RunFromDir="%rw">
+				<Exec CmdLine='vsdebugio -prog "%o"'/>
+			</Target>
+			<Target
+				Name="Execute"
+				MenuCaption="E&amp;xecute"
+				Dialog="_gnuc_options_form Run/Debug"
+				BuildFirst="1"
+				CaptureOutputWith="ProcessBuffer"
+				Deletable="0"
+				SaveOption="SaveWorkspaceFiles"
+				RunFromDir="%rw">
+				<Exec CmdLine='"%o"'/>
+			</Target>
+			<Target
+				Name="dash"
+				MenuCaption="-"
+				Deletable="0">
+				<Exec/>
+			</Target>
+			<Target
+				Name="GNU C Options"
+				MenuCaption="GNU C &amp;Options..."
+				ShowOnMenu="HideIfNoCmdLine"
+				Deletable="0"
+				SaveOption="SaveNone">
+				<Exec
+					CmdLine="gnucoptions"
+					Type="Slick-C"/>
+			</Target>
+		</Menu>
+	</Config>
+	<CustomFolders>
+		<Folder
+			Name="Source Files"
+			Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl;*.d"/>
+		<Folder
+			Name="Header Files"
+			Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.inc;*.sh;*.cpy;*.if"/>
+		<Folder
+			Name="Resource Files"
+			Filters="*.ico;*.cur;*.dlg"/>
+		<Folder
+			Name="Bitmaps"
+			Filters="*.bmp"/>
+		<Folder
+			Name="Other Files"
+			Filters=""/>
+	</CustomFolders>
+	<Files AutoFolders="DirectoryView">
+		<Folder Name="conf">
+			<F N="conf/admin.config.conf"/>
+			<F N="conf/node.config.conf"/>
+			<F N="conf/registry.config.conf"/>
+		</Folder>
+		<Folder Name="include">
+			<Folder Name="config">
+				<F N="include/config/Config.h"/>
+				<F N="include/config/taf_config.h"/>
+			</Folder>
+			<Folder Name="hessian">
+				<F N="include/hessian/HessianInput.h"/>
+				<F N="include/hessian/HessianOutput.h"/>
+				<F N="include/hessian/HessianProxy.h"/>
+				<F N="include/hessian/HessianStringStream.h"/>
+				<F N="include/hessian/HessianWrappers.h"/>
+			</Folder>
+			<Folder Name="jce">
+				<Folder Name="demo">
+					<F N="include/jce/demo/main.cpp"/>
+					<F N="include/jce/demo/UserInfo.h"/>
+					<F N="include/jce/demo/UserInfo.jce"/>
+				</Folder>
+				<F N="include/jce/Jce.h"/>
+				<F N="include/jce/jce_arraycpp.h"/>
+				<F N="include/jce/Jce_c.c"/>
+				<F N="include/jce/Jce_c.h"/>
+				<F N="include/jce/Jce_json.h"/>
+				<F N="include/jce/Jce_mcare.cpp"/>
+				<F N="include/jce/Jce_mcare.h"/>
+				<F N="include/jce/Jce_sym.cpp"/>
+				<F N="include/jce/Jce_sym.h"/>
+				<F N="include/jce/JceDisplayer.h"/>
+				<F N="include/jce/JceType.h"/>
+				<F N="include/jce/RequestF.h"/>
+				<F N="include/jce/RequestF.jce"/>
+				<F N="include/jce/RequestF_mcare.cpp"/>
+				<F N="include/jce/RequestF_mcare.h"/>
+				<F N="include/jce/RequestF_sym.cpp"/>
+				<F N="include/jce/RequestF_sym.h"/>
+				<F N="include/jce/wup.h"/>
+				<F N="include/jce/wup_c.c"/>
+				<F N="include/jce/wup_c.h"/>
+				<F N="include/jce/wup_mcare.cpp"/>
+				<F N="include/jce/wup_mcare.h"/>
+				<F N="include/jce/wup_sym.cpp"/>
+				<F N="include/jce/wup_sym.h"/>
+				<F N="include/jce/wup_sym_compact.cpp"/>
+				<F N="include/jce/wup_sym_compact.h"/>
+			</Folder>
+			<Folder Name="jmem">
+				<F N="include/jmem/jmem_hashmap.h"/>
+				<F N="include/jmem/jmem_hashmap_compact.h"/>
+				<F N="include/jmem/jmem_multi_hashmap.h"/>
+				<F N="include/jmem/jmem_policy.h"/>
+				<F N="include/jmem/jmem_queue.h"/>
+				<F N="include/jmem/jmem_rbtree.h"/>
+			</Folder>
+			<Folder Name="log">
+				<F N="include/log/Log.h"/>
+				<F N="include/log/taf_logger.h"/>
+			</Folder>
+			<Folder Name="nodeF">
+				<F N="include/nodeF/NodeF.h"/>
+				<F N="include/nodeF/taf_nodeF.h"/>
+			</Folder>
+			<Folder Name="notify">
+				<F N="include/notify/Notify.h"/>
+				<F N="include/notify/taf_notify.h"/>
+			</Folder>
+			<Folder Name="parse">
+				<F N="include/parse/element.h"/>
+				<F N="include/parse/parse.h"/>
+			</Folder>
+			<Folder Name="patch">
+				<F N="include/patch/Patch.h"/>
+				<F N="include/patch/taf_patch.h"/>
+			</Folder>
+			<Folder Name="servant">
+				<F N="include/servant/AdapterProxy.h"/>
+				<F N="include/servant/AdminF.h"/>
+				<F N="include/servant/AdminServant.h"/>
+				<F N="include/servant/AppCache.h"/>
+				<F N="include/servant/Application.h"/>
+				<F N="include/servant/AppProtocol.h"/>
+				<F N="include/servant/AsyncProcThread.h"/>
+				<F N="include/servant/BaseF.h"/>
+				<F N="include/servant/BaseNotify.h"/>
+				<F N="include/servant/BusF.h"/>
+				<F N="include/servant/Communicator.h"/>
+				<F N="include/servant/CommunicatorFactory.h"/>
+				<F N="include/servant/Connector.h"/>
+				<F N="include/servant/EndpointF.h"/>
+				<F N="include/servant/EndpointInfo.h"/>
+				<F N="include/servant/FDReactor.h"/>
+				<F N="include/servant/Global.h"/>
+				<F N="include/servant/JceCurrent.h"/>
+				<F N="include/servant/Message.h"/>
+				<F N="include/servant/NetworkUtil.h"/>
+				<F N="include/servant/NotifyObserver.h"/>
+				<F N="include/servant/ObjectProxy.h"/>
+				<F N="include/servant/ObjectProxyFactory.h"/>
+				<F N="include/servant/PropertyF.h"/>
+				<F N="include/servant/PropertyReport.h"/>
+				<F N="include/servant/QueryEndpoint.h"/>
+				<F N="include/servant/QueryF.h"/>
+				<F N="include/servant/QueueTimeout.h"/>
+				<F N="include/servant/Servant.h"/>
+				<F N="include/servant/ServantHandle.h"/>
+				<F N="include/servant/ServantHelper.h"/>
+				<F N="include/servant/ServantProxy.h"/>
+				<F N="include/servant/ServantProxyFactory.h"/>
+				<F N="include/servant/StatF.h"/>
+				<F N="include/servant/StatReport.h"/>
+				<F N="include/servant/Transceiver.h"/>
+			</Folder>
+			<Folder Name="util">
+				<F N="include/util/atomic_asm.h"/>
+				<F N="include/util/tc_atomic.h"/>
+				<F N="include/util/tc_autoptr.h"/>
+				<F N="include/util/tc_base64.h"/>
+				<F N="include/util/tc_bitmap.h"/>
+				<F N="include/util/tc_cgi.h"/>
+				<F N="include/util/tc_clientsocket.h"/>
+				<F N="include/util/tc_common.h"/>
+				<F N="include/util/tc_config.h"/>
+				<F N="include/util/tc_consistent_hash.h"/>
+				<F N="include/util/tc_des.h"/>
+				<F N="include/util/tc_dyn_object.h"/>
+				<F N="include/util/tc_encoder.h"/>
+				<F N="include/util/tc_epoll_server.h"/>
+				<F N="include/util/tc_epoller.h"/>
+				<F N="include/util/tc_ex.h"/>
+				<F N="include/util/tc_fifo.h"/>
+				<F N="include/util/tc_file.h"/>
+				<F N="include/util/tc_file_mutex.h"/>
+				<F N="include/util/tc_functor.h"/>
+				<F N="include/util/tc_hash_fun.h"/>
+				<F N="include/util/tc_hashmap.h"/>
+				<F N="include/util/tc_hashmap_compact.h"/>
+				<F N="include/util/tc_http.h"/>
+				<F N="include/util/tc_http_async.h"/>
+				<F N="include/util/tc_json.h"/>
+				<F N="include/util/tc_lock.h"/>
+				<F N="include/util/tc_logger.h"/>
+				<F N="include/util/tc_loki.h"/>
+				<F N="include/util/tc_malloc_chunk.h"/>
+				<F N="include/util/tc_md5.h"/>
+				<F N="include/util/tc_mem_chunk.h"/>
+				<F N="include/util/tc_mem_queue.h"/>
+				<F N="include/util/tc_mem_vector.h"/>
+				<F N="include/util/tc_mmap.h"/>
+				<F N="include/util/tc_monitor.h"/>
+				<F N="include/util/tc_multi_hashmap.h"/>
+				<F N="include/util/tc_mysql.h"/>
+				<F N="include/util/tc_option.h"/>
+				<F N="include/util/tc_pack.h"/>
+				<F N="include/util/tc_parsepara.h"/>
+				<F N="include/util/tc_rbtree.h"/>
+				<F N="include/util/tc_sem_mutex.h"/>
+				<F N="include/util/tc_shm.h"/>
+				<F N="include/util/tc_singleton.h"/>
+				<F N="include/util/tc_socket.h"/>
+				<F N="include/util/tc_squeue.h"/>
+				<F N="include/util/tc_tea.h"/>
+				<F N="include/util/tc_thread.h"/>
+				<F N="include/util/tc_thread_cond.h"/>
+				<F N="include/util/tc_thread_mutex.h"/>
+				<F N="include/util/tc_thread_pool.h"/>
+				<F N="include/util/tc_thread_queue.h"/>
+				<F N="include/util/tc_thread_rwlock.h"/>
+				<F N="include/util/tc_timeout_queue.h"/>
+				<F N="include/util/tc_timeprovider.h"/>
+			</Folder>
+		</Folder>
+		<Folder Name="java">
+			<Folder Name="hessian2hce">
+				<Folder Name="src">
+					<F N="java/hessian2hce/src/Hessian2hce.java"/>
+				</Folder>
+			</Folder>
+			<Folder Name="jce">
+				<Folder Name="src">
+					<F N="java/jce/src/client.config.conf"/>
+					<F N="java/jce/src/tafCareSend.conf"/>
+				</Folder>
+				<Folder Name="test">
+					<Folder Name="com">
+						<Folder Name="qq">
+							<Folder Name="taf">
+								<Folder Name="jce">
+									<Folder Name="wup">
+										<Folder Name="test">
+											<F N="java/jce/test/com/qq/taf/jce/wup/test/FriendInfo.java"/>
+											<F N="java/jce/test/com/qq/taf/jce/wup/test/FriendInfoHolder.java"/>
+											<F N="java/jce/test/com/qq/taf/jce/wup/test/Test.java"/>
+											<F N="java/jce/test/com/qq/taf/jce/wup/test/UdpTest.java"/>
+											<F N="java/jce/test/com/qq/taf/jce/wup/test/UserInfo.java"/>
+											<F N="java/jce/test/com/qq/taf/jce/wup/test/UserInfoHolder.java"/>
+										</Folder>
+									</Folder>
+								</Folder>
+								<Folder Name="proxy">
+									<Folder Name="test">
+										<Folder Name="router">
+											<Folder Name="Test">
+												<F N="java/jce/test/com/qq/taf/proxy/test/router/Test/HelloPrx.java"/>
+												<F N="java/jce/test/com/qq/taf/proxy/test/router/Test/HelloPrxCallback.java"/>
+												<F N="java/jce/test/com/qq/taf/proxy/test/router/Test/HelloPrxHelper.java"/>
+											</Folder>
+											<F N="java/jce/test/com/qq/taf/proxy/test/router/RouterBechmark.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/router/RouterTest.java"/>
+										</Folder>
+										<Folder Name="Test">
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/APrx.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/APrxCallback.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/MyInfo.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/MyInfoHolder.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/TestBasePrx.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/TestBasePrxCallback.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/TestExtPrx.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/TestExtPrxCallback.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/TestInfo.java"/>
+											<F N="java/jce/test/com/qq/taf/proxy/test/Test/TestInfoHolder.java"/>
+										</Folder>
+										<F N="java/jce/test/com/qq/taf/proxy/test/AllTest.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/ATest.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/Bechmark.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/BechmarkFrameWork.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/BenchemarkService.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/BigPackageTest.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/BigPackClientTest.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/HexUtils.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/PostData.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/ProfileSyncService.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/RegPrx.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/RegPrxHelper.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/SimpleCodecFactory.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/SimpleDecoder.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/SimpleDecoderStateMachine.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/SimpleEncoder.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/TestJce.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/TestParse.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/TestQuery.java"/>
+										<F N="java/jce/test/com/qq/taf/proxy/test/TinnyTest.java"/>
+									</Folder>
+								</Folder>
+							</Folder>
+							<Folder Name="Test">
+								<Folder Name="cnst">
+									<F N="java/jce/test/com/qq/Test/cnst/a.java"/>
+									<F N="java/jce/test/com/qq/Test/cnst/b.java"/>
+								</Folder>
+								<F N="java/jce/test/com/qq/Test/HelloRouteObjPrx.java"/>
+								<F N="java/jce/test/com/qq/Test/HelloRouteObjPrxCallback.java"/>
+								<F N="java/jce/test/com/qq/Test/HelloRouteObjPrxHelper.java"/>
+								<F N="java/jce/test/com/qq/Test/Main.java"/>
+								<F N="java/jce/test/com/qq/Test/OutStruct.java"/>
+								<F N="java/jce/test/com/qq/Test/OutStructHolder.java"/>
+							</Folder>
+						</Folder>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="tafserver">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="taf">
+							<Folder Name="server">
+								<Folder Name="ahttpclient">
+									<F N="java/tafserver/com/qq/taf/server/ahttpclient/AsyncHttpClient.java"/>
+									<F N="java/tafserver/com/qq/taf/server/ahttpclient/HttpResponseCallback.java"/>
+									<F N="java/tafserver/com/qq/taf/server/ahttpclient/HttpServiceInfo.java"/>
+								</Folder>
+								<Folder Name="jce2java">
+									<F N="java/tafserver/com/qq/taf/server/jce2java/ConfigPrx.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/ConfigPrxCallback.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/ConfigPrxHelper.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/LogPrx.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/LogPrxCallback.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/LogPrxHelper.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyInfo.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyInfoHolder.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyItem.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyItemHolder.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyKey.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyKeyHolder.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NOTIFYLEVEL.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyPrx.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyPrxCallback.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/NotifyPrxHelper.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/PropertyFPrx.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/PropertyFPrxCallback.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/PropertyFPrxHelper.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/ServerFPrx.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/ServerFPrxCallback.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/ServerFPrxHelper.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/ServerInfo.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/ServerInfoHolder.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/StatPropInfo.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/StatPropInfoHolder.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/StatPropMsgBody.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/StatPropMsgBodyHolder.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/StatPropMsgHead.java"/>
+									<F N="java/tafserver/com/qq/taf/server/jce2java/StatPropMsgHeadHolder.java"/>
+								</Folder>
+								<Folder Name="util">
+									<Folder Name="ip">
+										<F N="java/tafserver/com/qq/taf/server/util/ip/FuzzyIpDomain.java"/>
+										<F N="java/tafserver/com/qq/taf/server/util/ip/IPList.java"/>
+										<F N="java/tafserver/com/qq/taf/server/util/ip/IPUtil.java"/>
+									</Folder>
+									<F N="java/tafserver/com/qq/taf/server/util/Config.java"/>
+									<F N="java/tafserver/com/qq/taf/server/util/FileUtil.java"/>
+									<F N="java/tafserver/com/qq/taf/server/util/GeneralException.java"/>
+									<F N="java/tafserver/com/qq/taf/server/util/MethodHook.java"/>
+									<F N="java/tafserver/com/qq/taf/server/util/TAF_VERSION.java"/>
+								</Folder>
+								<F N="java/tafserver/com/qq/taf/server/AdapterConfig.java"/>
+								<F N="java/tafserver/com/qq/taf/server/AdminCommands.java"/>
+								<F N="java/tafserver/com/qq/taf/server/AdminServant.java"/>
+								<F N="java/tafserver/com/qq/taf/server/AdminServantImpl.java"/>
+								<F N="java/tafserver/com/qq/taf/server/Application.java"/>
+								<F N="java/tafserver/com/qq/taf/server/ApplicationUtil.java"/>
+								<F N="java/tafserver/com/qq/taf/server/ClientCommunicator.java"/>
+								<F N="java/tafserver/com/qq/taf/server/ClientConfig.java"/>
+								<F N="java/tafserver/com/qq/taf/server/ConfigCenterSupport.java"/>
+								<F N="java/tafserver/com/qq/taf/server/DyeingManager.java"/>
+								<F N="java/tafserver/com/qq/taf/server/Endpoint.java"/>
+								<F N="java/tafserver/com/qq/taf/server/JceCurrent.java"/>
+								<F N="java/tafserver/com/qq/taf/server/LoggerFactory.java"/>
+								<F N="java/tafserver/com/qq/taf/server/ManagedExecutor.java"/>
+								<F N="java/tafserver/com/qq/taf/server/NodeFHelper.java"/>
+								<F N="java/tafserver/com/qq/taf/server/NotifyInvoke.java"/>
+								<F N="java/tafserver/com/qq/taf/server/NotifyObserver.java"/>
+								<F N="java/tafserver/com/qq/taf/server/PropertyReporterFactory.java"/>
+								<F N="java/tafserver/com/qq/taf/server/RemoteConfig.java"/>
+								<F N="java/tafserver/com/qq/taf/server/RemoteNotify.java"/>
+								<F N="java/tafserver/com/qq/taf/server/ResponseHandler.java"/>
+								<F N="java/tafserver/com/qq/taf/server/Servant.java"/>
+								<F N="java/tafserver/com/qq/taf/server/ServerConfig.java"/>
+								<F N="java/tafserver/com/qq/taf/server/ServerStatTool.java"/>
+								<F N="java/tafserver/com/qq/taf/server/SessionCheckerFilter.java"/>
+								<F N="java/tafserver/com/qq/taf/server/SystemLogger.java"/>
+							</Folder>
+						</Folder>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="tafservercreate">
+				<Folder Name="src">
+					<F N="java/tafservercreate/src/_SERVANT_.jce"/>
+					<F N="java/tafservercreate/src/_SERVANT_Impl.java"/>
+					<F N="java/tafservercreate/src/_SERVER_.java"/>
+				</Folder>
+			</Folder>
+			<Folder Name="tafservertest">
+				<Folder Name="src">
+					<Folder Name="com">
+						<Folder Name="qq">
+							<Folder Name="java">
+								<Folder Name="test">
+									<F N="java/tafservertest/src/com/qq/java/test/BrokerDisplayInfo.java"/>
+									<F N="java/tafservertest/src/com/qq/java/test/Test.java"/>
+									<F N="java/tafservertest/src/com/qq/java/test/test.jce"/>
+								</Folder>
+								<Folder Name="testclient">
+									<F N="java/tafservertest/src/com/qq/java/testclient/TestClient.java"/>
+									<F N="java/tafservertest/src/com/qq/java/testclient/TestProxy.java"/>
+									<F N="java/tafservertest/src/com/qq/java/testclient/TestStat.java"/>
+								</Folder>
+								<Folder Name="testserver">
+									<Folder Name="testservant">
+										<F N="java/tafservertest/src/com/qq/java/testserver/testservant/ITestServant.java"/>
+										<F N="java/tafservertest/src/com/qq/java/testserver/testservant/Send.java"/>
+										<F N="java/tafservertest/src/com/qq/java/testserver/testservant/SendHolder.java"/>
+										<F N="java/tafservertest/src/com/qq/java/testserver/testservant/TestServant.java"/>
+										<F N="java/tafservertest/src/com/qq/java/testserver/testservant/TestServantPrx.java"/>
+										<F N="java/tafservertest/src/com/qq/java/testserver/testservant/TestServantPrxCallback.java"/>
+										<F N="java/tafservertest/src/com/qq/java/testserver/testservant/TestServantPrxHelper.java"/>
+									</Folder>
+									<F N="java/tafservertest/src/com/qq/java/testserver/TestServantImpl.java"/>
+									<F N="java/tafservertest/src/com/qq/java/testserver/TestServer.java"/>
+								</Folder>
+							</Folder>
+						</Folder>
+					</Folder>
+					<F N="java/tafservertest/src/client.conf"/>
+					<F N="java/tafservertest/src/TestServant.jce"/>
+				</Folder>
+			</Folder>
+			<Folder Name="testcase">
+				<Folder Name="src">
+					<Folder Name="com">
+						<Folder Name="qq">
+							<Folder Name="java">
+								<Folder Name="testcase">
+									<Folder Name="testcaseservant">
+										<F N="java/testcase/src/com/qq/java/testcase/testcaseservant/TafCaseServant.java"/>
+										<F N="java/testcase/src/com/qq/java/testcase/testcaseservant/TafCaseServantPrx.java"/>
+										<F N="java/testcase/src/com/qq/java/testcase/testcaseservant/TafCaseServantPrxCallback.java"/>
+										<F N="java/testcase/src/com/qq/java/testcase/testcaseservant/TafCaseServantPrxHelper.java"/>
+										<F N="java/testcase/src/com/qq/java/testcase/testcaseservant/UserInfo.java"/>
+										<F N="java/testcase/src/com/qq/java/testcase/testcaseservant/UserInfoHolder.java"/>
+									</Folder>
+									<F N="java/testcase/src/com/qq/java/testcase/TafCaseServantImpl.java"/>
+									<F N="java/testcase/src/com/qq/java/testcase/TestCase.java"/>
+									<F N="java/testcase/src/com/qq/java/testcase/TestGetUser.java"/>
+									<F N="java/testcase/src/com/qq/java/testcase/TestTestUnsigned.java"/>
+								</Folder>
+							</Folder>
+						</Folder>
+					</Folder>
+					<Folder Name="Test">
+						<F N="java/testcase/src/Test/UserInfo.java"/>
+					</Folder>
+					<F N="java/testcase/src/client.conf"/>
+					<F N="java/testcase/src/TafCaseServant.jce"/>
+					<F N="java/testcase/src/TafCaseServant.jce.cpp"/>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="java-duowan">
+			<Folder Name="jce">
+				<Folder Name="src">
+					<F N="java-duowan/jce/src/client.config.conf"/>
+					<F N="java-duowan/jce/src/tafCareSend.conf"/>
+				</Folder>
+			</Folder>
+			<Folder Name="tafservercreate">
+				<Folder Name="src">
+					<F N="java-duowan/tafservercreate/src/_SERVANT_.jce"/>
+				</Folder>
+			</Folder>
+			<Folder Name="tafservertest">
+				<Folder Name="src">
+					<Folder Name="com">
+						<Folder Name="qq">
+							<Folder Name="java">
+								<Folder Name="test">
+									<F N="java-duowan/tafservertest/src/com/qq/java/test/test.jce"/>
+								</Folder>
+							</Folder>
+						</Folder>
+					</Folder>
+					<F N="java-duowan/tafservertest/src/client.conf"/>
+					<F N="java-duowan/tafservertest/src/TestServant.jce"/>
+				</Folder>
+			</Folder>
+			<Folder Name="testcase">
+				<Folder Name="src">
+					<F N="java-duowan/testcase/src/client.conf"/>
+					<F N="java-duowan/testcase/src/TafCaseServant.jce"/>
+					<F N="java-duowan/testcase/src/TafCaseServant.jce.cpp"/>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="jce">
+			<Folder Name="config">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="taf">
+							<F N="jce/config/com/qq/taf/ConfigInfo.java"/>
+							<F N="jce/config/com/qq/taf/ConfigInfoHolder.java"/>
+							<F N="jce/config/com/qq/taf/ConfigPrx.java"/>
+							<F N="jce/config/com/qq/taf/ConfigPrxCallback.java"/>
+							<F N="jce/config/com/qq/taf/ConfigPrxHelper.java"/>
+						</Folder>
+					</Folder>
+				</Folder>
+				<F N="jce/config/Config.cpp"/>
+				<F N="jce/config/Config.h"/>
+				<F N="jce/config/Config.jce"/>
+			</Folder>
+			<Folder Name="log">
+				<F N="jce/log/Log.cpp"/>
+				<F N="jce/log/Log.h"/>
+				<F N="jce/log/Log.jce"/>
+			</Folder>
+			<Folder Name="node">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="taf">
+							<F N="jce/node/com/qq/taf/LoadInfo.java"/>
+							<F N="jce/node/com/qq/taf/LoadInfoHolder.java"/>
+							<F N="jce/node/com/qq/taf/NodeInfo.java"/>
+							<F N="jce/node/com/qq/taf/NodeInfoHolder.java"/>
+							<F N="jce/node/com/qq/taf/NodePrx.java"/>
+							<F N="jce/node/com/qq/taf/NodePrxCallback.java"/>
+							<F N="jce/node/com/qq/taf/NodePrxHelper.java"/>
+							<F N="jce/node/com/qq/taf/PatchInfo.java"/>
+							<F N="jce/node/com/qq/taf/PatchInfoHolder.java"/>
+							<F N="jce/node/com/qq/taf/PatchRequest.java"/>
+							<F N="jce/node/com/qq/taf/PatchRequestHolder.java"/>
+							<F N="jce/node/com/qq/taf/ServerState.java"/>
+							<F N="jce/node/com/qq/taf/ServerStateInfo.java"/>
+							<F N="jce/node/com/qq/taf/ServerStateInfoHolder.java"/>
+						</Folder>
+					</Folder>
+				</Folder>
+				<F N="jce/node/Node.cpp"/>
+				<F N="jce/node/Node.h"/>
+				<F N="jce/node/Node.jce"/>
+				<F N="jce/node/NodeDescriptor.h"/>
+				<F N="jce/node/NodeDescriptor.jce"/>
+			</Folder>
+			<Folder Name="nodeF">
+				<F N="jce/nodeF/NodeF.cpp"/>
+				<F N="jce/nodeF/NodeF.h"/>
+				<F N="jce/nodeF/NodeF.jce"/>
+			</Folder>
+			<Folder Name="notify">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="taf">
+							<F N="jce/notify/com/qq/taf/NotifyInfo.java"/>
+							<F N="jce/notify/com/qq/taf/NotifyInfoHolder.java"/>
+							<F N="jce/notify/com/qq/taf/NotifyItem.java"/>
+							<F N="jce/notify/com/qq/taf/NotifyItemHolder.java"/>
+							<F N="jce/notify/com/qq/taf/NotifyKey.java"/>
+							<F N="jce/notify/com/qq/taf/NotifyKeyHolder.java"/>
+							<F N="jce/notify/com/qq/taf/NOTIFYLEVEL.java"/>
+							<F N="jce/notify/com/qq/taf/NotifyPrx.java"/>
+							<F N="jce/notify/com/qq/taf/NotifyPrxCallback.java"/>
+							<F N="jce/notify/com/qq/taf/NotifyPrxHelper.java"/>
+						</Folder>
+					</Folder>
+				</Folder>
+				<F N="jce/notify/Notify.cpp"/>
+				<F N="jce/notify/Notify.h"/>
+				<F N="jce/notify/Notify.jce"/>
+			</Folder>
+			<Folder Name="patch">
+				<F N="jce/patch/Patch.cpp"/>
+				<F N="jce/patch/Patch.h"/>
+				<F N="jce/patch/Patch.jce"/>
+			</Folder>
+			<Folder Name="property">
+				<F N="jce/property/PropertyDB.h"/>
+				<F N="jce/property/PropertyDB.jce"/>
+			</Folder>
+			<Folder Name="querystat">
+				<F N="jce/querystat/QueryStatServant.cpp"/>
+				<F N="jce/querystat/QueryStatServant.h"/>
+				<F N="jce/querystat/QueryStatServant.jce"/>
+			</Folder>
+			<Folder Name="registry">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="taf">
+							<F N="jce/registry/com/qq/taf/AdminRegPrx.java"/>
+							<F N="jce/registry/com/qq/taf/AdminRegPrxCallback.java"/>
+							<F N="jce/registry/com/qq/taf/AdminRegPrxHelper.java"/>
+							<F N="jce/registry/com/qq/taf/ServerStateDesc.java"/>
+							<F N="jce/registry/com/qq/taf/ServerStateDescHolder.java"/>
+						</Folder>
+					</Folder>
+				</Folder>
+				<F N="jce/registry/AdminReg.cpp"/>
+				<F N="jce/registry/AdminReg.h"/>
+				<F N="jce/registry/AdminReg.jce"/>
+				<F N="jce/registry/Registry.cpp"/>
+				<F N="jce/registry/Registry.h"/>
+				<F N="jce/registry/Registry.jce"/>
+				<F N="jce/registry/RegistryDescriptor.h"/>
+				<F N="jce/registry/RegistryDescriptor.jce"/>
+			</Folder>
+			<Folder Name="servant">
+				<F N="jce/servant/AdminF.cpp"/>
+				<F N="jce/servant/AdminF.h"/>
+				<F N="jce/servant/AdminF.jce"/>
+				<F N="jce/servant/BaseF.h"/>
+				<F N="jce/servant/BaseF.jce"/>
+				<F N="jce/servant/BusF.h"/>
+				<F N="jce/servant/BusF.jce"/>
+				<F N="jce/servant/EndpointF.h"/>
+				<F N="jce/servant/EndpointF.jce"/>
+				<F N="jce/servant/PropertyF.cpp"/>
+				<F N="jce/servant/PropertyF.h"/>
+				<F N="jce/servant/PropertyF.jce"/>
+				<F N="jce/servant/QueryF.cpp"/>
+				<F N="jce/servant/QueryF.h"/>
+				<F N="jce/servant/QueryF.jce"/>
+				<F N="jce/servant/StatF.cpp"/>
+				<F N="jce/servant/StatF.h"/>
+				<F N="jce/servant/StatF.jce"/>
+			</Folder>
+			<Folder Name="stat">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="taf">
+							<F N="jce/stat/com/qq/taf/Db.java"/>
+							<F N="jce/stat/com/qq/taf/DbHolder.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryData.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryDataHolder.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryKey.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryKeyHolder.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryPrx.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryPrxCallback.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryPrxHelper.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryValue.java"/>
+							<F N="jce/stat/com/qq/taf/StatQueryValueHolder.java"/>
+						</Folder>
+					</Folder>
+				</Folder>
+				<F N="jce/stat/StatQuery.cpp"/>
+				<F N="jce/stat/StatQuery.h"/>
+				<F N="jce/stat/StatQuery.jce"/>
+			</Folder>
+		</Folder>
+		<Folder Name="kjava_taf">
+			<Folder Name="src">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="jce">
+							<Folder Name="wup">
+								<F N="kjava_taf/src/com/qq/jce/wup/BasicClassTypeUtil.java"/>
+								<F N="kjava_taf/src/com/qq/jce/wup/ObjectCreateException.java"/>
+								<F N="kjava_taf/src/com/qq/jce/wup/UniAttribute.java"/>
+								<F N="kjava_taf/src/com/qq/jce/wup/UniPacket.java"/>
+								<F N="kjava_taf/src/com/qq/jce/wup/WupHexUtil.java"/>
+							</Folder>
+						</Folder>
+						<Folder Name="taf">
+							<Folder Name="jce">
+								<F N="kjava_taf/src/com/qq/taf/jce/JceDecodeException.java"/>
+								<F N="kjava_taf/src/com/qq/taf/jce/JceDisplayer.java"/>
+								<F N="kjava_taf/src/com/qq/taf/jce/JceEncodeException.java"/>
+								<F N="kjava_taf/src/com/qq/taf/jce/JceInputStream.java"/>
+								<F N="kjava_taf/src/com/qq/taf/jce/JceOutputStream.java"/>
+								<F N="kjava_taf/src/com/qq/taf/jce/JceStruct.java"/>
+								<F N="kjava_taf/src/com/qq/taf/jce/JceUtil.java"/>
+							</Folder>
+							<Folder Name="proxy">
+								<Folder Name="utils">
+									<F N="kjava_taf/src/com/qq/taf/proxy/utils/HexUtil.java"/>
+									<F N="kjava_taf/src/com/qq/taf/proxy/utils/WrapByteArrayInputStream.java"/>
+									<F N="kjava_taf/src/com/qq/taf/proxy/utils/WrapByteArrayOutputStream.java"/>
+									<F N="kjava_taf/src/com/qq/taf/proxy/utils/WrapDataInputStream.java"/>
+								</Folder>
+							</Folder>
+							<F N="kjava_taf/src/com/qq/taf/RequestPacket.java"/>
+						</Folder>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="temp">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="ddz">
+							<Folder Name="MiniGameProtoDDZ">
+								<F N="kjava_taf/temp/com/qq/ddz/MiniGameProtoDDZ/TDDZSoMsgSCFinishRound.java"/>
+							</Folder>
+						</Folder>
+					</Folder>
+				</Folder>
+				<Folder Name="MiniGameProto">
+					<F N="kjava_taf/temp/MiniGameProto/Const.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/MSGID.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/MSGTYPE.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/ROOM_EVENTID.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgHead.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgNotifyVerifyCode.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgPushGameEvent.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgPushLoadRes.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgPushMessage.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgPushRoomEvent.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgPushSpeedTest.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgPushSpeedTestAck.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgPushTableMsg.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestHello.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestKickPlayer.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestListRoom.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestListTable.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestListZone.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestLogin.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestLogout.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestPlayData.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestQueryTable.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestReplay.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestSitDown.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestStandUp.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestStartGame.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestTalkOnTable.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgRequestVerifyCode.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseHello.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseKickPlayer.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseListRoom.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseListTable.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseListZone.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseLogin.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseLogout.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponsePlayData.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseQueryTable.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseReplay.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseSitDown.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseStandUp.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseStartGame.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TMsgResponseTalkOnTable.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TPackage.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TPlayerInfo.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TRoomEvent.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TRoomInfo.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TTableInfo.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TTest.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TTestA.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TTestB.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TUserSpeed.java"/>
+					<F N="kjava_taf/temp/MiniGameProto/TZoneInfo.java"/>
+				</Folder>
+				<Folder Name="MQQDLoader">
+					<F N="kjava_taf/temp/MQQDLoader/AppInfo.java"/>
+					<F N="kjava_taf/temp/MQQDLoader/MQQDL_ERRCODE.java"/>
+					<F N="kjava_taf/temp/MQQDLoader/RepInfoPack.java"/>
+					<F N="kjava_taf/temp/MQQDLoader/ReqExitPack.java"/>
+					<F N="kjava_taf/temp/MQQDLoader/ReqHandShakePack.java"/>
+					<F N="kjava_taf/temp/MQQDLoader/ResHandShakePack.java"/>
+					<F N="kjava_taf/temp/MQQDLoader/ResInfoPack.java"/>
+				</Folder>
+			</Folder>
+			<Folder Name="test">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="jce">
+							<Folder Name="wup">
+								<Folder Name="test">
+									<F N="kjava_taf/test/com/qq/jce/wup/test/FriendInfo.java"/>
+									<F N="kjava_taf/test/com/qq/jce/wup/test/FriendInfoHolder.java"/>
+									<F N="kjava_taf/test/com/qq/jce/wup/test/HexUtils.java"/>
+									<F N="kjava_taf/test/com/qq/jce/wup/test/IPackageTest.java"/>
+									<F N="kjava_taf/test/com/qq/jce/wup/test/PackageTest2.java"/>
+									<F N="kjava_taf/test/com/qq/jce/wup/test/TDDZSoMsgSCFinishRoundTest.java"/>
+									<F N="kjava_taf/test/com/qq/jce/wup/test/Test.java"/>
+									<F N="kjava_taf/test/com/qq/jce/wup/test/UserInfo.java"/>
+									<F N="kjava_taf/test/com/qq/jce/wup/test/UserInfoHolder.java"/>
+								</Folder>
+							</Folder>
+						</Folder>
+					</Folder>
+				</Folder>
+				<Folder Name="MTT">
+					<F N="kjava_taf/test/MTT/LoginRespTest.java"/>
+					<F N="kjava_taf/test/MTT/LoginRsp.java"/>
+					<F N="kjava_taf/test/MTT/UpdateRsp.java"/>
+					<F N="kjava_taf/test/MTT/VerifyRsp.java"/>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="script">
+			<Folder Name="demo">
+				<F N="script/demo/DemoServant.cpp"/>
+				<F N="script/demo/DemoServant.h"/>
+				<F N="script/demo/DemoServant.jce"/>
+				<F N="script/demo/DemoServantImp.cpp"/>
+				<F N="script/demo/DemoServantImp.h"/>
+				<F N="script/demo/DemoServer.cpp"/>
+				<F N="script/demo/DemoServer.h"/>
+			</Folder>
+			<Folder Name="HelloServer">
+				<Folder Name="client4c++">
+					<F N="script/HelloServer/client4c++/main.cpp"/>
+				</Folder>
+				<Folder Name="client4java">
+					<F N="script/HelloServer/client4java/TestHello.java"/>
+				</Folder>
+				<Folder Name="src">
+					<F N="script/HelloServer/src/fast.conf"/>
+					<F N="script/HelloServer/src/hello.conf"/>
+					<F N="script/HelloServer/src/Hello.cpp"/>
+					<F N="script/HelloServer/src/Hello.h"/>
+					<F N="script/HelloServer/src/Hello.jce"/>
+					<F N="script/HelloServer/src/HelloImp.h"/>
+					<F N="script/HelloServer/src/HelloServer.cpp"/>
+					<F N="script/HelloServer/src/HelloServer.h"/>
+					<F N="script/HelloServer/src/slow.conf"/>
+				</Folder>
+				<Folder Name="srcB">
+					<F N="script/HelloServer/srcB/hello.conf"/>
+					<F N="script/HelloServer/srcB/Hello.cpp"/>
+					<F N="script/HelloServer/srcB/Hello.h"/>
+					<F N="script/HelloServer/srcB/Hello.jce"/>
+					<F N="script/HelloServer/srcB/HelloImp.h"/>
+					<F N="script/HelloServer/srcB/HelloServer.cpp"/>
+					<F N="script/HelloServer/srcB/HelloServer.h"/>
+				</Folder>
+			</Folder>
+			<Folder Name="install_taf">
+				<Folder Name="taf">
+					<Folder Name="tafadmin">
+						<Folder Name="conf">
+							<F N="script/install_taf/taf/tafadmin/conf/admin.config.conf"/>
+						</Folder>
+					</Folder>
+					<Folder Name="tafnode">
+						<Folder Name="conf">
+							<F N="script/install_taf/taf/tafnode/conf/node.config.conf"/>
+						</Folder>
+					</Folder>
+					<Folder Name="tafregistry">
+						<Folder Name="conf">
+							<F N="script/install_taf/taf/tafregistry/conf/registry.config.conf"/>
+						</Folder>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="taf">
+				<Folder Name="tafadmin">
+					<Folder Name="conf">
+						<F N="script/taf/tafadmin/conf/admin.config.conf"/>
+					</Folder>
+				</Folder>
+				<Folder Name="tafnode">
+					<Folder Name="conf">
+						<F N="script/taf/tafnode/conf/node.config.conf"/>
+					</Folder>
+				</Folder>
+				<Folder Name="tafregistry">
+					<Folder Name="conf">
+						<F N="script/taf/tafregistry/conf/registry.config.conf"/>
+					</Folder>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="src">
+			<Folder Name="adminclient">
+				<F N="src/adminclient/Client.cpp"/>
+				<F N="src/adminclient/Client.h"/>
+				<F N="src/adminclient/Grammar.cpp"/>
+				<F N="src/adminclient/Grammar.hpp"/>
+				<F N="src/adminclient/Parser.cpp"/>
+				<F N="src/adminclient/Parser.h"/>
+				<F N="src/adminclient/Scanner.cpp"/>
+			</Folder>
+			<Folder Name="config">
+				<F N="src/config/Config.cpp"/>
+				<F N="src/config/ConfigImp.cpp"/>
+				<F N="src/config/ConfigImp.h"/>
+				<F N="src/config/ConfigServer.cpp"/>
+				<F N="src/config/ConfigServer.h"/>
+				<F N="src/config/main.cpp"/>
+			</Folder>
+			<Folder Name="hce2cpp">
+				<F N="src/hce2cpp/element.cpp"/>
+				<F N="src/hce2cpp/element.h"/>
+				<F N="src/hce2cpp/hce.tab.cpp"/>
+				<F N="src/hce2cpp/hce.tab.hpp"/>
+				<F N="src/hce2cpp/hce2cpp.cpp"/>
+				<F N="src/hce2cpp/hce2cpp.h"/>
+				<F N="src/hce2cpp/lex.yy.cpp"/>
+				<F N="src/hce2cpp/main.cpp"/>
+				<F N="src/hce2cpp/parse.cpp"/>
+				<F N="src/hce2cpp/parse.h"/>
+			</Folder>
+			<Folder Name="jce2arraycpp">
+				<F N="src/jce2arraycpp/jce2arraycpp.cpp"/>
+				<F N="src/jce2arraycpp/jce2arraycpp.h"/>
+				<F N="src/jce2arraycpp/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2as">
+				<F N="src/jce2as/jce2as.cpp"/>
+				<F N="src/jce2as/jce2as.h"/>
+				<F N="src/jce2as/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2c">
+				<F N="src/jce2c/jce2c.cpp"/>
+				<F N="src/jce2c/jce2c.h"/>
+				<F N="src/jce2c/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2cpp">
+				<F N="src/jce2cpp/jce2cpp.cpp"/>
+				<F N="src/jce2cpp/jce2cpp.h"/>
+				<F N="src/jce2cpp/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2cs">
+				<F N="src/jce2cs/jce2cs.cpp"/>
+				<F N="src/jce2cs/jce2cs.h"/>
+				<F N="src/jce2cs/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2java">
+				<F N="src/jce2java/jce2java.cpp"/>
+				<F N="src/jce2java/jce2java.h"/>
+				<F N="src/jce2java/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2js">
+				<F N="src/jce2js/jce2js.cpp"/>
+				<F N="src/jce2js/jce2js.h"/>
+				<F N="src/jce2js/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2kjava">
+				<F N="src/jce2kjava/jce2kjava.cpp"/>
+				<F N="src/jce2kjava/jce2kjava.h"/>
+				<F N="src/jce2kjava/jce2kjavap.cpp"/>
+				<F N="src/jce2kjava/jce2kjavap.h"/>
+				<F N="src/jce2kjava/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2mcarecpp">
+				<F N="src/jce2mcarecpp/jce2mcarecpp.cpp"/>
+				<F N="src/jce2mcarecpp/jce2mcarecpp.h"/>
+				<F N="src/jce2mcarecpp/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2objectc">
+				<F N="src/jce2objectc/jce2oc.cpp"/>
+				<F N="src/jce2objectc/jce2oc.h"/>
+				<F N="src/jce2objectc/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2php">
+				<F N="src/jce2php/jce2php.cpp"/>
+				<F N="src/jce2php/jce2php.h"/>
+				<F N="src/jce2php/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2symcpp">
+				<F N="src/jce2symcpp/jce2symcpp.cpp"/>
+				<F N="src/jce2symcpp/jce2symcpp.h"/>
+				<F N="src/jce2symcpp/main.cpp"/>
+			</Folder>
+			<Folder Name="jceAnalyzer">
+				<Folder Name="testjce1">
+					<F N="src/jceAnalyzer/testjce1/TestInfo.jce"/>
+				</Folder>
+				<Folder Name="testjce2">
+					<F N="src/jceAnalyzer/testjce2/TestInfo.jce"/>
+				</Folder>
+				<Folder Name="testwup1">
+					<F N="src/jceAnalyzer/testwup1/NeighborCommon.jce"/>
+					<F N="src/jceAnalyzer/testwup1/NeighborPackage.jce"/>
+				</Folder>
+				<Folder Name="testwup2">
+					<F N="src/jceAnalyzer/testwup2/NeighborCommon.jce"/>
+					<F N="src/jceAnalyzer/testwup2/NeighborPackage.jce"/>
+				</Folder>
+				<F N="src/jceAnalyzer/jceAnalyzer.cpp"/>
+				<F N="src/jceAnalyzer/jceAnalyzer.h"/>
+				<F N="src/jceAnalyzer/main.cpp"/>
+				<F N="src/jceAnalyzer/tmpWupRequestF.h"/>
+				<F N="src/jceAnalyzer/wupRequestF.h"/>
+			</Folder>
+			<Folder Name="libconfig">
+				<F N="src/libconfig/taf_config.cpp"/>
+			</Folder>
+			<Folder Name="libhessian">
+				<F N="src/libhessian/HessianInput.cpp"/>
+				<F N="src/libhessian/HessianOutput.cpp"/>
+				<F N="src/libhessian/HessianProxy.cpp"/>
+				<F N="src/libhessian/HessianWrappers.cpp"/>
+			</Folder>
+			<Folder Name="liblog">
+				<F N="src/liblog/taf_logger.cpp"/>
+			</Folder>
+			<Folder Name="libnodeF">
+				<F N="src/libnodeF/NodeF.cpp"/>
+				<F N="src/libnodeF/taf_nodeF.cpp"/>
+			</Folder>
+			<Folder Name="libnotify">
+				<F N="src/libnotify/taf_notify.cpp"/>
+			</Folder>
+			<Folder Name="libparse">
+				<F N="src/libparse/element.cpp"/>
+				<F N="src/libparse/jce.tab.cpp"/>
+				<F N="src/libparse/jce.tab.hpp"/>
+				<F N="src/libparse/lex.yy.cpp"/>
+				<F N="src/libparse/parse.cpp"/>
+			</Folder>
+			<Folder Name="libpatch">
+				<F N="src/libpatch/taf_patch.cpp"/>
+			</Folder>
+			<Folder Name="libservant">
+				<F N="src/libservant/AdapterProxy.cpp"/>
+				<F N="src/libservant/AdminF.cpp"/>
+				<F N="src/libservant/AdminServant.cpp"/>
+				<F N="src/libservant/AppCache.cpp"/>
+				<F N="src/libservant/Application.cpp"/>
+				<F N="src/libservant/AppProtocol.cpp"/>
+				<F N="src/libservant/AsyncProcThread.cpp"/>
+				<F N="src/libservant/BaseNotify.cpp"/>
+				<F N="src/libservant/Communicator.cpp"/>
+				<F N="src/libservant/Connector.cpp"/>
+				<F N="src/libservant/EndpointInfo.cpp"/>
+				<F N="src/libservant/FDReactor.cpp"/>
+				<F N="src/libservant/Global.cpp"/>
+				<F N="src/libservant/JceCurrent.cpp"/>
+				<F N="src/libservant/Message.cpp"/>
+				<F N="src/libservant/NetworkUtil.cpp"/>
+				<F N="src/libservant/NotifyObserver.cpp"/>
+				<F N="src/libservant/ObjectProxy.cpp"/>
+				<F N="src/libservant/ObjectProxyFactory.cpp"/>
+				<F N="src/libservant/PropertyF.cpp"/>
+				<F N="src/libservant/PropertyReport.cpp"/>
+				<F N="src/libservant/QueryEndpoint.cpp"/>
+				<F N="src/libservant/QueryF.cpp"/>
+				<F N="src/libservant/QueueTimeout.cpp"/>
+				<F N="src/libservant/Servant.cpp"/>
+				<F N="src/libservant/ServantHandle.cpp"/>
+				<F N="src/libservant/ServantHelper.cpp"/>
+				<F N="src/libservant/ServantProxy.cpp"/>
+				<F N="src/libservant/ServantProxyFactory.cpp"/>
+				<F N="src/libservant/StatF.cpp"/>
+				<F N="src/libservant/StatReport.cpp"/>
+				<F N="src/libservant/Transceiver.cpp"/>
+			</Folder>
+			<Folder Name="libutil">
+				<F N="src/libutil/tc_base64.cpp"/>
+				<F N="src/libutil/tc_bitmap.cpp"/>
+				<F N="src/libutil/tc_cgi.cpp"/>
+				<F N="src/libutil/tc_clientsocket.cpp"/>
+				<F N="src/libutil/tc_common.cpp"/>
+				<F N="src/libutil/tc_config.cpp"/>
+				<F N="src/libutil/tc_des.cpp"/>
+				<F N="src/libutil/tc_dyn_object.cpp"/>
+				<F N="src/libutil/tc_encoder.cpp"/>
+				<F N="src/libutil/tc_epoll_server.cpp"/>
+				<F N="src/libutil/tc_epoller.cpp"/>
+				<F N="src/libutil/tc_ex.cpp"/>
+				<F N="src/libutil/tc_fifo.cpp"/>
+				<F N="src/libutil/tc_file.cpp"/>
+				<F N="src/libutil/tc_file_mutex.cpp"/>
+				<F N="src/libutil/tc_hashmap.cpp"/>
+				<F N="src/libutil/tc_hashmap_compact.cpp"/>
+				<F N="src/libutil/tc_http.cpp"/>
+				<F N="src/libutil/tc_http_async.cpp"/>
+				<F N="src/libutil/tc_json.cpp"/>
+				<F N="src/libutil/tc_logger.cpp"/>
+				<F N="src/libutil/tc_malloc_chunk.cpp"/>
+				<F N="src/libutil/tc_md5.cpp"/>
+				<F N="src/libutil/tc_mem_chunk.cpp"/>
+				<F N="src/libutil/tc_mem_queue.cpp"/>
+				<F N="src/libutil/tc_mmap.cpp"/>
+				<F N="src/libutil/tc_multi_hashmap.cpp"/>
+				<F N="src/libutil/tc_mysql.cpp"/>
+				<F N="src/libutil/tc_option.cpp"/>
+				<F N="src/libutil/tc_pack.cpp"/>
+				<F N="src/libutil/tc_parsepara.cpp"/>
+				<F N="src/libutil/tc_rbtree.cpp"/>
+				<F N="src/libutil/tc_sem_mutex.cpp"/>
+				<F N="src/libutil/tc_shm.cpp"/>
+				<F N="src/libutil/tc_socket.cpp"/>
+				<F N="src/libutil/tc_tea.cpp"/>
+				<F N="src/libutil/tc_thread.cpp"/>
+				<F N="src/libutil/tc_thread_cond.cpp"/>
+				<F N="src/libutil/tc_thread_mutex.cpp"/>
+				<F N="src/libutil/tc_thread_pool.cpp"/>
+				<F N="src/libutil/tc_thread_rwlock.cpp"/>
+				<F N="src/libutil/tc_timeprovider.cpp"/>
+			</Folder>
+			<Folder Name="log">
+				<F N="src/log/Log.cpp"/>
+				<F N="src/log/LogImp.cpp"/>
+				<F N="src/log/LogImp.h"/>
+				<F N="src/log/LogServer.cpp"/>
+				<F N="src/log/LogServer.h"/>
+				<F N="src/log/main.cpp"/>
+			</Folder>
+			<Folder Name="node">
+				<F N="src/node/Activator.cpp"/>
+				<F N="src/node/Activator.h"/>
+				<F N="src/node/BatchPatchThread.cpp"/>
+				<F N="src/node/BatchPatchThread.h"/>
+				<F N="src/node/CommandAddFile.h"/>
+				<F N="src/node/CommandDestroy.h"/>
+				<F N="src/node/CommandDownload.h"/>
+				<F N="src/node/CommandLoad.h"/>
+				<F N="src/node/CommandLoadPatch.h"/>
+				<F N="src/node/CommandNotify.h"/>
+				<F N="src/node/CommandPatch.h"/>
+				<F N="src/node/CommandStart.h"/>
+				<F N="src/node/CommandStop.h"/>
+				<F N="src/node/KeepAliveThread.cpp"/>
+				<F N="src/node/KeepAliveThread.h"/>
+				<F N="src/node/main.cpp"/>
+				<F N="src/node/NodeImp.cpp"/>
+				<F N="src/node/NodeImp.h"/>
+				<F N="src/node/NodeServer.cpp"/>
+				<F N="src/node/NodeServer.h"/>
+				<F N="src/node/PlatformInfo.cpp"/>
+				<F N="src/node/PlatformInfo.h"/>
+				<F N="src/node/PropertyReporter.h"/>
+				<F N="src/node/RegistryProxy.h"/>
+				<F N="src/node/ServerCommand.h"/>
+				<F N="src/node/ServerFactory.cpp"/>
+				<F N="src/node/ServerFactory.h"/>
+				<F N="src/node/ServerImp.cpp"/>
+				<F N="src/node/ServerImp.h"/>
+				<F N="src/node/ServerLimitResource.cpp"/>
+				<F N="src/node/ServerLimitResource.h"/>
+				<F N="src/node/ServerObject.cpp"/>
+				<F N="src/node/ServerObject.h"/>
+			</Folder>
+			<Folder Name="notify">
+				<F N="src/notify/main.cpp"/>
+				<F N="src/notify/Notify.cpp"/>
+				<F N="src/notify/NotifyImp.cpp"/>
+				<F N="src/notify/NotifyImp.h"/>
+				<F N="src/notify/NotifyServer.cpp"/>
+				<F N="src/notify/NotifyServer.h"/>
+			</Folder>
+			<Folder Name="patch">
+				<F N="src/patch/main.cpp"/>
+				<F N="src/patch/Patch.cpp"/>
+				<F N="src/patch/PatchCache.cpp"/>
+				<F N="src/patch/PatchCache.h"/>
+				<F N="src/patch/PatchImp.cpp"/>
+				<F N="src/patch/PatchImp.h"/>
+				<F N="src/patch/PatchServer.cpp"/>
+				<F N="src/patch/PatchServer.h"/>
+			</Folder>
+			<Folder Name="patchclient">
+				<F N="src/patchclient/patchclient.cpp"/>
+			</Folder>
+			<Folder Name="PropertyDimenServer">
+				<F N="src/PropertyDimenServer/DbManager.cpp"/>
+				<F N="src/PropertyDimenServer/DbManager.h"/>
+				<F N="src/PropertyDimenServer/main.cpp"/>
+				<F N="src/PropertyDimenServer/PropertyDimen.jce"/>
+				<F N="src/PropertyDimenServer/PropertyDimenHashMap.h"/>
+				<F N="src/PropertyDimenServer/PropertyDimenImp.cpp"/>
+				<F N="src/PropertyDimenServer/PropertyDimenImp.h"/>
+				<F N="src/PropertyDimenServer/PropertyDimenServer.cpp"/>
+				<F N="src/PropertyDimenServer/PropertyDimenServer.h"/>
+				<F N="src/PropertyDimenServer/ReapThread.cpp"/>
+				<F N="src/PropertyDimenServer/ReapThread.h"/>
+				<F N="src/PropertyDimenServer/ReportPropertyDimen.jce"/>
+			</Folder>
+			<Folder Name="property">
+				<F N="src/property/main.cpp"/>
+				<F N="src/property/PropertyDbManager.cpp"/>
+				<F N="src/property/PropertyDbManager.h"/>
+				<F N="src/property/PropertyHashMap.h"/>
+				<F N="src/property/PropertyImp.cpp"/>
+				<F N="src/property/PropertyImp.h"/>
+				<F N="src/property/PropertyReapThread.cpp"/>
+				<F N="src/property/PropertyReapThread.h"/>
+				<F N="src/property/PropertyServer.cpp"/>
+				<F N="src/property/PropertyServer.h"/>
+			</Folder>
+			<Folder Name="queryStatServer">
+				<Folder Name="client">
+					<F N="src/queryStatServer/client/main.cpp"/>
+					<F N="src/queryStatServer/client/queryStatServant.jce"/>
+				</Folder>
+				<F N="src/queryStatServer/DbProxy.cpp"/>
+				<F N="src/queryStatServer/DbProxy.h"/>
+				<F N="src/queryStatServer/DbThread.cpp"/>
+				<F N="src/queryStatServer/DbThread.h"/>
+				<F N="src/queryStatServer/decodejson.cpp"/>
+				<F N="src/queryStatServer/JSON_parser.c"/>
+				<F N="src/queryStatServer/JSON_parser.h"/>
+				<F N="src/queryStatServer/QueryStatServantImp.cpp"/>
+				<F N="src/queryStatServer/QueryStatServantImp.h"/>
+				<F N="src/queryStatServer/QueryStatServer.cpp"/>
+				<F N="src/queryStatServer/QueryStatServer.h"/>
+				<F N="src/queryStatServer/RequestDecoder.cpp"/>
+				<F N="src/queryStatServer/RequestDecoder.h"/>
+			</Folder>
+			<Folder Name="registry">
+				<F N="src/registry/AdminRegImp.cpp"/>
+				<F N="src/registry/AdminRegImp.h"/>
+				<F N="src/registry/CheckSettingState.cpp"/>
+				<F N="src/registry/CheckSettingState.h"/>
+				<F N="src/registry/DbHandle.cpp"/>
+				<F N="src/registry/DbHandle.h"/>
+				<F N="src/registry/main.cpp"/>
+				<F N="src/registry/QueryImp.cpp"/>
+				<F N="src/registry/QueryImp.h"/>
+				<F N="src/registry/ReapThread.cpp"/>
+				<F N="src/registry/ReapThread.h"/>
+				<F N="src/registry/RegistryImp.cpp"/>
+				<F N="src/registry/RegistryImp.h"/>
+				<F N="src/registry/RegistryProcThread.cpp"/>
+				<F N="src/registry/RegistryProcThread.h"/>
+				<F N="src/registry/RegistryServer.cpp"/>
+				<F N="src/registry/RegistryServer.h"/>
+				<F N="src/registry/routerProxy.cpp"/>
+				<F N="src/registry/routerProxy.h"/>
+				<F N="src/registry/routerProxy.jce"/>
+				<F N="src/registry/RouterProxyCallback.cpp"/>
+				<F N="src/registry/RouterProxyCallback.h"/>
+			</Folder>
+			<Folder Name="stat">
+				<F N="src/stat/main.cpp"/>
+				<F N="src/stat/ReapSSDThread.cpp"/>
+				<F N="src/stat/ReapSSDThread.h"/>
+				<F N="src/stat/StatDbManager.cpp"/>
+				<F N="src/stat/StatDbManager.h"/>
+				<F N="src/stat/StatHashMap.h"/>
+				<F N="src/stat/StatImp.cpp"/>
+				<F N="src/stat/StatImp.h"/>
+				<F N="src/stat/StatQueryHashMap.h"/>
+				<F N="src/stat/StatQueryImp.cpp"/>
+				<F N="src/stat/StatQueryImp.h"/>
+				<F N="src/stat/StatServer.cpp"/>
+				<F N="src/stat/StatServer.h"/>
+			</Folder>
+			<Folder Name="xmlproxy">
+				<F N="src/xmlproxy/Markup.cpp"/>
+				<F N="src/xmlproxy/Markup.h"/>
+				<F N="src/xmlproxy/taf.tafxmlproxy.config.conf"/>
+				<F N="src/xmlproxy/tafxmlproxy.conf"/>
+				<F N="src/xmlproxy/TransFunc.cpp"/>
+				<F N="src/xmlproxy/TransFunc.h"/>
+				<F N="src/xmlproxy/TransProxyManager.cpp"/>
+				<F N="src/xmlproxy/TransProxyManager.h"/>
+				<F N="src/xmlproxy/XmlProxyCallback.cpp"/>
+				<F N="src/xmlproxy/XmlProxyCallback.h"/>
+				<F N="src/xmlproxy/XmlProxyImp.cpp"/>
+				<F N="src/xmlproxy/XmlProxyImp.h"/>
+				<F N="src/xmlproxy/XmlProxyProtocol.h"/>
+				<F N="src/xmlproxy/XmlProxyServer.cpp"/>
+				<F N="src/xmlproxy/XmlProxyServer.h"/>
+			</Folder>
+			<Folder Name="xmltrans">
+				<F N="src/xmltrans/Markup.cpp"/>
+				<F N="src/xmltrans/Markup.h"/>
+				<F N="src/xmltrans/xmltrans.cpp"/>
+				<F N="src/xmltrans/xmltrans.h"/>
+			</Folder>
+		</Folder>
+		<Folder Name="taf-java">
+			<Folder Name="src">
+				<Folder Name="com">
+					<Folder Name="qq">
+						<Folder Name="jce">
+							<Folder Name="wup">
+								<F N="taf-java/src/com/qq/jce/wup/BasicClassTypeUtil.java"/>
+								<F N="taf-java/src/com/qq/jce/wup/ObjectCreateException.java"/>
+								<F N="taf-java/src/com/qq/jce/wup/OldUniAttribute.java"/>
+								<F N="taf-java/src/com/qq/jce/wup/TafUniPacket.java"/>
+								<F N="taf-java/src/com/qq/jce/wup/UniAttribute.java"/>
+								<F N="taf-java/src/com/qq/jce/wup/UniPacket.java"/>
+								<F N="taf-java/src/com/qq/jce/wup/WupHexUtil.java"/>
+							</Folder>
+						</Folder>
+						<Folder Name="taf">
+							<Folder Name="cnst">
+								<F N="taf-java/src/com/qq/taf/cnst/Const.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEASYNCCALLTIMEOUT.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEMESSAGETYPEDYED.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEMESSAGETYPEGRID.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEMESSAGETYPEHASH.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEMESSAGETYPENULL.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEMESSAGETYPEROUTED.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEMESSAGETYPESAMPLE.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCENORMAL.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEONEWAY.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEPROXYCONNECTERR.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCESERVERDECODEERR.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCESERVERENCODEERR.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCESERVERNOFUNCERR.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCESERVERNOSERVANTERR.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCESERVERQUEUETIMEOUT.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCESERVERRESETGRID.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCESERVERSUCCESS.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCESERVERUNKNOWNERR.java"/>
+								<F N="taf-java/src/com/qq/taf/cnst/JCEVERSION.java"/>
+							</Folder>
+							<Folder Name="holder">
+								<F N="taf-java/src/com/qq/taf/holder/JceArrayHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceArrayListHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceBeanHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceBooleanHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceByteHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceDoubleHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceFloatHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceHashMapHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceIntHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceListHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceLongHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceMapHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceShortHolder.java"/>
+								<F N="taf-java/src/com/qq/taf/holder/JceStringHolder.java"/>
+							</Folder>
+							<Folder Name="jce">
+								<Folder Name="dynamic">
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/ByteArrayField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/ByteField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/DoubleField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/DynamicInputStream.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/DynamicOutputStream.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/FloatField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/IntField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/JceField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/ListField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/LongField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/MapField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/NumberField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/ShortField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/StringField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/StructField.java"/>
+									<F N="taf-java/src/com/qq/taf/jce/dynamic/ZeroField.java"/>
+								</Folder>
+								<F N="taf-java/src/com/qq/taf/jce/HexUtil.java"/>
+								<F N="taf-java/src/com/qq/taf/jce/JceDecodeException.java"/>
+								<F N="taf-java/src/com/qq/taf/jce/JceDisplayer.java"/>
+								<F N="taf-java/src/com/qq/taf/jce/JceEncodeException.java"/>
+								<F N="taf-java/src/com/qq/taf/jce/JceInputStream.java"/>
+								<F N="taf-java/src/com/qq/taf/jce/JceOutputStream.java"/>
+								<F N="taf-java/src/com/qq/taf/jce/JceStruct.java"/>
+								<F N="taf-java/src/com/qq/taf/jce/JceUtil.java"/>
+							</Folder>
+							<Folder Name="proxy">
+								<Folder Name="codec">
+									<F N="taf-java/src/com/qq/taf/proxy/codec/JceCodec.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/codec/JceMessage.java"/>
+								</Folder>
+								<Folder Name="conn">
+									<F N="taf-java/src/com/qq/taf/proxy/conn/EndPointAdapter.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/conn/EndPointEventListen.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/conn/FutureCache.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/conn/ProxyConnRouter.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/conn/ServiceEndPoint.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/conn/ServiceEndPointInfo.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/conn/ServiceEndPointListener.java"/>
+								</Folder>
+								<Folder Name="exec">
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafCallTimeoutException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafNotSendException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafProxyConfigException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafProxyException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafProxyNoConnException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafProxyOverloadException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafServerDecodeException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafServerEncodeException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafServerNoFuncException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafServerNoServantException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafServerQueueTimeoutException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafServerResetGridException.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/exec/TafServerUnknownException.java"/>
+								</Folder>
+								<Folder Name="utils">
+									<F N="taf-java/src/com/qq/taf/proxy/utils/NameRunnable.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/NameThreadFactory.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/NullTimeoutHandler.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/RandomUtils.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/TafUtils.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/TimeoutCache.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/TimeoutCacheIterator.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/TimeoutHandler.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/TimeoutNode.java"/>
+									<F N="taf-java/src/com/qq/taf/proxy/utils/TimeoutNodeList.java"/>
+								</Folder>
+								<F N="taf-java/src/com/qq/taf/proxy/CallbackHandler.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/Communicator.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/CommunicatorConfig.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/CommunicatorFactory.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/InvokeInfo.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/IServantProxy.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/IServicesInfo.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/Pair.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ProxyConfig.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ProxyStatTool.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/SendMessage.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/SendMsgStatBody.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ServantFuture.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ServantInterface.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ServantProxy.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ServantProxyCallback.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ServantProxyRouter.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ServantProxyThreadData.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ServiceInfos.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/ServiceInfosRefresher.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/StatResult.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/StatTool.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/TacCallbackHandler.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/TAdapterSelector.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/TafLoggerCenter.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/TafThreadPool.java"/>
+								<F N="taf-java/src/com/qq/taf/proxy/TafTimer.java"/>
+							</Folder>
+							<Folder Name="server">
+								<Folder Name="proxy">
+									<F N="taf-java/src/com/qq/taf/server/proxy/ConfigPrx.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/ConfigPrxCallback.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/ConfigPrxHelper.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/LogPrx.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/LogPrxCallback.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/LogPrxHelper.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyInfo.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyInfoHolder.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyItem.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyItemHolder.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyKey.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyKeyHolder.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NOTIFYLEVEL.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyPrx.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyPrxCallback.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/NotifyPrxHelper.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/PropertyFPrx.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/PropertyFPrxCallback.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/PropertyFPrxHelper.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/ServerFPrx.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/ServerFPrxCallback.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/ServerFPrxHelper.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/ServerInfo.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/ServerInfoHolder.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/StatPropInfo.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/StatPropInfoHolder.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/StatPropMsgBody.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/StatPropMsgBodyHolder.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/StatPropMsgHead.java"/>
+									<F N="taf-java/src/com/qq/taf/server/proxy/StatPropMsgHeadHolder.java"/>
+								</Folder>
+								<Folder Name="util">
+									<Folder Name="ip">
+										<F N="taf-java/src/com/qq/taf/server/util/ip/FuzzyIpDomain.java"/>
+										<F N="taf-java/src/com/qq/taf/server/util/ip/IPList.java"/>
+										<F N="taf-java/src/com/qq/taf/server/util/ip/IPUtil.java"/>
+									</Folder>
+									<F N="taf-java/src/com/qq/taf/server/util/Config.java"/>
+									<F N="taf-java/src/com/qq/taf/server/util/FileUtil.java"/>
+									<F N="taf-java/src/com/qq/taf/server/util/GeneralException.java"/>
+									<F N="taf-java/src/com/qq/taf/server/util/MethodHook.java"/>
+								</Folder>
+								<F N="taf-java/src/com/qq/taf/server/AdapterConfig.java"/>
+								<F N="taf-java/src/com/qq/taf/server/AdminCommands.java"/>
+								<F N="taf-java/src/com/qq/taf/server/AdminServant.java"/>
+								<F N="taf-java/src/com/qq/taf/server/AdminServantImpl.java"/>
+								<F N="taf-java/src/com/qq/taf/server/Application.java"/>
+								<F N="taf-java/src/com/qq/taf/server/ApplicationUtil.java"/>
+								<F N="taf-java/src/com/qq/taf/server/ClientCommunicator.java"/>
+								<F N="taf-java/src/com/qq/taf/server/ClientConfig.java"/>
+								<F N="taf-java/src/com/qq/taf/server/ConfigCenterSupport.java"/>
+								<F N="taf-java/src/com/qq/taf/server/DyeingManager.java"/>
+								<F N="taf-java/src/com/qq/taf/server/Endpoint.java"/>
+								<F N="taf-java/src/com/qq/taf/server/JceCurrent.java"/>
+								<F N="taf-java/src/com/qq/taf/server/LoggerFactory.java"/>
+								<F N="taf-java/src/com/qq/taf/server/ManagedExecutor.java"/>
+								<F N="taf-java/src/com/qq/taf/server/NodeFHelper.java"/>
+								<F N="taf-java/src/com/qq/taf/server/NotifyInvoke.java"/>
+								<F N="taf-java/src/com/qq/taf/server/NotifyObserver.java"/>
+								<F N="taf-java/src/com/qq/taf/server/PropertyReporterFactory.java"/>
+								<F N="taf-java/src/com/qq/taf/server/RemoteConfig.java"/>
+								<F N="taf-java/src/com/qq/taf/server/RemoteNotify.java"/>
+								<F N="taf-java/src/com/qq/taf/server/ResponseHandler.java"/>
+								<F N="taf-java/src/com/qq/taf/server/Servant.java"/>
+								<F N="taf-java/src/com/qq/taf/server/ServerConfig.java"/>
+								<F N="taf-java/src/com/qq/taf/server/ServerStatTool.java"/>
+								<F N="taf-java/src/com/qq/taf/server/SessionChecker.java"/>
+								<F N="taf-java/src/com/qq/taf/server/SystemLogger.java"/>
+							</Folder>
+							<F N="taf-java/src/com/qq/taf/EndpointF.java"/>
+							<F N="taf-java/src/com/qq/taf/EndpointFHolder.java"/>
+							<F N="taf-java/src/com/qq/taf/PingFPrx.java"/>
+							<F N="taf-java/src/com/qq/taf/PingFPrxCallback.java"/>
+							<F N="taf-java/src/com/qq/taf/PingFPrxHelper.java"/>
+							<F N="taf-java/src/com/qq/taf/QueryFPrx.java"/>
+							<F N="taf-java/src/com/qq/taf/QueryFPrxCallback.java"/>
+							<F N="taf-java/src/com/qq/taf/QueryFPrxHelper.java"/>
+							<F N="taf-java/src/com/qq/taf/RequestPacket.java"/>
+							<F N="taf-java/src/com/qq/taf/RequestPacketHolder.java"/>
+							<F N="taf-java/src/com/qq/taf/ResponsePacket.java"/>
+							<F N="taf-java/src/com/qq/taf/ResponsePacketHolder.java"/>
+							<F N="taf-java/src/com/qq/taf/StatFPrx.java"/>
+							<F N="taf-java/src/com/qq/taf/StatFPrxCallback.java"/>
+							<F N="taf-java/src/com/qq/taf/StatFPrxHelper.java"/>
+							<F N="taf-java/src/com/qq/taf/StatMicMsgBody.java"/>
+							<F N="taf-java/src/com/qq/taf/StatMicMsgBodyHolder.java"/>
+							<F N="taf-java/src/com/qq/taf/StatMicMsgHead.java"/>
+							<F N="taf-java/src/com/qq/taf/StatMicMsgHeadHolder.java"/>
+							<F N="taf-java/src/com/qq/taf/StatSampleMsg.java"/>
+							<F N="taf-java/src/com/qq/taf/StatSampleMsgHolder.java"/>
+							<F N="taf-java/src/com/qq/taf/TAF_VERSION.java"/>
+						</Folder>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="test">
+				<Folder Name="src">
+					<Folder Name="com">
+						<Folder Name="qq">
+							<Folder Name="java">
+								<Folder Name="test">
+									<Folder Name="basic">
+										<F N="taf-java/test/src/com/qq/java/test/basic/Basic.java"/>
+										<F N="taf-java/test/src/com/qq/java/test/basic/BasicPrx.java"/>
+										<F N="taf-java/test/src/com/qq/java/test/basic/BasicPrxCallback.java"/>
+										<F N="taf-java/test/src/com/qq/java/test/basic/BasicPrxHelper.java"/>
+										<F N="taf-java/test/src/com/qq/java/test/basic/Send.java"/>
+										<F N="taf-java/test/src/com/qq/java/test/basic/SendHolder.java"/>
+									</Folder>
+									<F N="taf-java/test/src/com/qq/java/test/BasicImpl.java"/>
+									<F N="taf-java/test/src/com/qq/java/test/PressureTest.java"/>
+									<F N="taf-java/test/src/com/qq/java/test/Test.java"/>
+									<F N="taf-java/test/src/com/qq/java/test/TestClient.java"/>
+									<F N="taf-java/test/src/com/qq/java/test/TestDirectClient.java"/>
+									<F N="taf-java/test/src/com/qq/java/test/Tester.java"/>
+									<F N="taf-java/test/src/com/qq/java/test/TestNoQuery.java"/>
+									<F N="taf-java/test/src/com/qq/java/test/TestStat.java"/>
+									<F N="taf-java/test/src/com/qq/java/test/TiredTest.java"/>
+								</Folder>
+							</Folder>
+						</Folder>
+					</Folder>
+					<F N="taf-java/test/src/Basic.jce"/>
+					<F N="taf-java/test/src/client.conf"/>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="test">
+			<Folder Name="admin">
+				<F N="test/admin/main.cpp"/>
+			</Folder>
+			<Folder Name="AServer">
+				<F N="test/AServer/22345.conf"/>
+				<F N="test/AServer/22346.conf"/>
+				<F N="test/AServer/22347.conf"/>
+				<F N="test/AServer/44345.conf"/>
+				<F N="test/AServer/A.jce"/>
+				<F N="test/AServer/AImp.cpp"/>
+				<F N="test/AServer/AImp.h"/>
+				<F N="test/AServer/AServer.cpp"/>
+				<F N="test/AServer/AServer.h"/>
+			</Folder>
+			<Folder Name="asyncHttp">
+				<F N="test/asyncHttp/main.cpp"/>
+				<F N="test/asyncHttp/tc_http_async.cpp"/>
+				<F N="test/asyncHttp/tc_http_async.h"/>
+			</Folder>
+			<Folder Name="client">
+				<F N="test/client/main.cpp"/>
+			</Folder>
+			<Folder Name="coder">
+				<F N="test/coder/EndpointF.jce"/>
+				<F N="test/coder/main.cpp"/>
+				<F N="test/coder/QueryF.jce"/>
+			</Folder>
+			<Folder Name="CommonTestServer">
+				<Folder Name="client">
+					<F N="test/CommonTestServer/client/main.cpp"/>
+					<F N="test/CommonTestServer/client/testshm.cpp"/>
+				</Folder>
+				<Folder Name="server">
+					<F N="test/CommonTestServer/server/KevinTestServant.cpp"/>
+					<F N="test/CommonTestServer/server/KevinTestServant.h"/>
+					<F N="test/CommonTestServer/server/KevinTestServant.jce"/>
+					<F N="test/CommonTestServer/server/KevinTestServantImp.cpp"/>
+					<F N="test/CommonTestServer/server/KevinTestServantImp.h"/>
+					<F N="test/CommonTestServer/server/KevinTestServer.cpp"/>
+					<F N="test/CommonTestServer/server/KevinTestServer.h"/>
+					<F N="test/CommonTestServer/server/ThridProtoServantImp.cpp"/>
+					<F N="test/CommonTestServer/server/ThridProtoServantImp.h"/>
+				</Folder>
+			</Folder>
+			<Folder Name="config">
+				<F N="test/config/main.cpp"/>
+			</Folder>
+			<Folder Name="hce2cpp">
+				<F N="test/hce2cpp/main.cpp"/>
+			</Folder>
+			<Folder Name="HelloServer">
+				<Folder Name="client">
+					<F N="test/HelloServer/client/main.cpp"/>
+				</Folder>
+				<Folder Name="src">
+					<F N="test/HelloServer/src/CCProtocol.h"/>
+					<F N="test/HelloServer/src/hello.conf"/>
+					<F N="test/HelloServer/src/Hello.cpp"/>
+					<F N="test/HelloServer/src/Hello.h"/>
+					<F N="test/HelloServer/src/Hello.jce"/>
+					<F N="test/HelloServer/src/hello2.conf"/>
+					<F N="test/HelloServer/src/HelloImp.cpp"/>
+					<F N="test/HelloServer/src/HelloImp.h"/>
+					<F N="test/HelloServer/src/HelloServer.cpp"/>
+					<F N="test/HelloServer/src/HelloServer.h"/>
+				</Folder>
+				<Folder Name="transfer">
+					<F N="test/HelloServer/transfer/hello.conf"/>
+					<F N="test/HelloServer/transfer/hello2.conf"/>
+					<F N="test/HelloServer/transfer/hello3.conf"/>
+					<F N="test/HelloServer/transfer/HelloImp.h"/>
+					<F N="test/HelloServer/transfer/HelloServer.cpp"/>
+					<F N="test/HelloServer/transfer/HelloServer.h"/>
+				</Folder>
+				<Folder Name="wup_client">
+					<F N="test/HelloServer/wup_client/main.cpp"/>
+				</Folder>
+			</Folder>
+			<Folder Name="hessian">
+				<F N="test/hessian/main.cpp"/>
+			</Folder>
+			<Folder Name="jce2cpp">
+				<F N="test/jce2cpp/main.cpp"/>
+				<F N="test/jce2cpp/test.jce"/>
+				<F N="test/jce2cpp/test1.jce"/>
+				<F N="test/jce2cpp/test2.jce"/>
+				<F N="test/jce2cpp/test3.jce"/>
+			</Folder>
+			<Folder Name="jce2java">
+				<Folder Name="java">
+					<F N="test/jce2java/java/MyTafTest.java"/>
+					<F N="test/jce2java/java/MyTest.java"/>
+				</Folder>
+				<F N="test/jce2java/main.cpp"/>
+				<F N="test/jce2java/server.config.conf"/>
+				<F N="test/jce2java/Server.jce"/>
+				<F N="test/jce2java/TestServer.cpp"/>
+				<F N="test/jce2java/TestServer.h"/>
+			</Folder>
+			<Folder Name="jce2symcpp">
+				<F N="test/jce2symcpp/QzoneCannon_20110310.cpp"/>
+				<F N="test/jce2symcpp/QzoneCannon_20110310.h"/>
+				<F N="test/jce2symcpp/QzoneCannon_20110310.jce"/>
+			</Folder>
+			<Folder Name="jmem">
+				<F N="test/jmem/HashMapCompactTest.cpp"/>
+				<F N="test/jmem/HashMapCompactTest.h"/>
+				<F N="test/jmem/HashMapTest.cpp"/>
+				<F N="test/jmem/HashMapTest.h"/>
+				<F N="test/jmem/main.cpp"/>
+				<F N="test/jmem/MultiHashMapTest.cpp"/>
+				<F N="test/jmem/MultiHashMapTest.h"/>
+				<F N="test/jmem/QueueTest.cpp"/>
+				<F N="test/jmem/QueueTest.h"/>
+				<F N="test/jmem/RBTreeTest.cpp"/>
+				<F N="test/jmem/RBTreeTest.h"/>
+				<F N="test/jmem/test.jce"/>
+			</Folder>
+			<Folder Name="log">
+				<F N="test/log/client.config.conf"/>
+				<F N="test/log/main.cpp"/>
+			</Folder>
+			<Folder Name="node">
+				<F N="test/node/main.cpp"/>
+			</Folder>
+			<Folder Name="notify">
+				<F N="test/notify/main.cpp"/>
+			</Folder>
+			<Folder Name="ping">
+				<F N="test/ping/main.cpp"/>
+			</Folder>
+			<Folder Name="property">
+				<F N="test/property/main.cpp"/>
+			</Folder>
+			<Folder Name="ProxyTest">
+				<Folder Name="abClient">
+					<F N="test/ProxyTest/abClient/main.cpp"/>
+					<F N="test/ProxyTest/abClient/ServantProxy.cpp"/>
+				</Folder>
+				<Folder Name="AServer">
+					<F N="test/ProxyTest/AServer/AServant.jce"/>
+					<F N="test/ProxyTest/AServer/AServantImp.cpp"/>
+					<F N="test/ProxyTest/AServer/AServantImp.h"/>
+					<F N="test/ProxyTest/AServer/AServer.cpp"/>
+					<F N="test/ProxyTest/AServer/AServer.h"/>
+				</Folder>
+				<Folder Name="asyncAClient">
+					<F N="test/ProxyTest/asyncAClient/main.cpp"/>
+				</Folder>
+				<Folder Name="asyncClient">
+					<F N="test/ProxyTest/asyncClient/main.cpp"/>
+				</Folder>
+				<Folder Name="BServer">
+					<F N="test/ProxyTest/BServer/BServant.jce"/>
+					<F N="test/ProxyTest/BServer/BServantImp.cpp"/>
+					<F N="test/ProxyTest/BServer/BServantImp.h"/>
+					<F N="test/ProxyTest/BServer/BServer.cpp"/>
+					<F N="test/ProxyTest/BServer/BServer.h"/>
+				</Folder>
+				<Folder Name="myClient">
+					<F N="test/ProxyTest/myClient/main.cpp"/>
+				</Folder>
+				<Folder Name="syncAClient">
+					<F N="test/ProxyTest/syncAClient/main.cpp"/>
+				</Folder>
+			</Folder>
+			<Folder Name="registry">
+				<F N="test/registry/main.cpp"/>
+			</Folder>
+			<Folder Name="simple">
+				<F N="test/simple/echo.h"/>
+				<F N="test/simple/simple.cpp"/>
+			</Folder>
+			<Folder Name="stat">
+				<F N="test/stat/main.cpp"/>
+			</Folder>
+			<Folder Name="TafCaseServer">
+				<Folder Name="jceclient">
+					<F N="test/TafCaseServer/jceclient/main.cpp"/>
+				</Folder>
+				<Folder Name="TafCaseServer">
+					<F N="test/TafCaseServer/TafCaseServer/TafCaseServant.cpp"/>
+					<F N="test/TafCaseServer/TafCaseServer/TafCaseServant.h"/>
+					<F N="test/TafCaseServer/TafCaseServer/TafCaseServant.jce"/>
+					<F N="test/TafCaseServer/TafCaseServer/TafCaseServantImp.cpp"/>
+					<F N="test/TafCaseServer/TafCaseServer/TafCaseServantImp.h"/>
+					<F N="test/TafCaseServer/TafCaseServer/TafCaseServer.cpp"/>
+					<F N="test/TafCaseServer/TafCaseServer/TafCaseServer.h"/>
+				</Folder>
+				<Folder Name="wupcclient">
+					<F N="test/TafCaseServer/wupcclient/main.cpp"/>
+					<F N="test/TafCaseServer/wupcclient/TafCaseServant.jce"/>
+				</Folder>
+				<Folder Name="wupclient">
+					<F N="test/TafCaseServer/wupclient/main.cpp"/>
+				</Folder>
+			</Folder>
+			<Folder Name="TCServer">
+				<Folder Name="client">
+					<F N="test/TCServer/client/TestTCServer.cpp"/>
+				</Folder>
+				<F N="test/TCServer/echo.h"/>
+				<F N="test/TCServer/hello.conf"/>
+				<F N="test/TCServer/Hello.jce"/>
+				<F N="test/TCServer/HelloImp.h"/>
+				<F N="test/TCServer/http.h"/>
+				<F N="test/TCServer/string.h"/>
+				<F N="test/TCServer/TCServer.cpp"/>
+				<F N="test/TCServer/TCServer.h"/>
+			</Folder>
+			<Folder Name="TestAddConfig">
+				<F N="test/TestAddConfig/Test.jce"/>
+				<F N="test/TestAddConfig/TestAddConfig.cpp"/>
+				<F N="test/TestAddConfig/TestAddConfig.h"/>
+				<F N="test/TestAddConfig/TestImp.cpp"/>
+				<F N="test/TestAddConfig/TestImp.h"/>
+			</Folder>
+			<Folder Name="TestClient">
+				<F N="test/TestClient/client.config.conf"/>
+				<F N="test/TestClient/Collector.cpp"/>
+				<F N="test/TestClient/Collector.h"/>
+				<F N="test/TestClient/main.cpp"/>
+				<F N="test/TestClient/Random.h"/>
+				<F N="test/TestClient/TestBasePrxCallbackImp.h"/>
+				<F N="test/TestClient/TestCase.h"/>
+				<F N="test/TestClient/TestThread.h"/>
+				<F N="test/TestClient/ToStr.h"/>
+			</Folder>
+			<Folder Name="TestServer">
+				<F N="test/TestServer/main.cpp"/>
+				<F N="test/TestServer/server.config.conf"/>
+				<F N="test/TestServer/Test.jce"/>
+				<F N="test/TestServer/TestBaseImp.h"/>
+				<F N="test/TestServer/TestExtImp.h"/>
+				<F N="test/TestServer/TestServer.cpp"/>
+				<F N="test/TestServer/TestServer.h"/>
+			</Folder>
+			<Folder Name="TestUtil">
+				<F N="test/TestUtil/test_tc_common.cpp"/>
+				<F N="test/TestUtil/test_tc_des.cpp"/>
+			</Folder>
+			<Folder Name="TransServer">
+				<F N="test/TransServer/CCProtocol.h"/>
+				<F N="test/TransServer/trans.conf"/>
+				<F N="test/TransServer/TransImp.cpp"/>
+				<F N="test/TransServer/TransImp.h"/>
+				<F N="test/TransServer/TransServer.cpp"/>
+				<F N="test/TransServer/TransServer.h"/>
+			</Folder>
+			<Folder Name="trans">
+				<F N="test/trans/main.cpp"/>
+				<F N="test/trans/struct.jce"/>
+			</Folder>
+			<Folder Name="util">
+				<F N="test/util/log.config.conf"/>
+				<F N="test/util/template.config.conf"/>
+				<F N="test/util/test_tc_autoptr.cpp"/>
+				<F N="test/util/test_tc_bitmap.cpp"/>
+				<F N="test/util/test_tc_cgi.cpp"/>
+				<F N="test/util/test_tc_common.cpp"/>
+				<F N="test/util/test_tc_config.cpp"/>
+				<F N="test/util/test_tc_des.cpp"/>
+				<F N="test/util/test_tc_encoder.cpp"/>
+				<F N="test/util/test_tc_file.cpp"/>
+				<F N="test/util/test_tc_file_lock.cpp"/>
+				<F N="test/util/test_tc_functor.cpp"/>
+				<F N="test/util/test_tc_hashmap.cpp"/>
+				<F N="test/util/test_tc_http.cpp"/>
+				<F N="test/util/test_tc_http_async.cpp"/>
+				<F N="test/util/test_tc_json.cpp"/>
+				<F N="test/util/test_tc_log.cpp"/>
+				<F N="test/util/test_tc_loki.cpp"/>
+				<F N="test/util/test_tc_mem_chunk.cpp"/>
+				<F N="test/util/test_tc_mem_queue.cpp"/>
+				<F N="test/util/test_tc_mmap.cpp"/>
+				<F N="test/util/test_tc_multi_hashmap.cpp"/>
+				<F N="test/util/test_tc_mysql.cpp"/>
+				<F N="test/util/test_tc_option.cpp"/>
+				<F N="test/util/test_tc_pack.cpp"/>
+				<F N="test/util/test_tc_singleton.cpp"/>
+				<F N="test/util/test_tc_socket.cpp"/>
+				<F N="test/util/test_tc_tea.cpp"/>
+				<F N="test/util/test_tc_thread.cpp"/>
+				<F N="test/util/test_tc_thread_lock.cpp"/>
+				<F N="test/util/test_tc_thread_pool.cpp"/>
+				<F N="test/util/test_tc_thread_queue.cpp"/>
+				<F N="test/util/test_tc_threadrw_lock.cpp"/>
+			</Folder>
+			<Folder Name="wup">
+				<F N="test/wup/Test.h"/>
+				<F N="test/wup/Test.jce"/>
+			</Folder>
+			<Folder Name="xmlproxy">
+				<F N="test/xmlproxy/ats.cpp"/>
+			</Folder>
+		</Folder>
+		<Folder Name="wup-codec">
+			<Folder Name="wup-as">
+				<Folder Name="demo">
+					<F N="wup-codec/wup-as/demo/Hello.jce"/>
+				</Folder>
+			</Folder>
+			<Folder Name="wup-c">
+				<Folder Name="demo">
+					<F N="wup-codec/wup-c/demo/main.c"/>
+					<F N="wup-codec/wup-c/demo/Test.jce"/>
+				</Folder>
+				<F N="wup-codec/wup-c/Jce_c.c"/>
+				<F N="wup-codec/wup-c/Jce_c.h"/>
+				<F N="wup-codec/wup-c/wup_c.c"/>
+				<F N="wup-codec/wup-c/wup_c.h"/>
+			</Folder>
+			<Folder Name="wup-csharp">
+				<Folder Name="Test">
+					<F N="wup-codec/wup-csharp/Test/Test.jce"/>
+				</Folder>
+			</Folder>
+			<Folder Name="wup-js">
+				<Folder Name="examples">
+					<Folder Name="server">
+						<Folder Name="TestJCE.TestProxyServer">
+							<F N="wup-codec/wup-js/examples/server/TestJCE.TestProxyServer/TestProxyImp.cpp"/>
+							<F N="wup-codec/wup-js/examples/server/TestJCE.TestProxyServer/TestProxyImp.h"/>
+							<F N="wup-codec/wup-js/examples/server/TestJCE.TestProxyServer/TestProxyServer.cpp"/>
+							<F N="wup-codec/wup-js/examples/server/TestJCE.TestProxyServer/TestProxyServer.h"/>
+							<F N="wup-codec/wup-js/examples/server/TestJCE.TestProxyServer/UserInfo.jce"/>
+						</Folder>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="wup-linux-c++">
+				<F N="wup-codec/wup-linux-c++/Jce.h"/>
+				<F N="wup-codec/wup-linux-c++/JceDisplayer.h"/>
+				<F N="wup-codec/wup-linux-c++/JceType.h"/>
+				<F N="wup-codec/wup-linux-c++/RequestF.h"/>
+				<F N="wup-codec/wup-linux-c++/wup.h"/>
+			</Folder>
+			<Folder Name="wup-linux-pdu-c++">
+				<F N="wup-codec/wup-linux-pdu-c++/Jce.h"/>
+				<F N="wup-codec/wup-linux-pdu-c++/JceDisplayer.h"/>
+				<F N="wup-codec/wup-linux-pdu-c++/JceType.h"/>
+				<F N="wup-codec/wup-linux-pdu-c++/pdu_header.h"/>
+			</Folder>
+			<Folder Name="wup-lua">
+				<F N="wup-codec/wup-lua/luaregistry.h"/>
+			</Folder>
+			<Folder Name="wup-msf-c++">
+				<F N="wup-codec/wup-msf-c++/Jce.h"/>
+				<F N="wup-codec/wup-msf-c++/JceType.h"/>
+				<F N="wup-codec/wup-msf-c++/RequestF.h"/>
+				<F N="wup-codec/wup-msf-c++/wup.h"/>
+			</Folder>
+			<Folder Name="wup-objectC">
+				<Folder Name="Examples">
+					<Folder Name="Adapters">
+						<F N="wup-codec/wup-objectC/Examples/Adapters/MttHDVerifyRes.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Adapters/MttLoginReq+Adapter.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Adapters/MttPageConfigReq+Adapter.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Adapters/MttReleaseInfo+Adapter.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Adapters/MttSplashReq+Adapter.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Adapters/MttSTStat+Adapter.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Adapters/MttUserBase+Adapter.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Adapters/MttVerifyReq+Adapter.h"/>
+					</Folder>
+					<Folder Name="BusinessData">
+						<F N="wup-codec/wup-objectC/Examples/BusinessData/MttHDLoginInfo.h"/>
+						<F N="wup-codec/wup-objectC/Examples/BusinessData/MttHDPageConfigInfo.h"/>
+						<F N="wup-codec/wup-objectC/Examples/BusinessData/MttHDPersistentObject.h"/>
+						<F N="wup-codec/wup-objectC/Examples/BusinessData/MttHDSplashInfo.h"/>
+						<F N="wup-codec/wup-objectC/Examples/BusinessData/MttHDStatInfo.h"/>
+						<F N="wup-codec/wup-objectC/Examples/BusinessData/MttHDVerifyInfo.h"/>
+						<F N="wup-codec/wup-objectC/Examples/BusinessData/MttHDVideoInfo.h"/>
+					</Folder>
+					<Folder Name="Protocol">
+						<F N="wup-codec/wup-objectC/Examples/Protocol/MttBrokerSecurityRequest.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Protocol/MttBrokerSecurityResponse.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Protocol/MttVideoApp.h"/>
+						<F N="wup-codec/wup-objectC/Examples/Protocol/MttVideoReq.h"/>
+					</Folder>
+					<Folder Name="RMIAgents">
+						<F N="wup-codec/wup-objectC/Examples/RMIAgents/MttConfigAgent.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIAgents/MttCoolReadAgent.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIAgents/MttLoginAgent.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIAgents/MttSecurityAgent.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIAgents/MttStatAgent.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIAgents/MttVerifyAgent.h"/>
+					</Folder>
+					<Folder Name="RMIServices">
+						<F N="wup-codec/wup-objectC/Examples/RMIServices/MttConfigService.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIServices/MttCoolReadService.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIServices/MttLoginService.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIServices/MttSecurityService.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIServices/MttStatService.h"/>
+						<F N="wup-codec/wup-objectC/Examples/RMIServices/MttVerifyService.h"/>
+					</Folder>
+					<F N="wup-codec/wup-objectC/Examples/MttHDWupAdapters.h"/>
+					<F N="wup-codec/wup-objectC/Examples/MttHDWupBusinessData.h"/>
+					<F N="wup-codec/wup-objectC/Examples/MttHDWupEnvironment.h"/>
+					<F N="wup-codec/wup-objectC/Examples/MttHDWupManager.h"/>
+					<F N="wup-codec/wup-objectC/Examples/MttHDWupRMIServices.h"/>
+				</Folder>
+				<Folder Name="WirelessUnifiedProtocol">
+					<Folder Name="Dependencies">
+						<Folder Name="ASIHttpRequest">
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASICacheDelegate.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASIHTTPRequest.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASIHTTPRequestConfig.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASIHTTPRequestDelegate.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASIProgressDelegate.h"/>
+						</Folder>
+					</Folder>
+					<Folder Name="WirelessUnifiedProtocol">
+						<Folder Name="RMIModel">
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/RMIModel/WupAgent.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/RMIModel/WupAgentDelegate.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/RMIModel/WupHttpRequest.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/RMIModel/WupService.h"/>
+						</Folder>
+						<Folder Name="Serializable">
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceEnumHelper.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceInputStream.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceObject.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceObjectV2.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceOutputStream.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceStream.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/RequestF.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/UniAttribute.h"/>
+							<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/UniPacket.h"/>
+						</Folder>
+						<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/WirelessUnifiedProtocol-Debug.h"/>
+						<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocol/WirelessUnifiedProtocol.h"/>
+					</Folder>
+					<Folder Name="WirelessUnifiedProtocolTests">
+						<Folder Name="Protocol">
+							<Folder Name="Mtt">
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttAcceptEncoding.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttAdsContent.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttAdsReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttAdsRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerContentInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerDisplayInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerFragRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerFragResponse.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerJSPDInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerJSRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPageRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPicParam.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPicRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPushRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPushResponse.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerReqType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerRequestParam.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSecurityRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSecurityResponse.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSimplifiedPushRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSimplifiedPushResponse.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSimplifiedRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerTransferResponse.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerUploadRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerUserInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerWups.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrowserReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrowserRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrowserVersion.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttCheckPluginReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttCityListReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttCityListRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfigReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfigRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfirm.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttContentEncoding.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDirectPolicy.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDNSReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDNSRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDomainRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDomainRspNew.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDynamicReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDynamicRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEDomainType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEEntryType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEFASTKEY.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEHotWordType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttELanguageType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEPushServerType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttERelayProtoVer.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttErrorCode.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEServerVer.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttETPV.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEUSESTAT.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEWaitPushType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttExtDomain.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttFKINFO.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotListReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotListRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotWordInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotWordsReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotWordsRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIcon.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIconInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIconRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImageQuality.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImageReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImageRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImgReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImgRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIPListReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIPListRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttItemReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttItemRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttKeywordRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttLoginReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttLoginRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttLPageReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttLPageRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttMethod.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttMTTContentType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttNavigation.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttNaviRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageBrowserReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageBrowserRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageConfigReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageConfigRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPerformanceInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPicInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPicRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPing.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginBootResp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginInfoNew.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginRspNew.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginVersion.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPushAppReqList.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPushPortionFresh.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPushRespnoseContent.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPushSysNotify.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRefuse.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRelayPageReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRelayPageRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttReply.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRequest.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRequestFragment.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchTypeInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchTypeReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchTypeRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSecurityCheckType.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSoftAnalyseInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSpecialValue.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSplashReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSplashRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttStaticConfigReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttStatValue.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTImagePolicy.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTJSInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTJSPDInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTOperator.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTOperatorRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTPV.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTSingleMD5.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTSpeedStatis.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTStat.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTTime.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTTotal.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttThirdUse.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttTipPushReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttTipPushRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttUpdateRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttURLPV.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttUserBase.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttVerifyReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttVerifyRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttVerifyRspExt.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherInfo.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherInfo4Mini.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherReq.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherRsp.h"/>
+								<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherRsp4Mini.h"/>
+							</Folder>
+						</Folder>
+						<F N="wup-codec/wup-objectC/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/WirelessUnifiedProtocolTests.h"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="wup-objectC-2014">
+				<Folder Name="WirelessUnifiedProtocol">
+					<Folder Name="Dependencies">
+						<Folder Name="ASIHttpRequest">
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASICacheDelegate.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASIHTTPRequest.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASIHTTPRequestConfig.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASIHTTPRequestDelegate.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/Dependencies/ASIHttpRequest/ASIProgressDelegate.h"/>
+						</Folder>
+					</Folder>
+					<Folder Name="WirelessUnifiedProtocol">
+						<Folder Name="RMIModel">
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/RMIModel/WupAgent.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/RMIModel/WupAgentDelegate.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/RMIModel/WupHttpRequest.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/RMIModel/WupService.h"/>
+						</Folder>
+						<Folder Name="Serializable">
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceEnumHelper.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceInputStream.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceObject.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceObjectV2.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceOutputStream.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/JceStream.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/RequestF.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/UniAttribute.h"/>
+							<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/Serializable/UniPacket.h"/>
+						</Folder>
+						<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/WirelessUnifiedProtocol-Debug.h"/>
+						<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocol/WirelessUnifiedProtocol.h"/>
+					</Folder>
+					<Folder Name="WirelessUnifiedProtocolTests">
+						<Folder Name="Protocol">
+							<Folder Name="Mtt">
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttAcceptEncoding.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttAdsContent.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttAdsReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttAdsRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerContentInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerDisplayInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerFragRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerFragResponse.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerJSPDInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerJSRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPageRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPicParam.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPicRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPushRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerPushResponse.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerReqType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerRequestParam.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSecurityRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSecurityResponse.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSimplifiedPushRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSimplifiedPushResponse.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerSimplifiedRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerTransferResponse.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerUploadRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerUserInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrokerWups.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrowserReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrowserRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttBrowserVersion.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttCheckPluginReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttCityListReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttCityListRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfigReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfigRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfirm.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttConfRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttContentEncoding.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDirectPolicy.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDNSReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDNSRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDomainRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDomainRspNew.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDynamicReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttDynamicRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEDomainType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEEntryType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEFASTKEY.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEHotWordType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttELanguageType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEPushServerType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttERelayProtoVer.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttErrorCode.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEServerVer.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttETPV.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEUSESTAT.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttEWaitPushType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttExtDomain.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttFKINFO.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotListReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotListRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotWordInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotWordsReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttHotWordsRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIcon.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIconInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIconRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImageQuality.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImageReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImageRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImgReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttImgRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIPListReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttIPListRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttItemReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttItemRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttKeywordRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttLoginReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttLoginRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttLPageReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttLPageRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttMethod.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttMTTContentType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttNavigation.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttNaviRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageBrowserReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageBrowserRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageConfigReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageConfigRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPageRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPerformanceInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPicInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPicRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPing.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginBootResp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginInfoNew.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginRspNew.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPluginVersion.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPushAppReqList.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPushPortionFresh.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPushRespnoseContent.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttPushSysNotify.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRefuse.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRelayPageReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRelayPageRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttReply.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRequest.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttRequestFragment.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchTypeInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchTypeReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSearchTypeRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSecurityCheckType.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSoftAnalyseInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSpecialValue.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSplashReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSplashRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttStaticConfigReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttStatValue.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTImagePolicy.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTJSInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTJSPDInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTOperator.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTOperatorRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTPV.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTSingleMD5.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTSpeedStatis.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTStat.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTTime.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttSTTotal.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttThirdUse.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttTipPushReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttTipPushRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttUpdateRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttURLPV.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttUserBase.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttVerifyReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttVerifyRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttVerifyRspExt.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherInfo.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherInfo4Mini.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherReq.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherRsp.h"/>
+								<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/Protocol/Mtt/MttWeatherRsp4Mini.h"/>
+							</Folder>
+						</Folder>
+						<F N="wup-codec/wup-objectC-2014/WirelessUnifiedProtocol/WirelessUnifiedProtocolTests/WirelessUnifiedProtocolTests.h"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="wup-php">
+				<Folder Name="demo">
+					<F N="wup-codec/wup-php/demo/Hello.jce"/>
+				</Folder>
+			</Folder>
+			<Folder Name="wup_mcare-c++">
+				<F N="wup-codec/wup_mcare-c++/Jce_mcare.cpp"/>
+				<F N="wup-codec/wup_mcare-c++/Jce_mcare.h"/>
+				<F N="wup-codec/wup_mcare-c++/RequestF_mcare.cpp"/>
+				<F N="wup-codec/wup_mcare-c++/RequestF_mcare.h"/>
+				<F N="wup-codec/wup_mcare-c++/wup_mcare.cpp"/>
+				<F N="wup-codec/wup_mcare-c++/wup_mcare.h"/>
+			</Folder>
+			<Folder Name="wup_symbian-c++">
+				<F N="wup-codec/wup_symbian-c++/Jce_sym.cpp"/>
+				<F N="wup-codec/wup_symbian-c++/Jce_sym.h"/>
+				<F N="wup-codec/wup_symbian-c++/RequestF_sym.cpp"/>
+				<F N="wup-codec/wup_symbian-c++/RequestF_sym.h"/>
+				<F N="wup-codec/wup_symbian-c++/wup_sym.cpp"/>
+				<F N="wup-codec/wup_symbian-c++/wup_sym.h"/>
+			</Folder>
+			<Folder Name="wup_windows-c++">
+				<F N="wup-codec/wup_windows-c++/Jce.h"/>
+				<F N="wup-codec/wup_windows-c++/JceDisplayer.h"/>
+				<F N="wup-codec/wup_windows-c++/JceType.h"/>
+				<F N="wup-codec/wup_windows-c++/RequestF.h"/>
+				<F N="wup-codec/wup_windows-c++/stdint.h"/>
+				<F N="wup-codec/wup_windows-c++/wup.h"/>
+			</Folder>
+		</Folder>
+	</Files>
+</Project>

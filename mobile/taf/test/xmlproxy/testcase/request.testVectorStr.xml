@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gbk"?>
+<?xml-stylesheet href="XmlProxy.xsl" type="text/xsl"?>
+<request>
+<!--
+    <locator>taf.tafregistry.QueryObj@tcp -h 172.27.205.110 -p 17890 -t 3000</locator>
+-->
+    <servant>Test.TestServer.TestBaseObj</servant>
+    <return>
+        <int/>
+    </return>
+    <function_name>testVectorStr</function_name>
+    <parameters>        
+        <int in="true" name="id">1</int>
+        <vector in="true" name="vi">
+		<string>中国19</string>
+		<string>小日本18</string>
+		<string>韩国17</string>
+		</vector>
+        <vector out="true" name="vo">
+		<string/>
+		</vector>
+    </parameters>
+</request>

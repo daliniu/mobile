@@ -1,0 +1,23 @@
+<response>
+<return>
+<int tag="0">1</int>
+</return>
+<parameters>
+<map tag="3">
+<entry>
+<int tag="0">1</int>
+<struct tag="1">
+<int tag="0">100000</int>
+<string tag="1">this is an string</string>
+</struct>
+</entry>
+<entry>
+<int tag="0">2</int>
+<struct tag="1">
+<int tag="0">200000</int>
+<string tag="1">this is an string2</string>
+</struct>
+</entry>
+</map>
+</parameters>
+</response>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../" default="all">
+	<property file="build.properties" />
+
+	<!-- source -->
+	<property name="dir.src.root" location="." />
+	<property name="dir.wup" location="src/" />
+	<property name="dir.dist" value="dist" />
+	<property name="dir.lib" value="lib" />
+	<property name="dir.build" value="build" />
+	<property name="dir.build.src" value="build/src" />
+	<property name="version.major"         value="1" />
+	<property name="version.minor"         value="0" />
+	<property name="version.build"         value="2" />
+	<property name="version"               value="1.0.2" />
+	<property name="version.number"        value="${version.major}.${version.minor}.${version.build}" />
+
+	<target name="clean">
+		<delete dir="${dir.build}" />
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${dir.build}" />
+		<mkdir dir="${dir.build.src}" />	
+		<mkdir dir="${dir.dist}" />
+	</target>
+
+	<path id="libs">
+		<fileset dir="${dir.dist}" includes="**/*.jar" />
+		<fileset dir="${dir.lib}" includes="**/*.jar" />
+	</path>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${dir.wup}" source="1.3" target="1.3" destdir="${dir.build}" debug="true" encoding="UTF-8">
+			<classpath refid="libs">
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="buildjar" depends="compile">
+	    <tstamp>      
+	      <format property="TimeSign" pattern="yyyy-MM-dd HH:mm:ss" />
+	    </tstamp>   
+	    <filter token="VERSION" value="${version}"/>
+	    <filter token="VERSION_NUMBER" value="${version.number}"/>
+	    <filter token="VERSION_BUILT" value="${TimeSign}"/>
+		<copy todir="${dir.build.src}" filtering="true">
+					<fileset dir="${dir.wup}">
+						<include name="**/*.java" />
+						<include name="**/*.properties" />
+						<include name="**/*.manifest" />
+					</fileset>
+	    </copy>
+		<copy todir="${dir.build}" filtering="true">
+			<fileset dir="${dir.wup}">
+				<include name="**/*.properties" />
+			</fileset>
+	    </copy>
+		<jar destfile="${dir.dist}/k_jce_src-1.0.0.jar" basedir="${dir.build}">
+			<include name="src/com/qq/taf/jce/**.*" />
+			<include name="src/com/qq/taf/proxy/utils/**.*" />
+			<include name="src/*.properties" />
+			<include name="com/qq/taf/jce/**.class" />
+			<include name="com/qq/taf/proxy/utils/**.class" />
+			<include name="*.properties" />
+			<manifest>
+				<attribute name="BuildTime" value="${TimeSign}" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="all" depends="buildjar">
+	</target>
+</project>

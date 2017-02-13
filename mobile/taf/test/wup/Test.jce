@@ -1,0 +1,17 @@
+module Test
+{
+    struct TestInfo
+    {
+        1  require bool  b;
+        2  require short si;
+        3  require byte  by;
+        4  require int   ii;
+        5  require long  li;
+        6  require float f;
+        7  require double d;
+        8  require string s;
+        9  require vector<int> vi;
+        10 require map<int,string> mi;
+    };
+
+};

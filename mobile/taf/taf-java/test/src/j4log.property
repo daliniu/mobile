@@ -1,0 +1,3 @@
+jceClient=ERROR,/usr/local/app/taf/app_log/Java/Test/jceClient.log
+_jutil=ERROR,/usr/local/app/taf/app_log/Java/Test/jutil.log
+test=INFO,/usr/local/app/taf/app_log/Java/Test/test.log

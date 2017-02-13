@@ -1,0 +1,25 @@
+module routerProxy
+{
+	struct ServerInfo
+	{
+		0 require string host;
+		1 require int port;
+		2 require bool isTCP;
+	};
+
+	
+	interface RouterProxyService
+	{
+	    /**
+	     * 
+	     name格式： #servantName#routerName#idc
+	     *  TAF主控通过字符串第一个字符是否是#来识别3G路由服务
+	     *  servantName：服务的真正servantName　格式：contextName.ServiceName
+	     *  routerName是服务的3G路由名称，格式[A-Za-z0-9_]+
+	     *  idc是可选信息，默认是当前IDC
+	     * 
+	     */
+		int getServerList(string name, out vector<ServerInfo> result);
+	};
+};
+

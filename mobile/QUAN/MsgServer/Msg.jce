@@ -1,0 +1,152 @@
+#include "/home/tafjce/QUAN/SecretServer/SecretBase.jce"
+
+module QUAN
+{
+    struct PushMsgKey
+    {
+        0  optional  long         lUId;     // 用户ID
+    };
+
+    struct PushMsgValue
+    {
+        0  optional  int          iAppId;    
+        1  optional  int          iVersion;    
+        2  optional  int          iOnline;     // 1 online 2 offline
+        3  optional  string       sToken;    
+        4  optional  string       sOs;    
+    };
+
+    struct MsgRemindKey    
+    {
+        0  optional  long         lUId;     // 用户ID
+    };
+
+    struct MsgRemindValue    
+    {
+        0  optional  map<long, MsgRmd>            mSIds;     // 帖子ID key 
+        1  optional  int                          iTime;
+    };
+
+    struct SysMsgKey    
+    {
+        0  optional  long         lUId;     // 用户ID
+    };
+
+    struct SysMsgValue    
+    {
+        0  optional  vector<SysMsgInfo>           vSysMsgs;
+        1  optional  int                          iTime;
+    };
+
+    interface Msg
+    {
+        int test();
+
+        /**
+        * 获取消息提醒列表
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int getPushMsg(PushMsgReq tReq, out PushMsgRsp tRsp);
+
+        /**
+        * 获取消息提醒数
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int getMsgNum(GetMsgNumReq tReq, out GetMsgNumRsp tRsp);
+        
+        /**
+        * 插入消息提醒
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int addMsg(AddMsgReq tReq);
+
+        /**
+        * 更新消息提醒状态  (未读变为已读)
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int changeMsgStatus(ChangeMsgReq tReq);
+
+        /**
+        * 绑定推送接口
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int bindMsg(BindMsgReq tReq);
+
+        /**
+        * @帖子消息提醒
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int atMsg(AtMsgReq tReq);
+
+        /**
+        * @帖子消息提醒
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int cleanCache(vector<long> tUserId);
+
+        /**
+        * @获取用户系统消息
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int getSysMsg(GetSysMsgReq tReq, out GetSysMsgRsp tRsp);
+
+        /**
+        * @推送消息
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int pushSysMsg(PushSysMsgReq tReq);
+
+        /**
+        * @清除消息提醒cache
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int cleanSysCache(long tUserId);
+
+        /**
+        * @ 系统提醒状态
+        * @param tReq
+        * @param tRsp
+        * @return int     0成功，-1失败
+        */
+        int getNewSysMsg(GetNewSysMsgReq tReq, out GetNewSysMsgRsp tRsp);
+
+        /**
+        * @Breif IM推送消息
+        *
+        * @Param lSId
+        *
+        * @Returns   
+        */
+        int pushImMsg(PushImMsgReq tReq);
+
+        /**
+        * @Breif 
+        *
+        * @Param lSId
+        *
+        * @Returns   
+        */
+        int pushBindMsg(UserId tUserId, int iType, string sId);
+    };
+
+}; 

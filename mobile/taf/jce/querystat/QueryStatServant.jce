@@ -1,0 +1,9 @@
+module  taf
+{
+
+    interface queryData
+    {
+		int query(string input, out string result );
+    };
+
+};

@@ -1,0 +1,4 @@
+*.d
+hce.tab.cpp
+lex.yy.cpp
+hce.tab.hpp

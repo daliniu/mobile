@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Jce For Javascript</title>
+		<script type="text/javascript" src="../lib/libutil.js"></script>
+		<script type="text/javascript" src="../lib/libjce.js"></script>
+		<script type="text/javascript" src="../lib/libext.js"></script>
+		<script type="text/javascript" src="UserInfo.js"></script>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+		<h1>测试Map编解码示例&nbsp;&nbsp;<font size="3" style="margin-bottom: -2px">元素类型为结构体</font></h1>
+		<pre class="pre_style" >
+//Taf.Map(int8/int16/int32/int64/uint8/uint16/uint32/string, struct)`
+function TestMapString()
+{
+    //声明Map类型，并且赋值
+    var sta = new TestJCE.UserBasic();
+    sta.sUserID   = "88885138";
+    sta.sUserName = "QQ88";
+    sta.sex       = TestJCE.enSex.EN_MALE;
+
+    var stb = new Test.UserBasic();
+    stb.sUserID   = "88885139";
+    sta.sUserName = "QQ39";
+    sta.sex       = TestJCE.enSex.EN_FEMALE;
+
+    var map = new Taf.Map(new Taf.STRING(), new TestJCE.UserBasic());
+    map.put("QQ88", sta);
+    map.put("QQ39", stb);
+
+    //开始编码
+    var os = new Taf.JceOutputStream();
+    os.writeMap(5, map);
+
+    //开始解码
+    os.getBinBuffer().position = 0;
+    var is = new Taf.JceInputStream(os.getBinBuffer());
+    var mp = is.readMap(5, true, new Taf.Map(new Taf.STRING(), new TestJCE.UserBasic()));
+    for (var key in mp.val)
+    {
+        console.log("KEY:", key, " VALUE:", map.val[key].sUserID, map.val[key].sUserName, map.val[key].sex);
+    }
+}
+</pre>
+		<script>
+function TestMapStruct() 
+{
+    //声明Map类型，并且赋值
+    var sta = new TestJCE.UserBasic();
+    sta.sUserID   = "88885138";
+    sta.sUserName = "QQ88";
+    sta.sex       = TestJCE.enSex.EN_MALE;
+
+	var stb = new TestJCE.UserBasic();
+	stb.sUserID   = "88885139";
+	stb.sUserName = "QQ39";
+	stb.sex       = TestJCE.enSex.EN_FEMALE;
+
+    var map = new Taf.Map(new Taf.STRING(), new TestJCE.UserBasic());
+	map.put("QQ88", sta);
+	map.put("QQ39", stb);
+
+    //开始编码
+    var os = new Taf.JceOutputStream();
+    os.writeMap(5, map);
+
+    //开始解码
+    os.getBinBuffer().position = 0;
+    var is = new Taf.JceInputStream(os.getBinBuffer());
+    var mp = is.readMap(5, true, new Taf.Map(new Taf.STRING(), new TestJCE.UserBasic()));
+    for (var key in mp.val)
+    {
+        console.log("KEY:", key, " VALUE:", map.val[key].sUserID, map.val[key].sUserName, map.val[key].sex);
+    }
+}
+TestMapStruct();
+</script>
+	</body>
+</html>

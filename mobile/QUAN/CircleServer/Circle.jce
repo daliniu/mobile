@@ -1,0 +1,85 @@
+#include "/home/tafjce/QUAN/SecretServer/SecretBase.jce"
+
+module QUAN
+{
+    struct CircleKey
+    {
+        0 optional long id;
+    };
+    
+    struct CircleValue
+    {
+        0 optional int iTimespan;
+        1 optional CircleInfo tCircleInfo;
+    };
+
+    struct CircleLbsInfo
+    {
+        0 optional long lCircleId;
+        1 optional CircleLocation tLocation;
+    };
+
+    struct CircleLbsValue
+    {
+        0 optional int iTimespan;
+        1 optional vector<CircleLbsInfo> vCircleLbsInfo;
+    };
+
+    struct CircleUserValue
+    {
+        0 optional int iTimespan;
+        1 optional vector<long> vConcern;
+        2 optional vector<long> vAccessable;
+    };
+
+    struct CircleUnlockKey
+    {
+        0 optional long lUId;
+        1 optional long lCircleId;
+    };
+
+    struct CircleUnlockValue
+    {
+        0 optional int iTimespan;
+        1 optional int iLockNum;
+    };
+
+    struct CircleLocationValue
+    {
+        0 optional int iTimespan;
+        1 optional vector<CircleLocation> vLocation;
+    };
+
+    struct CircleIdList
+    {
+        0 optional vector<long> vCircleId;
+    };
+
+    interface Circle
+    {
+        int createCircle(CreateCircleReq tReq,out CreateCircleRsp tRsp);
+        int createCircleByAdmin(CreateCircleReq tReq,vector<CircleLocation> vCircleLocation,out CreateCircleRsp tRsp);
+
+        int searchCircle(SearchCircleReq tReq,out SearchCircleRsp tRsp);
+
+        int getCircle(GetCircleReq tReq,out GetCircleRsp tRsp);
+
+        int getCircleInfo(UserId tId,long lCircleId,string sCoord,out CircleInfo tCircleInfo);
+
+        int setCircleConcern(SetCircleReq tReq);
+
+        int postInCircle(UserId tId,long lCircleId,string sCoord,bool bIsComment);
+
+        int auditCircle(long lCircleId,int iAuditState,string sReason);
+
+        int recommCircle(long lCircleId,int iRecommValue);
+
+        int clearCircleCache(long lCircleId);
+        int clearLbsCache(string sCoord);
+
+        int addCircleLocation(long lCircleId,CircleLocation tCircleLocation);
+        int modifyCircleLocation(long lCircleLocationId,CircleLocation tCircleLocation);
+
+    };
+
+}; 

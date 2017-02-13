@@ -1,0 +1,14 @@
+module test
+{
+
+    //手机终端显示相关信息
+    struct BrokerDisplayInfo
+    {
+	0 optional short wScreenWidth = 12;		//屏幕宽度，单位(像素)
+	1 optional short wScreenHeight = 320;		//屏幕高度，单位(像素)
+	2 optional byte cFontSize = 14;			//字体大小，单位(像素)
+	3 optional byte cRowSpacing = 1;		//行距，单位(像素)
+	4 optional vector<byte> vCharSetKey;		//字符集的MD5值
+    };
+	
+};	

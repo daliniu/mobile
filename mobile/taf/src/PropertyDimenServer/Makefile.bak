@@ -1,0 +1,19 @@
+
+
+TOPDIR  := ../..
+include ${TOPDIR}/make.rules
+
+#-------------------------------------------------------------------------------
+
+INCLUDE   += -I${TOPDIR}/include/servant
+LIB       += ${TAFLIB} -lmysqlclient
+
+#-------------------------------------------------------------------------------
+
+J2CPP_FLAG = --with-taf
+TARGET  := PropertyDimenServer
+
+
+#-------------------------------------------------------------------------------
+include ${TOPDIR}/jce/property/PropertyDB.mk
+include ${TOPDIR}/inc.mk

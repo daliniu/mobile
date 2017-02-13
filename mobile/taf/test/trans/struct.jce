@@ -1,0 +1,18 @@
+module Test
+{
+
+struct stName
+{
+	0 require int a;
+	1 require int b;
+};
+
+struct stUserInfo_t
+{
+    0 require int iUserID;
+    1 require string sUserName;
+    2 require string sUserDesc;
+	3 require stName stname;
+};
+
+}; 

@@ -1,0 +1,72 @@
+
+module QUAN
+{
+
+    struct LbsUser
+    {
+        0 optional  long    lId;            //id, 例如：用户id
+        1 optional  int     iTime;          //更新时间
+        2 optional  double  iDistance;      //距离
+    };
+
+    //key[LbsUser,iDistance,iTime];
+
+   struct LbsReq
+   {
+        0 optional long     lId;                //id, 例如：用户id
+        1 optional double   dLng;               //经度
+        2 optional double   dLat;               //纬度
+   };
+
+   struct LbsRsp
+   {
+        0 optional vector<LbsUser> vId;          //id列表，如用户id
+   };
+
+    interface Lbs
+    {
+        /**
+        * 获取附近用户ID
+        * @param tReq           请求
+        * @param vRsp           返回
+        * @return int           0成功，-1失败
+        */
+        int getNearbyUser(LbsReq tReq,out LbsRsp tRsp);
+
+        /**
+        * 更新lbs信息
+        * @param tReq           请求
+        * @return int           0成功，-1失败
+        */
+        int updateLbsMap(LbsReq tReq);
+
+    };
+
+
+
+  //=========================lbs自身cache使用==============================
+
+
+   struct LbsInfo
+   {
+        0 optional unsigned short       idx;    //索引，暂未使用
+        1 optional int                  x;      //x坐标
+        2 optional int                  y;      //y坐标
+        3 optional int                  time;   //时间
+   };
+
+
+   struct CacheKey
+   {
+        0 optional unsigned int         row;
+        1 optional unsigned short       col;
+   };
+
+   struct CacheValue
+   {
+       0 optional map<long,LbsInfo> mLbsUser; 
+       1 optional int iLastCleanTime;
+   };
+
+
+}; 

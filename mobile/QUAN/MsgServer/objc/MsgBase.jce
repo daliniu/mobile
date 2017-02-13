@@ -1,0 +1,19 @@
+#include "/home/tafjce/QUAN/SecretServer/SecretBase.jce"
+
+module QUAN
+{
+    //消息提醒请求  
+    struct PushMsgReq  
+    {
+        0 optional UserId                tUserId;     // 用户ID 
+        1 optional IdRange               tRange;      //返回的ID范围
+        2 optional int                   iCount;      // 请求数量
+    };
+
+    //消息提醒请求  
+    struct PushMsgRsp  
+    {
+        0 optional int                   iNextBeginId;   // 返回下次请求的开始ID
+        1 optional vector<SecretInfo>    vSecrets;       // 帖子列表       20条
+    };
+}; 

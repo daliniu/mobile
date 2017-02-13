@@ -1,0 +1,11 @@
+
+module Test
+{
+
+interface AServant
+{
+    int test();
+    string saysomething(string something);
+};
+
+}; 

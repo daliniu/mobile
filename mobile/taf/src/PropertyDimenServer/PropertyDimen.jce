@@ -1,0 +1,10 @@
+
+module taf
+{
+
+interface QueryPropDimen
+{
+		int query(string input, out string result );
+};
+
+};

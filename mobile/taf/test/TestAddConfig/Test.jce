@@ -1,0 +1,10 @@
+
+module Test
+{
+
+interface TestABC
+{
+    int test(int a, int b);
+};
+
+}; 

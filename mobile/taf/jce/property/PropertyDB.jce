@@ -1,0 +1,14 @@
+
+module taf
+{
+struct Db
+{
+        0 require string sModule;
+        1 require string sIp;
+        2 require string sDbName;
+        3 require string sTbName;
+        4 require string sUser;
+        5 require string sPass;
+        6 require string sPort;         
+};
+};

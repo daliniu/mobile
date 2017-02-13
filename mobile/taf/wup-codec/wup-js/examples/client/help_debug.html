@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Jce For Javascript</title>
+       	<link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+		<h4>如何调试？</h4>
+		<hr />
+		
+		首先明确如下几点：<br />
+		1、前段和后端的JCE文件是否一致。如果两边的JCE文件不一样，在读取特定TAG字段的时候会出现类型不一致的情况。<br />
+		2、前段引入libutil.js后，使用Taf.Util.jcestream()，将JCE请求数据流打印出来；<br />
+		3、后端使用TC_Common::bin2str()，同样将JCE请求数据按16进制打印出来；<br />
+		4、对比两端打印的字符串确认是否相同。
+		
+		
+
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+/*
+* NeighborSvc协议
+* Copyright (C) 2011 qq.com
+* Created	by edgarzhu, 2011.08
+* Info: 1、客户端每次登录后通过ReqCheckIn协议上报用户当前位置信息
+				2、通过ReqGetNeighbors协议拉取附近QQ用户信息列表(version: 0x0001拉取附近的好友)
+* Change list:
+*/
+
+#include "./test2/NeighborCommon.jce"
+
+module NeighborSvc
+{
+	//规则1：用户ID类型为long，由客户端按照业务类型来生成：1个字节版本号（目前为0）+1个字节业务类型（0:手机QQ; 1:微聊; 2:微博; 3:邮箱）+6个字节业务内部的id
+
+	enum GPSTYPE
+	{
+		GPS_WGS84 = 0,		// WGS-84系统的坐标(一般手机硬件读到数值的是该系统)
+		GPS_MARS  = 1,		// 火星坐标(按保密局要求加扰后的坐标，
+					             // 用于国内地图展示或POI相对位置处理等)
+					             // by roycelin @ 2011-06-01 17:44:19
+		GPS_WGS_REAL = 2	// 确认输入为硬件读出来的GPS，而不是像iphone或android自己使用cell,wifi定位的数值
+	};
+	
+	enum CMDTYPE
+	{
+		CMD_INIT = 0,
+		CMD_CHECK_IN = 1,
+		CMD_GET_NEIGHBORS = 2,
+		CMD_SET_USER_STATE = 3,
+		CMD_GET_POINT = 4,
+	
+		CMD_CHECK_IN_ECT = 101,
+		CMD_GET_USERS = 102,
+		CMD_CHECK_IN_CRC = 103,
+		CMD_CHECK_IN_ECT_CRC = 104
+	};
+
+	// 1.以下经度、纬度数值均为相应坐标*1,000,000，
+	//   即去掉小数点(WUP的float精确度支持不够)
+	// 2.默认值为非法值,表示该无该字段属性
+	struct GPS
+	{
+		0 require int iLat = 900000000; // 纬度
+		1 require int iLon = 900000000; // 经度
+		2 require int iAlt = -10000000; // 海拨
+		3 optional GPSTYPE eType = GPS_WGS84; // 如果是从手机硬件读出来的，要设置此gps为WGS84
+								// 如果是使用LBS组提供的SDK组件获取的，此字段需要用QLBSGPSInfo::getType() 获取
+	};
+	
+	// 以下属性手机终端可以读出,详见wikipedia
+	struct Cell
+	{
+		0 require short shMcc = -1; // 国家码, mobile country code.中国是460
+		1 require short shMnc = -1; // 网络码, mobile network code.移动是0, 联通是1
+		2 require int iLac    = -1; // 区域码, location area code
+		3 require int iCellId = -1; // cell id
+	};
+
+	enum BusinessType
+	{
+		BusinessType_MQQ = 0,
+		BusinessType_Friend = 1,
+		BusinessType_MQQNoAct = 2
+	};
+	enum MqqSysType
+	{
+		MqqSysType_default = 0,
+		MqqSysType_Iphone = 1,
+		MqqSysType_Android = 2,
+		MqqSysType_Symbian_V5 = 3,
+		MqqSysType_WP7 = 4,
+		MqqSysType_Symbian_V3 = 5,
+		MqqSysType_HD = 6,
+		MqqSysType_HD_MINI = 7,
+		MqqSysType_HD_MTK = 8
+	};
+	//req包头部分 
+	struct ReqHeader
+	{
+		0 require short shVersion;     //版本号
+		1 require long lMID;           //用户ID
+		2 require unsigned int  iAppID; //客户端appid
+		3 optional BusinessType eBusiType = BusinessType_MQQ;//业务类型	
+		4 optional unsigned int uClientIp = 0;
+		5 optional unsigned int uClientPort = 0;
+		6 optional MqqSysType eMqqSysType = MqqSysType_default; //phone system
+	}; 
+	
+	enum REPLYCODE
+	{
+		REPLYCODE_SUCC = 0,
+		REPLYCODE_ERROR_EXCEPTION = 1,
+		REPLYCODE_ERROR_FUNCNAME = 2,
+		REPLYCODE_ERR_CHECKIN_TIMEOUT = 3,
+		REPLYCODE_ERR_GETNBS_TIMEOUT = 4,
+		REPLYCODE_ERR_TAF_rpc_call_async = 5,
+
+		REPLYCODE_ERR_LBS_EXCEPTION     = 101, // LBS系统异常
+		REPLYCODE_ERR_LBS_POSITION_FAIL = 102, // LBS系统无法根据输入定位
+		REPLYCODE_ERR_LBS_AUTH_FAIL     = 201, // LBS鉴权失败
+		REPLYCODE_ERR_LBS_INPUT_ERROR   = 202,  // LBS输入条件不足
+
+		REPLYCODE_SUCC_NOPENGYOU_INFO = 300 //没有查到朋友资料
+	};
+	
+	//resp包头部分
+	struct RespHeader
+	{
+		0 require short shVersion;      //版本号
+		1 require long lMID;            //用户ID
+		2 require REPLYCODE eReplyCode;//返回码
+		3 optional string strResult;		//返回结果说明,注：utf-8编码		
+	}; 
+
+	enum ListType
+	{
+		ListType_Normal = 0,
+		ListType_Group = 1
+	};
+
+	//req包体部分，三个字段均为必填项，客户端无法取得的数据:1、stGps使用默认值；2、vMacs和vCells size为0
+	struct ReqUserInfo
+	{
+	//LBS Info
+		0 require GPS stGps;              // GPS经纬度(WGS坐标,手机默认的输入)
+		1 require vector<long> vMacs;     // 在同一时刻同一地点能搜到wifi的mac地址
+		                                  // 1.建议按信号强度从强到弱排序
+		                                  // 2.每个mac填充long的低0-6位, demo:AB-CD-12-34-56-78 -> 188897262065272
+		                                  // 3.如无扫描到的wifi macs, 保留为空即可
+		2 require vector<Cell> vCells;    // 用户当前连接的基站CELLIDs
+		                                  // 1.可一次性获得多个cell的平台直接在这里填写
+		                                  // 2.只能读一个cell的平台，放入一个cell即可
+		3 require string strAuthName;      // 调用方身份认证名称(提前申请分配)
+		4 require string strAuthPassword;  // 调用方身份认证密码(提前申请分配)
+	//List Info
+		5 optional ListType eListType = ListType_Normal;
+	//new lbs report data
+		6 optional NeighborComm::LocalInfoType eLocalInfo ;
+		7 optional vector<byte> vLBSKeyData; // 终端读出来的定位数据
+	};
+
+	//resp包体部分
+	struct RespNeighborInfo
+	{
+		0 require long lNBID = 0;      //符合条件的用户ID 
+		1 require int iDistance = 0;  //与用户之间的距离
+		2 require int lTime = 0;  //此用户签到时间点
+		3 optional string strDescription;  //对时间距离的描述
+		4 optional byte cGroupId = 0;
+		5 optional byte cSex = -1; //性别0==男，1==女
+		6 optional byte cAge = -1;
+		7 optional string strPYFaceUrl;  //朋友头像url PS: 无为空
+								//http://py.qlogo.cn/friend/48a5beee9d1bd4e739bf6362e610369a83164a57f44ca232/audited/60 (头像size: 60/100/200)
+		8 optional string strSchoolName;  //共同学校名称 PS: 无为空
+		9 optional string strCompanyName;  //共同公司名称 PS: 无为空
+		10 optional string strPYName; //朋友昵称
+		11 optional NeighborComm::MerchantType eMerchantType = NeighborComm::MerchantType_Nomal; //附近商家类型
+		12 optional string strNick; //昵称
+	};
+	struct GroupInfo
+	{
+		0 require byte cGroupId;
+		1 require string strGroupName;
+	};
+	//resp包体部分
+	struct UserDetailLocalInfo
+	{
+		0 require string strProvince;  // 省、直辖市、自治区、特别行政区
+		1 require string strCity;      // 地区、地级市、自治州、盟
+		2 require string strDistrict;  // 县级市、自治县、旗、自治旗、特区、林区，以及市辖区
+		3 require string strTown;      // 乡、镇、民族乡、街道
+		4 require string strRoad;     // 路,街道
+		5 require string strPremises; // 周边地标,不推荐直接使用。大多为空,如"腾讯大厦;XX茶餐厅".以; 分隔。建议仅在描述当前点时使用
+                                       // 地标这个字段一般建议这样使用：
+                                       // 你在XX市XX区XX路附近，(如果路字段为空)周边可能有：地标1,地标2
+	};
+//收到非setUserState的包，就默认将用户状态置为USERTYPE_LBS_valid
+	//签到命令包
+	struct ReqCheckIn
+	{
+		0 require ReqHeader stHeader;
+		1 require ReqUserInfo stUserInfo;
+	};
+	struct RespCheckIn
+	{
+		0 require RespHeader stHeader;
+		1 optional GPS stGps;
+	};
+	
+	//用来获取火星坐标和具体的位置信息，不用签到
+	struct ReqGetPoint
+	{
+		0 require ReqUserInfo stUserInfo;
+	};
+	struct RespGetPoint
+	{
+		0 require GPS stGps;
+		1 optional UserDetailLocalInfo stUDLinfo;
+	};
+
+	//为翻页，req、resp共用部分
+	struct UserData
+	{
+		0 require int lTime = 0;      //用户入队列时间点
+		1 require int iLat = 900000000; // 纬度
+		2 require int iLon = 900000000; // 经度
+		3 require long lNextMid = 0;//client第一次请求添0；svc下发回包时添下次拉取的起始mid
+								//当lNextMid = -1 时，表明svc无下页数据，svc收到这样的请求不会返回有效数据
+		4 optional string strProvince;  // 省、直辖市、自治区、特别行政区
+	};
+	struct ReqGetNeighbors
+	{
+		0 require ReqHeader stHeader;
+		1 optional ReqUserInfo stCheckInInfo;//可选字段，有此字段则会帮用户做一次签到
+		2 optional UserData stUserData;
+		3 optional int iListSize = -1;
+	};
+	struct RespGetNeighbors
+	{
+		0 require RespHeader stHeader;
+		1 require long RespTime = 0;
+		2 optional vector<RespNeighborInfo> vNeighborInfos;//符合条件的用户list
+		3 optional vector<GroupInfo> vGroupList;
+		4 optional UserData stUserData;
+		5 optional UserDetailLocalInfo stUDLinfo;
+		6 optional NeighborComm::EctFragmentation stEctFmt; //分包信息
+	};
+
+	enum USERTYPE
+	{
+		USERTYPE_INIT = 0,
+		USERTYPE_LBS_MQQ = 0x1, //DCacheUserData.uUserState & USERTYPE_LBS_MQQ == true : Mqq lbs valid
+		USERTYPE_LBS_Friend = 0x2 //DCacheUserData.uUserState & USERTYPE_LBS_Friend == true : Friend lbs valid
+	};
+	//用户设置是否使用位置功能
+	struct ReqSetUserState
+	{
+		0 require ReqHeader stHeader;
+		1 require USERTYPE eUserState;//eUserState = USERTYPE_LBS_MQQ or USERTYPE_LBS_Friend 设置手Q或者朋友的位置服务可用
+																	//eUserState = 0 设置手Q或者朋友的位置服务为不可用
+	};
+	struct RespSetUserState
+	{
+		0 require RespHeader stHeader;
+	};
+/*****************************************DCache package*****************************************/
+	struct DCacheUserData
+	{
+		0 require unsigned int uUserState = 3;
+		1 optional BusinessType eBusiType = BusinessType_MQQ;
+	};
+
+	struct DCacheUserPoint
+	{
+		0 require int lTime = 0;      //用户入队列时间点
+		1 require int iLat = 900000000; // 纬度
+		2 require int iLon = 900000000; // 经度
+	};
+
+	struct NodeList
+	{
+		0 require map<long, vector<DCacheUserPoint>> UserDayInfo;
+	};
+
+	struct DCacheUserDayInfo
+	{
+		0 require DCacheUserData stUserData;
+		1 require vector<byte> strNodeList;//NodeList
+	};
+}; 
+
+/*
+使用示例：
+
+请求包:
+	UniPacket<> ReqCPack;
+//包头部分
+	ReqCPack.setRequestId(【客户端seq】);
+	ReqCPack.setServantName(【NeighborObj】);
+	ReqCPack.setFuncName(【CMDTYPE中的字符串 如：CMD_CHECK_IN】);
+	enum CMDTYPE
+	{
+		CMD_INIT = 0,
+		CMD_CHECK_IN = 1,
+		CMD_GET_NEIGHBORS = 2,
+		CMD_SET_USER_STATE = 3,
+	
+		CMD_CHECK_IN_ECT = 101,
+		CMD_GET_USERS = 102,
+		CMD_CHECK_IN_CRC = 103,
+		CMD_CHECK_IN_ECT_CRC = 104
+	};
+
+//包体部分
+//ReqCPack.put<T>(【strName】, 【T对象】)
+//strName使用struct T的名字字符串，客户端、服务器端都按这个约定填写
+//例如：
+	NeighborSvc::ReqCheckIn rCI;
+	..................
+	ReqCPack.put<NeighborSvc::ReqCheckIn>("ReqCheckIn", rCI);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+接收包:
+服务器组包规则与客户端相同
+*/
+
+

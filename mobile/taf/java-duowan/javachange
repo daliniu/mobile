@@ -1,0 +1,3 @@
+#2011-01-14
+taf服务端对单向调用判断并不做响应，客户端同步调用中对单向调用判断提前、优化
+SendMessage.setMessageType方法优化，删除无用的request构造

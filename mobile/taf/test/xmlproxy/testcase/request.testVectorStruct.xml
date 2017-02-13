@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="gbk"?>
+<?xml-stylesheet href="XmlProxy.xsl" type="text/xsl"?>
+<request>
+<!--
+    <locator>taf.tafregistry.QueryObj@tcp -h 172.27.205.110 -p 17890 -t 3000</locator>
+-->
+    <servant>Test.TestServer.TestExtObj</servant>
+    <return>
+        <int/>
+    </return>
+    <function_name>testVectorStruct</function_name>
+    <parameters>        
+        <int in="true" name="id">1</int>
+		<vector in="true" name="vi">
+			<struct>
+				<bool tag="0">true</bool>
+				<byte tag="1">4a</byte>
+				<short tag="2">201</short>
+				<int tag="3">202</int>
+				<long tag="4">203</long>
+				<float tag="5">204.4</float>
+				<double tag="6">205.5</double>
+				<string tag="7">this is an string</string>
+				<vector tag="8">
+					<struct name="MyInfo">
+						<int tag="0">100000</int>
+						<string tag="1">this is an string in MyInfo</string>
+					</struct>
+					<struct name="MyInfo">
+						<int tag="0">200000</int>
+						<string tag="1">this is an string in MyInfo2</string>
+					</struct>
+				</vector>
+				<vector tag="9">
+					<string>vector string 1</string>
+					<string>vector string 2</string>
+				</vector>
+				<map tag="10">
+					<entry>
+						<string>key1</string>
+						<string>value1</string>
+					</entry>
+					<entry>
+						<string>key2</string>
+						<string>value2</string>
+					</entry>
+				</map>
+				<vector tag="11">
+					<map>
+						<entry>
+							<string>key3</string>
+							<string>value3</string>
+						</entry>
+						<entry>
+							<string>key4</string>
+							<string>value4</string>
+						</entry>
+					</map>
+				</vector>
+				<map tag="12">
+					<entry>
+						<vector>
+							<string>vector string 5</string>
+							<string>vector string 6</string>
+						</vector>
+						<vector>
+							<string>vector string 7</string>
+							<string>vector string 8</string>
+						</vector>
+					</entry>
+					<entry>
+						<vector>
+							<string>vector string 9</string>
+							<string>vector string 10</string>
+						</vector>
+						<vector>
+							<string>vector string 11</string>
+							<string>vector string 12</string>
+						</vector>
+					</entry>
+				</map>
+			</struct>
+			<struct>
+				<bool tag="0">false</bool>
+				<byte tag="1">4a</byte>
+				<short tag="2">201</short>
+				<int tag="3">202</int>
+				<long tag="4">203</long>
+				<float tag="5">204.4</float>
+				<double tag="6">205.5</double>
+				<string tag="7">this is an string</string>
+				<vector tag="8">
+					<struct name="MyInfo">
+						<int tag="0">100000</int>
+						<string tag="1">this is an string in MyInfo</string>
+					</struct>
+					<struct name="MyInfo">
+						<int tag="0">200000</int>
+						<string tag="1">this is an string in MyInfo2</string>
+					</struct>
+				</vector>
+				<vector tag="9">
+					<string>vector string 1</string>
+					<string>vector string 2</string>
+				</vector>
+				<map tag="10">
+					<entry>
+						<string>key1</string>
+						<string>value1</string>
+					</entry>
+					<entry>
+						<string>key2</string>
+						<string>value2</string>
+					</entry>
+				</map>
+				<vector tag="11">
+					<map>
+						<entry>
+							<string>key3</string>
+							<string>value3</string>
+						</entry>
+						<entry>
+							<string>key4</string>
+							<string>value4</string>
+						</entry>
+					</map>
+				</vector>
+				<map tag="12">
+					<entry>
+						<vector>
+							<string>vector string 5</string>
+							<string>vector string 6</string>
+						</vector>
+						<vector>
+							<string>vector string 7</string>
+							<string>vector string 8</string>
+						</vector>
+					</entry>
+					<entry>
+						<vector>
+							<string>vector string 9</string>
+							<string>vector string 10</string>
+						</vector>
+						<vector>
+							<string>vector string 11</string>
+							<string>vector string 12</string>
+						</vector>
+					</entry>
+				</map>
+			</struct>
+		</vector>
+
+		<vector out="true" name="vo">
+			<struct>
+				<bool tag="0"/>
+				<byte tag="1"/>
+				<short tag="2"/>
+				<int tag="3"/>
+				<long tag="4"/>
+				<float tag="5"/>
+				<double tag="6"/>
+				<string tag="7"/>
+				<vector tag="8">
+					<struct name="MyInfo">
+						<int tag="0"/>
+						<string tag="1"/>
+					</struct>
+					<struct name="MyInfo">
+						<int tag="0"/>
+						<string tag="1"/>
+					</struct>
+				</vector>
+				<vector tag="9">
+					<string/>
+					<string/>
+				</vector>
+				<map tag="10">
+					<entry>
+						<string/>
+						<string/>
+					</entry>
+					<entry>
+						<string/>
+						<string/>
+					</entry>
+				</map>
+				<vector tag="11">
+					<map>
+						<entry>
+							<string/>
+							<string/>
+						</entry>
+						<entry>
+							<string/>
+							<string/>
+						</entry>
+					</map>
+				</vector>
+				<map tag="12">
+					<entry>
+						<vector>
+							<string/>
+							<string/>
+						</vector>
+						<vector>
+							<string/>
+							<string/>
+						</vector>
+					</entry>
+					<entry>
+						<vector>
+							<string/>
+							<string/>
+						</vector>
+						<vector>
+							<string/>
+							<string/>
+						</vector>
+					</entry>
+				</map>
+			</struct>
+		</vector>
+    </parameters>
+</request>

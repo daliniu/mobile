@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="gbk"?>
+<?xml-stylesheet href="XmlProxy.xsl" type="text/xsl"?>
+<request>
+<!--
+    <locator>taf.tafregistry.QueryObj@tcp -h 172.27.205.110 -p 17890 -t 3000</locator>
+-->
+    <servant>Test.TestServer.TestBaseObj</servant>
+    <return>
+        <int/>
+    </return>
+    <function_name>testMapInt</function_name>
+    <parameters>        
+        <int in="true" name="id">1</int>
+        <map in="true" name="vi">
+			<entry>
+				<int>100000</int>
+				<int>200000</int>
+			</entry>
+			<entry>
+				<int>300000</int>
+				<int>400000</int>
+			</entry>
+			<entry>
+				<int>500000</int>
+				<int>600000</int>
+			</entry>
+		</map>
+        <map out="true" name="vo">
+			<entry>
+				<int/>
+				<int/>
+			</entry>
+		</map>
+    </parameters>
+</request>

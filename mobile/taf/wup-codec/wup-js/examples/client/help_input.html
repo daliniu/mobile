@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Jce For Javascript</title>
+       	<link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+		<h4>输出流Taf.JceInputStream暴露了哪些接口？</h4>
+		<hr />
+
+		Taf.JceInputStream用于从JCE协议数据流中读取指定的字段：
+		<table style="margin-left:0px;margin-top:10px; margin-bottom: 10px" cellpadding="2px" cellspacing="4px" summary="" width="1000px">
+			<tr>
+				<td width="250px">函数</td>
+				<td width="600px">描述</td>
+			</tr>
+			<tr>
+				<td>构造函数</td>
+				<td>
+					开发者调用  var is = new Taf.JceInputStram(buffer)，声明一个输入流对象。<br /><br />
+
+					输入参数类型：<br />
+					字段数据值: buffer ArrayBuffer
+				</td>
+			</tr>
+
+			<tr>
+				<td>readBoolean(tag, require, def)</td>
+				<td>
+					从数据流中读一个Boolean类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Boolean<br /><br />
+					
+					返回数据类型：Boolean<br /><br />
+					
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>
+				</td>
+			</tr>
+
+			<tr>
+				<td>readInt8(tag, require, def)</td>
+				<td>
+					从数据流中读一个Int8类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Int8<br /><br />
+					
+					返回数据类型：Int8<br /><br />
+					
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>
+				</td>
+			</tr>
+
+			<tr>
+				<td>readInt16(tag, require, def)</td>
+				<td>
+					从数据流中读一个Int16类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Int16<br /><br />
+					
+					返回数据类型：Int16<br /><br />
+					
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>readInt32(tag, require, def)</td>
+				<td>
+					从数据流中读一个Int32类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Int32<br /><br />
+
+					返回数据类型：Int32<br /><br />
+
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>
+				</td>
+			</tr>
+
+			<tr>
+				<td>readInt64(tag, require, def)</td>
+				<td>
+					从数据流中读一个Int64类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Int64<br /><br />
+
+					返回数据类型：Int64<br /><br />
+
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>				
+				</td>
+			</tr>
+			
+			<tr>
+				<td>readUInt8(tag, require, def)</td>
+				<td>
+					从数据流中读一个UInt8类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def UInt8<br /><br />
+
+					返回数据类型：UInt8<br /><br />
+
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>	
+				</td>
+			</tr>
+			
+			<tr>
+				<td>readUInt16(tag, require, def)</td>
+				<td>
+					从数据流中读一个UInt16类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def UInt16<br /><br />
+
+					返回数据类型：UInt16<br /><br />
+
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>						
+				</td>
+			</tr>
+			
+			<tr>
+				<td>readUInt32(tag, require, def)</td>
+				<td>
+					从数据流中读一个UInt32类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def UInt32<br /><br />
+
+					返回数据类型：UInt32<br /><br />
+
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>							
+				</td>
+			</tr>
+			
+			<tr>
+				<td>readString(tag, require, def)</td>
+				<td>
+					从数据流中读一个String类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def String<br /><br />
+
+					返回数据类型：String<br /><br />
+
+					<font color="#FF0000">注意：<br />A1 当require为true可忽略该字段；<br />
+						A2 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A3 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>								
+				</td>
+			</tr>
+
+			<tr>
+				<td>readStruct(tag, require, def)</td>
+				<td>
+					从数据流中读一个结构体类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Struct<br /><br />
+
+					返回数据类型：Struct<br /><br />
+
+					<font color="#FF0000">注意：<br />
+						A1 函数调用方法。假设有个结构体名称为TestJCE.UserInfo。<br />&nbsp;&nbsp;&nbsp;该函数调用方法：is.readStruct(0, true, new TestJCE.UserInfo())；<br />
+						A2 当require为true的时候，使用new出来结构体中的readFrom函数从数据流中读取字段；<br />
+						A3 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A4 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>							
+				</td>
+			</tr>
+
+			<tr>
+				<td>readBytes(tag, require, def)</td>
+				<td>
+					从数据流中读一个Taf.BinBuffer类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Taf.BinBuffer<br /><br />
+
+					返回数据类型：Taf.BinBuffer<br /><br />
+
+					<font color="#FF0000">注意：<br />
+						A1 函数调用方法。<br />&nbsp;&nbsp;&nbsp;该函数调用方法：is.readBytes(0, true, new Taf.BinBuffer())；<br />
+						A2 当require为true的时候，使用new出来Taf.BinBuffer()的readFrom函数从数据流中读取字段；<br />
+						A3 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A4 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>						
+				</td>
+			</tr>
+
+			<tr>
+				<td>readVector(tag, require, def)</td>
+				<td>
+					从数据流中读一个Taf.Vector&lt;T&gt;（T不可为Byte）类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Taf.Vector&lt;T&gt;<br /><br />
+
+					返回数据类型：Taf.Vector&lt;T&gt;<br /><br />
+
+					<font color="#FF0000">注意：<br />
+						A1 函数调用方法。<br />&nbsp;&nbsp;&nbsp;该函数调用方法：is.readVector(0, true, new Taf.Vector(new T()))；<br />
+						A2 当require为true的时候，使用new出来Taf.Vector()的readFrom函数从数据流中读取字段；<br />
+						A3 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A4 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>							
+				</td>
+			</tr>
+
+			<tr>
+				<td>readMap(tag, require, def)</td>
+				<td>
+					从数据流中读一个Taf.Map&lt;KT, VT&gt;类型的字段。<br /><br />
+
+					输入参数类型：<br />
+					字段标签值：tag byte<br />
+					是否&nbsp;&nbsp;必读：require Boolean<br />
+					字段默认值：def Taf.Map&lt;KT, VT&gt;<br /><br />
+
+					返回数据类型：Taf.Map&lt;KT, VT&gt;<br /><br />
+
+					<font color="#FF0000">注意：<br />
+						A1 函数调用方法。<br />&nbsp;&nbsp;&nbsp;该函数调用方法：is.readMap(0, true, new Taf.Map(new KT(), new VT()))；<br />
+						A2 当require为true的时候，使用new出来Taf.Map()的readFrom函数从数据流中读取字段；<br />
+						A3 当require为false的时候，如果找不到对应Tag的字段，该函数将返回def作为默认值；<br />
+						A4 该函数在特定情况下会抛出异常，请注意捕捉。
+					</font>							
+				</td>
+			</tr>		
+			
+		</table>
+
+</body>
+</html>

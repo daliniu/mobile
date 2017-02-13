@@ -1,0 +1,12 @@
+<response>
+<return>
+<int tag="0">1</int>
+</return>
+<parameters>
+<vector tag="3">
+<float tag="0">3.14</float>
+<float tag="0">4.13</float>
+<float tag="0">5.26</float>
+</vector>
+</parameters>
+</response>

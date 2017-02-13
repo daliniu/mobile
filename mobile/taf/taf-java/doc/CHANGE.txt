@@ -1,0 +1,99 @@
+# 2010-08-10 15:27 
+初始建立，代码迁移自老svn之/java目录。
+
+# 2010-08-10 17:14
+1、简化/ant下的构建脚本。
+2、固定并统一wup包和proxy包的版本信息。
+3、构建wup、proxy、server三个包。
+
+# 2010-08-11 12:05
+1、对长度不合法的请求包做缓冲区清理。（同步自老svn的修改）
+2、构建taf-proxy包。
+
+# 2010-08-16 14:51
+1、抛出异常时增加一层包装，解决异常堆栈不全问题。（同步自老svn的修改）
+2、构建taf-proxy包。
+
+# 2010-08-17 15:24
+1、补充taf_del_router和taf_del_hash。（同步自老svn的修改）
+2、构建taf-proxy包。
+
+# 2010-08-18 10:20
+1、netTool包的内容由net_framework替换为Navi1.0。
+2、相关代码重构：netTool相关的API切换。
+3、构建wup、taf-proxy、taf-server包。
+
+# 2010-08-18 11:45
+1、修正不推荐使用的接口session.close()。
+2、构建taf-proxy包。
+
+# 2010-08-25 16:57
+1、对wup、jce、proxy三者，albertzhu在8月24日和25日的多项优化。（同步自老svn的修改）
+2、构建wup、taf-proxy两个包。
+
+# 2010-10-20 14:25
+1、整个框架移植到Navi2.0上。
+2、wup协议优化及相关修改。（同步自老svn的修改）
+3、构建wup、taf-proxy、taf-server三个包。
+4、netTool包的内容有Navi1.0替换为Navi2.0。
+
+# 2010-10-28 17:55
+1、删除服务端ahttpclient包及对thessian包的依赖。
+2、三个构建脚本的编译等级调整为1.6。
+3、构建wup、taf-proxy、taf-server。
+
+# 2010-10-29 09:25
+1、服务端jce2java子包名称重构为proxy。
+2、构建taf-server。
+
+# 2010-11-04 16:12
+1、Communicator增加getEndpoint4All方法。（同步自老svn的修改）
+2、构建taf-proxy。
+
+# 2010-11-09 16:23
+1、netTool包额外加入com.qq.sim包下的Millis100TimeProvider和TimeProvider。
+2、ServiceEndPoint.getAliveEndPoint修改Session空闲时间的判断逻辑。
+3、构建taf-proxy。
+
+# 2010-11-10 16:45
+1、netTool包支持连接io永不超时，以及taf-proxy的相关修改。
+2、taf-server提供连接io超时的默认值。
+3、构建taf-proxy、taf-server。
+
+# 2010-11-11 11:35
+1、把对TimeProvider的依赖替换为Millis100TimeProvider。
+2、构建wup、taf-proxy、taf-server。
+
+# 2010-11-11 16:47
+1、删除wup.properties和ClientInfo.properties版本号配置文件。
+2、删除无用类cm.qq.taf.Version。
+3、把版本号直接写入com.qq.jce.wup.WupInfo和com.qq.taf.ClientInfo中。
+4、构建wup、taf-proxy。
+
+# 2010-11-12 15:31
+1、netTool之Session.toString方法提供更详细输出。
+2、ServiceEndPoint简化几处关闭Session的逻辑。
+3、构建taf-proxy。
+
+# 2010-12-08 16:49
+1、wup客户端UniAttribute和UniPacket之BUG修正。（同步自老SVN的修改）
+2、构建wup、taf-proxy、taf-server。
+
+# 2010-12-14 17:11
+1、客户端异步调用线程池相关逻辑重构。（同步自老SVN的修改）
+2、构建taf-proxy。
+
+# 2010-12-17 10:10
+1、wup修改UniAttribute之汉字编码问题。（同步自老SVN的修改）
+2、构建wup。
+
+# 2011-1-6 11:34
+1、依赖包netTool更新：Navi新增UDP模块。
+2、依赖包config_center和jutil更新。
+3、proxy和server代码修改：与Navi之UDP模块相关的代码修改。
+4、构建wup、proxy和server三个包。
+
+# 2011-01-14 16:27
+1、taf服务端对单向调用判断并不做响应，客户端同步调用中对单向调用判断提前、优化
+2、SendMessage.setMessageType方法优化，删除无用的request构造
+

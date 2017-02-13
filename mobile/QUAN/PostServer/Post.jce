@@ -1,0 +1,182 @@
+#include "/home/tafjce/QUAN/SecretServer/SecretBase.jce"
+
+module QUAN
+{
+    struct PostCacheKey
+    {
+        0 optional long lSId;
+    };
+
+    struct PostCacheValue
+    {
+        0 optional SecretInfo tSecretInfo;
+        1 optional int iTimespan;
+    };
+
+    struct CommentCacheValue
+    {
+        0 optional vector<ContentInfo> vContentInfo;
+        1 optional int iTimespan;
+    };
+
+    struct UserFavorCacheValue
+    {
+        0 optional map<long,int> mpFavorList;
+        1 optional int iTimespan;
+    };
+
+    struct UserCleanTrailCacheValue
+    {
+        0 optional int iCleanTrailTime;
+        1 optional int iTimespan;
+    };
+
+    struct NotifyPost
+    {
+        0 optional long lSId;
+        1 optional int iNotifyType;
+    };
+
+    interface Post
+    {
+        /**
+         * 获取内容列表
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         */ 
+        int getSecretContent(ContentListReq tReq, out ContentListRsp tRsp);
+
+
+        /**
+         * 发表秘密
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         */ 
+        int postSecret(PostSecretReq tReq, out PostSecretRsp tRsp);
+
+        /**
+         * 发表评论
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         *
+         * @cache post,comment
+         */ 
+        int postContent(PostContentReq tReq, out PostContentRsp tRsp,out vector<long> vRelatUId);
+
+        /**
+         * 点赞
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         *
+         * @cache post
+         */ 
+        int postFavor(PostFavorReq tReq, out PostFavorRsp tRsp);
+
+        /**
+         * 举报
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         */ 
+        int postReport(PostReportReq tReq, out PostReportRsp tRsp);
+
+        /**
+         * 移除 
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         *
+         * @cache 
+         */ 
+        int removeSecret(RemoveSecretReq tReq, out RemoveSecretRsp tRsp);
+
+        /**
+         * 移除 
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         *
+         * @cache 
+         */ 
+        int removeContent(RemoveContentReq tReq, out RemoveContentRsp tRsp);
+
+        /**
+         * 移除痕迹
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         */ 
+        int cleanTrail(CleanTrailReq tReq, out CleanTrailRsp tRsp);
+
+        /**
+         * 批量获取用户帖子
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         */ 
+        int getBatchSecrets(long lUId, vector<long> vInSecret, out vector<SecretInfo> vOutSecrets);
+
+        
+        /**
+         * 清除cache
+         * @param lSId/lUId  贴子ID/用户ID
+         * @return int     0成功，-1失败  
+         */
+        int clearPostCache(long lSId);
+        int clearCommentCache(long lSId);
+        int clearUserOpCache(long lUId);
+        int clearUserCleanTrailCache(long lUId);
+
+        /**
+         * 批量获取操作关系
+         * @param vUId 用户列表
+         * @param vOp  输出操作列表
+         * @return int     0成功，-1失败  
+         */
+        int getUserOpBatch(long lUId,vector<FriendsList> vUId,out vector<map<long,int>> vOp);
+
+        /**
+         * 批量获取用户提醒贴
+         * @param tReq      
+         * @param tRsp
+         * @return int     0成功，-1失败  
+         */ 
+        int getBatchNotifySecrets(long lUId, vector<NotifyPost> vInSecret, out vector<SecretInfo> vOutSecrets);
+
+
+        /**
+         * @Breif 分享贴子
+         *
+         * @Param lSId
+         * @Param lShareId
+         *
+         * @Returns int     0成功，-1失败    
+         */
+        int shareSecret(long lSId,long lShareId);
+
+
+        /**
+         * @Breif 审核贴子
+         *
+         * @Param lSId
+         * @Param iLevel 1仅自己可见，其它预留
+         *
+         * @Returns   
+         */
+        int auditSecret(vector<long> vSId,int iLevel);
+
+        /**
+         * @Breif 根据帖子ID获取帖子内容
+         *
+         * @Param lSId
+         *
+         * @Returns   
+         */
+        int getSecretById(GetSecretByIdReq tReq, out GetSecretByIdRsp tRsp);
+    };
+
+}; 

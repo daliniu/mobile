@@ -1,0 +1,412 @@
+[Global]
+CurrentProject=taf.vpj
+[ProjectDates]
+taf.vpj=20140320092703072
+[ActiveConfig]
+taf.vpj=Debug
+[State]
+SCREEN: 1920 1080 486 32 1434 924 0 0 M 0 0 0 0 1283 692 0
+CWD: \MDW
+BUFFER: BN="src\libparse\lex.yy.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=70 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=35 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="src\libparse\parse.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=70 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=36 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="jce\log\Log.jce"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=jce	HM=0 MF=0 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=70 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.849 CL=46 LE=0 CX=41 CY=25 WI=5 BI=39 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="test\client\main.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=96 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=70 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.3467 CL=40 LE=0 CX=40 CY=17 WI=5 BI=4 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="test\HelloServer\src\HelloImp.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=96 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=70 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.234 CL=70 LE=0 CX=70 CY=14 WI=5 BI=34 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="test\HelloServer\src\HelloServer.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=96 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=70 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.70 CL=95 LE=0 CX=95 CY=5 WI=5 BI=15 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="include\util\tc_http.h"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=96 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=0 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.24704 CL=21 LE=0 CX=21 CY=26 WI=5 BI=16 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="src\libutil\tc_http.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=96 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=70 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.33865 CL=6 LE=0 CX=6 CY=27 WI=5 BI=17 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="src\libservant\ServantProxy.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=96 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=0 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.18198 CL=21 LE=0 CX=21 CY=26 WI=5 BI=18 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="src\libservant\StatReport.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=96 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=0 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.10359 CL=31 LE=0 CX=31 CY=17 WI=5 BI=19 HT=0 HN=0 HF=0 HC=4
+BUFFER: BN="test\HelloServer\client\main.cpp"
+BI: MA=1 74 1  TABS=1 5  WWS=1 IWT=0 ST=0 IN=2 BW=0 US=32000 RO=0 SE=1 SN=0 BIN=0 MN=C/C++	HM=0 MF=96 TL=0 MLL=0 ASE=0 LNL=1 LCF=0 CAPS=0 E=70 ESBU2=-1 CL="" SC="" SCE= SCU=
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=5 BI=13 HT=0 HN=0 HF=0 HC=4
+WINDOW: 0 0 1126 452 -1 -1 N  WF=0 WT=1 "Default Unicode Font,10,0,1"
+BUFFER: BN="src\libparse\lex.yy.cpp"
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=352 BI=35 HT=0 HN=0 HF=0 HC=4
+WINDOW: 20 25 1126 452 -1 -1 N  WF=0 WT=2 "Default Unicode Font,10,0,1"
+BUFFER: BN="src\libparse\parse.cpp"
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=342 BI=36 HT=0 HN=0 HF=0 HC=4
+WINDOW: 40 50 1126 452 -1 -1 N  WF=0 WT=4 "Default Unicode Font,10,0,1"
+BUFFER: BN="jce\log\Log.jce"
+VIEW: LN=.849 CL=46 LE=0 CX=41 CY=25 WI=328 BI=39 HT=0 HN=0 HF=0 HC=4
+WINDOW: 80 100 994 484 -1 -1 N  WF=0 WT=3 "Default Unicode Font,10,0,1"
+BUFFER: BN="test\client\main.cpp"
+VIEW: LN=.3467 CL=40 LE=0 CX=40 CY=17 WI=371 BI=4 HT=0 HN=0 HF=0 HC=4
+WINDOW: 120 150 994 484 -1 -1 N  WF=0 WT=6 "Default Unicode Font,10,0,1"
+BUFFER: BN="test\HelloServer\client\main.cpp"
+VIEW: LN=.0 CL=1 LE=0 CX=1 CY=0 WI=383 BI=13 HT=0 HN=0 HF=0 HC=4
+WINDOW: 100 125 994 484 -1 -1 N  WF=0 WT=5 "Default Unicode Font,10,0,1"
+BUFFER: BN="test\HelloServer\src\HelloImp.cpp"
+VIEW: LN=.234 CL=70 LE=0 CX=70 CY=14 WI=377 BI=34 HT=0 HN=0 HF=0 HC=4
+WINDOW: 140 175 994 484 -1 -1 N  WF=0 WT=7 "Default Unicode Font,10,0,1"
+BUFFER: BN="test\HelloServer\src\HelloServer.cpp"
+VIEW: LN=.70 CL=95 LE=0 CX=95 CY=5 WI=396 BI=15 HT=0 HN=0 HF=0 HC=4
+WINDOW: 200 25 994 484 -1 -1 N  WF=0 WT=8 ",,,"
+BUFFER: BN="include\util\tc_http.h"
+VIEW: LN=.24704 CL=21 LE=0 CX=21 CY=26 WI=411 BI=16 HT=0 HN=0 HF=0 HC=4
+WINDOW: 180 0 994 484 -1 -1 N  WF=0 WT=9 "Default Unicode Font,10,0,1"
+BUFFER: BN="src\libutil\tc_http.cpp"
+VIEW: LN=.33865 CL=6 LE=0 CX=6 CY=27 WI=402 BI=17 HT=0 HN=0 HF=0 HC=4
+WINDOW: 220 50 994 484 -1 -1 N  WF=0 WT=10 ",,,"
+BUFFER: BN="src\libservant\ServantProxy.cpp"
+VIEW: LN=.18198 CL=21 LE=0 CX=21 CY=26 WI=418 BI=18 HT=0 HN=0 HF=0 HC=4
+WINDOW: 240 75 994 484 -1 -1 M  WF=0 WT=12 ",,,"
+BUFFER: BN="src\libservant\StatReport.cpp"
+VIEW: LN=.10307 CL=38 LE=0 CX=38 CY=16 WI=424 BI=19 HT=0 HN=0 HF=0 HC=4
+FILEHIST: 9
+jce\log\Log.jce
+test\client\main.cpp
+test\HelloServer\client\main.cpp
+test\HelloServer\src\HelloImp.cpp
+test\HelloServer\src\HelloServer.cpp
+src\libutil\tc_http.cpp
+include\util\tc_http.h
+src\libservant\ServantProxy.cpp
+src\libservant\StatReport.cpp
+DEBUG: 0 0 0 0 3 0 gdb
+printf
+strcpy
+std::*
+DEBUG2: 0
+PROJECT_CACHE: 0
+TBCLASS: 0 0
+[TreeExpansion2]
+- taf.vpj
+  + conf
+  - include
+    + config
+    + hessian
+    + jce
+      + demo
+    + jmem
+    + log
+    + nodeF
+    + notify
+    + parse
+    + patch
+    + servant
+    + util
+  + java
+    + hessian2hce
+      + src
+    - jce
+      + src
+      - test
+        - com
+          - qq
+            - taf
+              - jce
+                - wup
+                  + test
+              - proxy
+                - test
+                  + router
+                    + Test
+                  + Test
+            - Test
+              - cnst
+    + tafserver
+      - com
+        - qq
+          - taf
+            - server
+              + ahttpclient
+              + jce2java
+              - util
+                + ip
+    + tafservercreate
+      - src
+    + tafservertest
+      - src
+        - com
+          - qq
+            - java
+              - test
+              - testclient
+              - testserver
+                - testservant
+    + testcase
+      - src
+        - com
+          - qq
+            - java
+              - testcase
+                + testcaseservant
+        - Test
+  + java-duowan
+    - jce
+      - src
+    - tafservercreate
+      - src
+    - tafservertest
+      - src
+        - com
+          - qq
+            - java
+              - test
+    - testcase
+      - src
+  + jce
+    + config
+      + com
+        + qq
+          + taf
+    - log
+    + node
+      + com
+        + qq
+          + taf
+    + nodeF
+    + notify
+      + com
+        + qq
+          + taf
+    + patch
+    + property
+    + querystat
+    + registry
+      + com
+        + qq
+          + taf
+    + servant
+    + stat
+      + com
+        + qq
+          + taf
+  + kjava_taf
+    + src
+      + com
+        + qq
+          + jce
+            + wup
+          + taf
+            + jce
+            + proxy
+              + utils
+    + temp
+      + com
+        + qq
+          + ddz
+            + MiniGameProtoDDZ
+      + MiniGameProto
+      + MQQDLoader
+    + test
+      + com
+        + qq
+          + jce
+            + wup
+              + test
+      + MTT
+  + script
+    + demo
+    + HelloServer
+      + client4c++
+      + client4java
+      + src
+      + srcB
+    + install_taf
+      + taf
+        + tafadmin
+          + conf
+        + tafnode
+          + conf
+        + tafregistry
+          + conf
+    + taf
+      + tafadmin
+        + conf
+      + tafnode
+        + conf
+      + tafregistry
+        + conf
+  - src
+    + adminclient
+    + config
+    + hce2cpp
+    + jce2arraycpp
+    + jce2as
+    + jce2c
+    + jce2cpp
+    + jce2cs
+    + jce2java
+    + jce2js
+    + jce2kjava
+    + jce2mcarecpp
+    + jce2objectc
+    + jce2php
+    + jce2symcpp
+    + jceAnalyzer
+      + testjce1
+      + testjce2
+      + testwup1
+      + testwup2
+    + libconfig
+    + libhessian
+    + liblog
+    + libnodeF
+    + libnotify
+    + libparse
+    + libpatch
+    - libservant
+    - libutil
+    + log
+    + node
+    + notify
+    + patch
+    + patchclient
+    + PropertyDimenServer
+    + property
+    + queryStatServer
+      + client
+    + registry
+    + stat
+    + xmlproxy
+    + xmltrans
+  + taf-java
+    - src
+      - com
+        - qq
+          - jce
+            - wup
+          - taf
+            - cnst
+            - holder
+            - jce
+              - dynamic
+            - proxy
+              - codec
+              + conn
+              + exec
+              + utils
+            - server
+              + proxy
+              - util
+                - ip
+    - test
+      - src
+        - com
+          - qq
+            - java
+              - test
+                - basic
+  - test
+    + admin
+    - AServer
+    + asyncHttp
+    - client
+    + coder
+    + CommonTestServer
+      + client
+      + server
+    + config
+    + hce2cpp
+    - HelloServer
+      - client
+      - src
+      + transfer
+      + wup_client
+    + hessian
+    + jce2cpp
+    + jce2java
+      + java
+    + jce2symcpp
+    + jmem
+    + log
+    + node
+    + notify
+    + ping
+    + property
+    + ProxyTest
+      - abClient
+      - AServer
+      - asyncAClient
+      - asyncClient
+      - BServer
+      - myClient
+      - syncAClient
+    + registry
+    + simple
+    + stat
+    + TafCaseServer
+      + jceclient
+      + TafCaseServer
+      - wupcclient
+      - wupclient
+    + TCServer
+      - client
+    + TestAddConfig
+    + TestClient
+    + TestServer
+    + TestUtil
+    + TransServer
+    + trans
+    + util
+    + wup
+    - xmlproxy
+  + wup-codec
+    + wup-as
+      + demo
+    + wup-c
+      + demo
+    + wup-csharp
+      + Test
+    + wup-js
+      + examples
+        + server
+          + TestJCE.TestProxyServer
+    - wup-linux-c++
+    + wup-linux-pdu-c++
+    + wup-lua
+    + wup-msf-c++
+    + wup-objectC
+      + Examples
+        + Adapters
+        + BusinessData
+        + Protocol
+        + RMIAgents
+        + RMIServices
+      + WirelessUnifiedProtocol
+        + Dependencies
+          + ASIHttpRequest
+        + WirelessUnifiedProtocol
+          + RMIModel
+          + Serializable
+        + WirelessUnifiedProtocolTests
+          + Protocol
+            + Mtt
+    + wup-objectC-2014
+      + WirelessUnifiedProtocol
+        + Dependencies
+          + ASIHttpRequest
+        + WirelessUnifiedProtocol
+          + RMIModel
+          + Serializable
+        + WirelessUnifiedProtocolTests
+          + Protocol
+            + Mtt
+    + wup-php
+      + demo
+    + wup_mcare-c++
+    + wup_symbian-c++
+    + wup_windows-c++
+scroll:36

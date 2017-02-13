@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="../../" default="all">
+	<property file="build.properties" />
+
+	<!-- source -->
+	<property name="dir.src.root" location="." />
+	<property name="dir.src" location="java/jce/test" />
+	<property name="dir.dist" value="java/system/WEB-INF/lib" />
+	<property name="dir.build" value="java/build" />
+
+	<target name="clean">
+		<delete dir="${dir.build}" />
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${dir.build}" />
+		<mkdir dir="${dir.dist}" />
+	</target>
+
+	<path id="libs">
+		<fileset dir="${dir.dist}" includes="**/*.jar" />
+	</path>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${dir.src}" destdir="${dir.build}" debug="true" encoding="UTF-8">
+			<classpath refid="libs">
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="buildjar" depends="compile">
+		<jar destfile="${dir.dist}/taf-proxytest-1.0.0.jar" basedir="${dir.build}">
+		</jar>
+	</target>
+
+	<target name="all" depends="buildjar">
+	</target>
+</project>

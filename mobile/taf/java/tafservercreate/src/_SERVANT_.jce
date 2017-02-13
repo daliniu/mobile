@@ -1,0 +1,10 @@
+
+module _SERVANTLOWWER_
+{
+
+interface _SERVANT_
+{
+    int test();
+};
+
+}; 

@@ -1,0 +1,12 @@
+<response>
+<return>
+<int tag="0">1</int>
+</return>
+<parameters>
+<vector tag="3">
+<short tag="0">2500</short>
+<short tag="0">2501</short>
+<short tag="0">2502</short>
+</vector>
+</parameters>
+</response>

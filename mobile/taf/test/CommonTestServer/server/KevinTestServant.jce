@@ -1,0 +1,28 @@
+
+module Test
+{
+
+	enum TEST_ENUM
+	{
+		TT1,
+		TT2,
+		TT3
+	};
+
+	struct stUserInfo_t
+	{
+		0 require  string sUserID;
+		1 require  string sUserName;
+		2 optional string sUserDesc  = "abcdefg";
+		3 optional TEST_ENUM a;
+	};
+
+	interface KevinTestServant
+	{
+		int test();
+		string setUser(string suin, stUserInfo_t inUser, out stUserInfo_t outUser);
+		string pay(string suin, out string sret); 
+	};
+
+
+}; 

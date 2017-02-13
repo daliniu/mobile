@@ -1,0 +1,606 @@
+#include "servant/Communicator.h"
+#include "util/tc_common.h"
+#include "util/tc_monitor.h"
+#include <sys/un.h>
+#include <iostream>
+#include "log/taf_logger.h"
+
+#include "./queryStatServant.h"
+
+#include "util/tc_mysql.h"
+
+using namespace std;
+using namespace taf;
+
+CommunicatorPtr _comm = new Communicator();
+
+static int _grid = 0;
+static string _locator = 
+"taf.queryStatServer.queryStatObj@tcp -h 10.135.4.100 -p 10078";
+
+void syncCall(queryStatPrx pPrx, int c)
+{
+	//发起远程调用
+	for (int i = 0; i < c; ++i)
+	{
+		string r;
+
+		string sIn = "AccountCenter.UserAccountServer";
+
+		cout << "send:" << sIn << endl;
+		taf::Int32 ret;
+		try
+		{
+			ret = pPrx->query(slave_name,r);
+		}
+		catch(exception& e)
+		{
+			cout << "exception:" << e.what() << endl;
+		}
+
+		cout << "ret:" << ret << "recv:" << r.size() << endl;
+	}
+}
+
+
+struct queryStatCallback : public queryStatPrxCallback
+{
+	//回调函数
+	virtual void callback_query(int ret, const string &r)
+	{
+		assert(ret == 0);
+
+		cout << "callback:" << r << endl;
+	}
+
+	virtual void callback_query_exception(taf::Int32 ret)
+	{
+		cout << "callback exception:" << ret << endl;
+	}
+};
+
+void asyncCall(queryStatPrx pPrx, int c)
+{
+	//发起远程调用
+	for (int i = 1; i < c; ++i)
+	{
+	/*
+		queryStatPrxCallbackPtr p = new queryStatCallback;
+
+		ostringstream os; os << "AccountCenter.UserAccountServer";
+
+		try
+		{
+			pPrx->async_query(p, os.str());
+		}
+		catch(exception& e)
+		{
+			cout << "exception:" << e.what() << endl;
+		}
+
+      */
+	}
+}
+
+#if 0
+enum Op
+{
+	SET,
+	ADD,
+	SUB,
+	EQ,
+	NE,
+	GT,
+	LT,
+	LE,
+	GE,
+	LIMIT,
+};
+
+int parseCondition(string cond, string& value)
+{
+	string::size_type pos =0;
+	pos= cond.find(">=");
+	if (pos != string::npos )
+	{
+		value = cond.substr(pos+2);
+		return GE;
+	}
+	
+	pos = cond.find("<=");
+	if (pos != string::npos )
+	{
+		value = cond.substr(pos+2);
+		return LE;
+	}
+		
+	pos = cond.find("!=");
+	if (pos != string::npos )
+	{
+		value = cond.substr(pos+2);
+		return NE;
+	}
+	pos = cond.find("<");
+	if (pos != string::npos )
+	{
+		value = cond.substr(pos+1);
+		return LT;
+	}
+		
+	pos = cond.find(">");
+	if (pos != string::npos )
+	{
+		value = cond.substr(pos+1);
+		return GT;
+	}
+		
+	pos = cond.find("="); 
+	if (pos != string::npos )
+	{
+		value = cond.substr(pos+1);
+		return EQ;
+	}
+	// ==
+
+}
+
+int find_field( vector<string> &cond, string field /*f_tflag, f_date*/, string& value )
+{
+	vector<string>::iterator it = cond.begin();
+	while(it != cond.end()){
+		string::size_type pos = it->find(field);
+	
+		if(pos != string::npos)
+		{
+			string temp = *it;
+			cond.erase(it);
+			return parseCondition(temp, value);
+		}
+		it++;
+	}
+	return -1;
+
+}
+
+string composeSqlPartition(map<string, vector<string> >  &req, vector<string> &sql)
+{
+
+	vector<string> conditions;
+	conditions = req["filter"];
+	string date1;
+	string date2;
+	
+	string tflag1;
+	string tflag2;
+
+	
+	string whereCond = "";
+	
+	string groupCond = "";
+	string field = "";
+	
+	string selectCond = "";
+	
+	int ret;
+	ret = find_field(conditions, "f_date", date1);
+	date1 = TC_Common::trim(date1, " ''");
+	if (ret == EQ || ret ==-1)
+	{
+		LOG->debug() << "f_date EQ " << date1<< endl;
+		date2 = date1;
+	}
+	else //NOT EQ, find  again
+	{
+		ret = find_field(conditions, "f_date", date2);
+		date2 = TC_Common::trim(date2, " ''");
+		if (date1 < date2)
+		{
+			LOG->debug() << "v1 < v2:" << date1<< "to:" <<TC_Common::strto<int>(date1) << endl;
+		}
+		else
+		{
+			LOG->debug() << "v2 < v1:" << date2 <<"to:" <<TC_Common::strto<int>(date2)<< endl;
+			date1.swap(date2);
+		}
+	}
+	sql.push_back(date1);
+	sql.push_back(date2);
+	//get date end
+
+	//get hour
+	ret = find_field(conditions, "f_tflag", tflag1);
+	tflag1 = TC_Common::trim(tflag1, "'");
+	if (ret == EQ || ret == -1)
+	{
+		LOG->debug() << "f_tflag EQ " << tflag1<< endl;
+		tflag2 = tflag1;
+	}
+	else //NOT EQ, find  again
+	{
+		ret = find_field(conditions, "f_tflag", tflag2);
+		tflag2 = TC_Common::trim(tflag2, "'");
+		if (tflag1 < tflag2)
+		{
+			LOG->debug() << "v1 < v2:" << tflag1<< "to:" <<TC_Common::strto<int>(tflag1) << endl;
+		}
+		else
+		{
+			LOG->debug() << "v2 < v1:" << tflag2 <<"to:" <<TC_Common::strto<int>(tflag2)<< endl;
+			tflag1.swap(tflag2);
+		}
+	}
+	sql.push_back(tflag1);
+	sql.push_back(tflag2);
+	//get hour end
+
+	conditions = req["filter"];
+	if (!conditions.empty())
+	{
+		whereCond = " where ";
+	}
+	vector<string>::iterator it = conditions.begin();
+	whereCond +=  *it;
+ 	it++;
+	while(it != conditions.end())
+	{
+		whereCond += " and " + *it ;
+ 		it++;
+	}
+
+	sql.push_back(whereCond);
+
+
+	conditions = req["groupby"];
+	if (!conditions.empty())
+	{
+		groupCond = " group by ";
+	}
+	it = conditions.begin();
+	groupCond += *it;
+	field += ", " +*it;
+	it++;
+	while(it != conditions.end())
+	{
+		groupCond += ", " +*it;
+		field += ", " +*it;
+ 		it++;
+	}
+	sql.push_back(groupCond);
+
+
+
+	conditions = req["indexs"];
+	if (conditions.empty())
+	{
+		selectCond = " sum(succ_count) ";
+	}
+	else
+	{
+		it = conditions.begin();
+		selectCond +=  " sum(" + *it + ") ";
+		it++;
+		while(it != conditions.end())
+		{
+			selectCond +=  ", sum(" + *it + ") " ;
+	 		it++;
+		}
+		selectCond +=field;
+	}
+
+	sql.push_back(selectCond);
+
+
+
+
+
+	/*
+	string sSql =
+	"select " + selectCond + " from "
+	"t_stat_0" + TC_Common::tostr(i) + "_" + day + hour.substr(0,2) + whereCond  + groupCond;
+	sql.push_back(sSql);
+	*/
+	return "";
+
+}
+void query(int i, /*i, 0 ->3*/ map<string, vector<string> >  &req, vector<map<int, float> > &result)
+{
+    TC_Mysql _pDefaultMysql;
+	
+
+	string db_ip = "10.135.4." + TC_Common::tostr(96+i);
+	string db_name = "db_taf_stat_0" +  TC_Common::tostr(i);
+
+	_pDefaultMysql.init(db_ip, "root", "", db_name);
+	_pDefaultMysql.connect();
+/*
+	catch(exception &ex)
+	{
+		cout << ex.what() << endl;
+	}
+*/
+	vector<string> part;
+
+	string date1;
+	string date2;
+	string tflag1;
+	string tflag2;
+	string whereCond = "";
+	string groupCond = "";
+	string selectCond = "";
+
+	composeSqlPartition(req, part);
+
+
+	date1 = part[0];
+	 date2 = part[1];
+	 tflag1= part[2];
+	 tflag2= part[3];
+	 whereCond = part[4] ;
+	 groupCond = part[5];
+	 selectCond = part[6] ;
+	 
+	vector<string> v_field = TC_Common::sepstr<string>(selectCond, ", ");
+
+	LOG->debug()<< "date1" << date1 <<endl;
+	LOG->debug()<< "date2" << date2 <<endl;
+
+	LOG->debug()<< "tflag1" << tflag1 <<endl;
+	LOG->debug()<< "tflag2" << tflag2 <<endl;
+
+	for(string day=date1; day<=date2 ; )
+	{
+		//query one day
+		for(string tflag=tflag1; tflag<=tflag2; )
+		{
+
+		    string sSql =
+		    "select " + selectCond + " from "
+		    "t_stat_0" + TC_Common::tostr(i) + "_" + day + tflag.substr(0,2) + whereCond  + groupCond;
+
+		    LOG->debug() <<"sSql:" <<sSql <<endl;
+		    taf::TC_Mysql::MysqlData res = _pDefaultMysql.queryRecord(sSql);
+		    
+
+			string buffer = "affected:" +  TC_Common::tostr(res.size()) + "\n";
+			for(size_t  i=0;  i<res.size();i++)
+			{
+				buffer += "{\n";
+				for(size_t j=0; j<v_field.size(); j++)
+				{
+					buffer += res[i][v_field[j]] + ",";
+				}
+				buffer +="}\n";
+			}
+			
+			LOG->debug()<< "buffer" <<buffer <<endl;
+			//recreate tflag;
+			int h = TC_Common::strto<int>(tflag.substr(0,2));
+			int m = TC_Common::strto<int>(tflag.substr(2,2));
+			m +=10; // 10 minutes;
+			if (m<=60)
+			{
+				if (h ==0)
+				{
+					tflag =  "00" + TC_Common::tostr(m);
+				}
+				else if (h <10)
+				{
+					tflag =  "0" + TC_Common::tostr(h) + TC_Common::tostr(m);
+				}
+				else
+				{
+					tflag =   TC_Common::tostr(h) + TC_Common::tostr(m);
+				}
+
+				
+			}
+			else
+			{
+				m = m%60;
+				h +=1;
+				if (h <10)
+				{
+					tflag =  "0" + TC_Common::tostr(h) + TC_Common::tostr(m);
+				}
+				else
+				{
+					tflag =   TC_Common::tostr(h) + TC_Common::tostr(m);
+				}
+			}
+			LOG->debug()<< "tflag" <<tflag <<endl;
+			
+
+		}
+
+		day =  TC_Common::tostr((TC_Common::strto<int>(day) +1));
+	}
+	
+	//_queryMutex.lock();
+	//result.push_back(m_count);
+	//_queryMutex.unlock();
+	
+}
+
+int decodeRequest(string i)
+{
+	string sInput = 
+		"{\"indexs\":[\"succ_count\",\"timeout_count\",\"total_time\"], "
+		"\"filter\":[\"slave_name like '%%'\",\"f_tflag >='0030'\",\"f_tflag <='2350'\",\"f_date <= '20110120'\",\"f_date >= '20110119'\"],"
+		"\"groupby\":[\"f_date\",\"f_tflag\",\"slave_name\",\"master_name\",\"interface_name\"]"
+		"}" ;
+
+	/*
+	string sInput = 
+	{
+	"indexs":["f_success","f_timeout","f_alltime"],
+	"filter":["slave_name like ''","f_tflag ='1430'","f_date <= '20110210'","f_date >= '20110203'"],
+	"groupby":["f_date","f_tflag","slave_name","master_name","interface"],
+	"dataid":"taf",
+	"method":"query"
+	}
+	*/
+	LOG->debug() << "input:" <<  sInput << endl;
+
+	map<string, vector<string> >  req;
+
+	string::size_type pos1 = sInput.find_first_of("[");
+	if(pos1 == string::npos)
+	{
+		LOG->debug() << ("paramh '" + sInput + "' is invalid!" );
+	}
+	string::size_type pos2 = sInput.find_first_of("]");
+	if(pos2 == string::npos)
+	{
+		LOG->debug() << ("paramh '" + sInput + "' is invalid!" );
+	}
+	vector<string> fields = TC_Common::sepstr<string>(sInput.substr(pos1, pos2 -pos1-1), ",");
+	vector<string>::iterator it = fields.begin();
+	while(it != fields.end())
+	{
+	
+		LOG->debug() << "indexs bt " << *it << endl;
+		string s = TC_Common::trim(*it, "[]\"\"");
+		*it = s;
+		LOG->debug() << "indexs at " << *it << endl;
+		it++;
+	}
+	req["indexs"] = fields;
+
+
+	string::size_type pos3 = sInput.find_first_of("[", pos2);
+	if(pos3 == string::npos)
+	{
+		LOG->debug() << "paramh '" + sInput + "' is invalid!" << endl;
+	}
+	string::size_type pos4 = sInput.find_first_of("]", pos3);
+	if(pos4 == string::npos)
+	{
+		LOG->debug() << "paramh '" + sInput + "' is invalid!" << endl;
+	}
+	vector<string> conditions = TC_Common::sepstr<string>(sInput.substr(pos3, pos4-pos3 -1), ",");
+	it = conditions.begin();
+	while(it != conditions.end())
+	{
+		LOG->debug() << "filter bt " << *it << endl;
+ 		string s = TC_Common::trim(*it, "[]\"\"");
+		*it = s;
+		LOG->debug() << "filter at " << *it << endl;
+		it++;
+	}
+	req["filter"] = conditions;
+
+
+	//groupby
+	string::size_type pos5 = sInput.find_first_of("[", pos4);
+	if(pos5 == string::npos)
+	{
+		LOG->debug() << "paramh '" + sInput + "' is invalid!" << endl;
+	}
+	string::size_type pos6 = sInput.find_first_of("]", pos5);
+	if(pos6 == string::npos)
+	{
+		LOG->debug() << "paramh '" + sInput + "' is invalid!" << endl;
+	}
+	conditions = TC_Common::sepstr<string>(sInput.substr(pos5, pos6-pos5 -1), ",");
+	it = conditions.begin();
+	while(it != conditions.end())
+	{
+		LOG->debug() << "groupby bt "  << *it << endl;
+ 		string s = TC_Common::trim(*it, "[]\"\"");
+		*it = s;
+		LOG->debug() << "groupby at " << *it << endl;
+		it++;
+	}
+	req["groupby"] = conditions;
+
+	map<string, vector<string> >::iterator mit = req.find("filter");
+	it = mit->second.begin();
+	while(it != mit->second.end())
+	{
+		LOG->debug() << "dump  cond:" << *it << endl;
+		it++;
+	}
+	LOG->debug() << "req map to str:" << TC_Common::tostr(req) <<endl;
+	vector<map<int, float> > result;
+	query(0, req, result);
+}
+
+int encodeResponse()
+{
+	/*
+	// entrys = days * timepoint 
+	"entrys":"7",
+	"days":"7",
+	"timepoint":"1", 
+	[ //one day's timepoint
+ 	333 ,  2 ,3;
+	]
+	[
+	333 ,  2 ,3;
+	]
+	*/
+	return 0;
+}
+#endif
+int main(int argc, char *argv[])
+{
+    try
+	{
+        if (argc < 5)
+        {
+            cout << "Usage:" << argv[0] << " <config file> <count> <sync:0|async:1> <fork num>" << endl;
+
+           // return 0;
+        }
+
+
+
+		TafRollLogger::getInstance()->logger()->setLogLevel(4);
+
+        TC_Config conf;
+
+        //conf.parseFile(argv[1]);
+
+		//_comm->setProperty(conf);
+
+		queryStatPrx pPrx = _comm->stringToProxy<queryStatPrx>(_locator);
+		string r = "test\n";
+		//decodeRequest(r);
+
+		int c = 1;
+		timeval tv1, tv2;
+		gettimeofday(&tv1, NULL);
+
+		int t = 0;
+
+		if (t == 0) 
+		{
+		    syncCall(pPrx, c);
+		}
+		else if (t == 1) 
+		{
+			asyncCall(pPrx, c);
+		}
+
+		pid_t pid = getpid();
+		gettimeofday(&tv2, NULL);
+
+		cout << "(pid:" << pid << ")" 
+			 << "(" << (t == 0 ? "sync" : "async") << ")"
+			 << "(count:" << c << ")"
+			 << "(use ms:" << (tv2.tv_sec - tv1.tv_sec)*1000 + (tv2.tv_usec - tv1.tv_usec)/1000 << ")"
+			 << endl;
+
+		///sleep(3);
+	}
+	catch(exception &ex)
+	{
+        cout << ex.what() << endl;
+	}
+	cout << "main return." << endl;
+
+	return 0;
+}
+
+
+
