@@ -1,0 +1,2640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="taf">
+      <UniqueIdentifier>{7219a909-94c5-48ae-8268-ccbb90b47620}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\conf">
+      <UniqueIdentifier>{b0cc6c75-464d-423a-bf79-139df8e6e788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include">
+      <UniqueIdentifier>{a83b1a27-54d7-445b-a5c3-f7ca71e909a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\config">
+      <UniqueIdentifier>{1d59cd48-f200-4efa-9f47-a883d048d8b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\hessian">
+      <UniqueIdentifier>{c49df626-17f3-426e-96df-be42cd1caf3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\jce">
+      <UniqueIdentifier>{1e92b8b7-3552-41fa-a517-c362e5a2d192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\jmem">
+      <UniqueIdentifier>{967884bf-6854-41cd-8e90-31b7324c9181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\log">
+      <UniqueIdentifier>{d1ec71e4-aaaf-4db9-83ba-76e742f540ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\nodeF">
+      <UniqueIdentifier>{69121dee-f718-4c69-9bab-8cae747a2877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\notify">
+      <UniqueIdentifier>{c12fde4d-b50c-4830-b82b-6b8581dc797d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\parse">
+      <UniqueIdentifier>{90b5caf8-7e66-4dd8-b722-98d578fc7ed1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\patch">
+      <UniqueIdentifier>{7a506223-bcd4-413b-989a-79cf4a9ec692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\servant">
+      <UniqueIdentifier>{2f331ce5-af56-48fa-802e-ccc29d7675fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\include\util">
+      <UniqueIdentifier>{b56d1fb0-8458-40f1-b0e1-cc3821af3f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce">
+      <UniqueIdentifier>{a35e024a-084d-4eb2-889f-d30446a74daa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\config">
+      <UniqueIdentifier>{1db62c11-36a7-4339-acf0-23348a20f172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\log">
+      <UniqueIdentifier>{a7681189-ee78-4365-bbad-4bf649a6b087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\node">
+      <UniqueIdentifier>{6a00d6cb-bb67-4504-b470-f95803dd72b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\nodeF">
+      <UniqueIdentifier>{0bd810fa-099e-491a-9256-8c547be0adba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\notify">
+      <UniqueIdentifier>{61bbecfa-1ff6-48dc-bb96-5d92b9591696}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\patch">
+      <UniqueIdentifier>{372f94a4-cbfc-4ec2-8b2c-2fd72f572dac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\property">
+      <UniqueIdentifier>{c46dde66-93fc-4093-9616-aafa4d80c4e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\querystat">
+      <UniqueIdentifier>{d0ddad89-934a-4863-910a-8f56da452c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\registry">
+      <UniqueIdentifier>{be8b3aff-a34b-4f1e-a47f-62d0a6ebe315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\servant">
+      <UniqueIdentifier>{aa83a474-8e96-4e33-be37-55b2309384b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\jce\stat">
+      <UniqueIdentifier>{95e6b38c-300d-4071-9251-a8c3927226b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src">
+      <UniqueIdentifier>{811d8d06-8b38-4a72-87dc-ac6a005becfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\adminclient">
+      <UniqueIdentifier>{b2717655-f723-4ba3-9a52-000bf541eb89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\config">
+      <UniqueIdentifier>{2d216cac-93a8-439e-81c5-ed0a4fd7f520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\hce2cpp">
+      <UniqueIdentifier>{5558ab61-7a2d-4fd2-98a0-caa161ab5f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2arraycpp">
+      <UniqueIdentifier>{4fc5c5db-2560-4dc6-b695-aeccd3db32c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2as">
+      <UniqueIdentifier>{80fa222f-6b66-4aa0-881e-56fb26982fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2c">
+      <UniqueIdentifier>{80f7d889-8501-4ff7-ae4d-98cbb106e853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2cpp">
+      <UniqueIdentifier>{00e8ff2b-723b-4ab5-828f-31d6dd8ebae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2cs">
+      <UniqueIdentifier>{40fc38ee-45f8-416c-9747-1c837a6ecde0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2hpp">
+      <UniqueIdentifier>{50838ad6-a01a-4978-88e8-adc886e5a783}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2java">
+      <UniqueIdentifier>{b0241314-f4a7-453a-be9f-b9835d498dde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2js">
+      <UniqueIdentifier>{db0ee06e-b3b7-45d6-86ac-6e8320ab8810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2kjava">
+      <UniqueIdentifier>{cffac8a6-8b3a-4fd2-bff0-4c09dd2effd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2mcarecpp">
+      <UniqueIdentifier>{ac071de5-1315-49f0-9c84-d9f8e5de028e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2objectc">
+      <UniqueIdentifier>{7fdf2f03-c975-4529-8598-8264456c1c95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2param">
+      <UniqueIdentifier>{a5b98e3c-1547-4c52-8fea-9ba8119decec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2php">
+      <UniqueIdentifier>{56645f37-007f-4855-9715-6385702f6e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jce2symcpp">
+      <UniqueIdentifier>{ccf19d62-daf3-4389-b229-0049bf23322e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\jceAnalyzer">
+      <UniqueIdentifier>{f8ffb302-e296-42fb-9bb0-c9493e702e27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\libconfig">
+      <UniqueIdentifier>{4d9261c7-d16b-42a8-ad45-84446e88a471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\libhessian">
+      <UniqueIdentifier>{b5d31305-b872-4fde-971e-a3f8b4b6cca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\liblog">
+      <UniqueIdentifier>{14eab129-c320-45dd-930d-b65cfa456606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\libnodeF">
+      <UniqueIdentifier>{faf6cced-32eb-4717-92ca-77ced52d8ef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\libnotify">
+      <UniqueIdentifier>{3cdadb90-f50e-49eb-9ce5-b6bb91bf66fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\libparse">
+      <UniqueIdentifier>{a34d604f-961e-40d6-bf67-aebe3ef7863f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\libpatch">
+      <UniqueIdentifier>{1bd8cfc4-1f14-439a-b09c-571d64243e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\libservant">
+      <UniqueIdentifier>{16a4d7e9-5cfa-4b77-be2d-ee739f72f595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\libutil">
+      <UniqueIdentifier>{df05b453-65f0-4c05-bb15-047da4551eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\log">
+      <UniqueIdentifier>{9afec354-dd50-4bf2-b8c6-851bd685ff65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\node">
+      <UniqueIdentifier>{7e132096-bef2-4655-a10f-482d4f11a378}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\notify">
+      <UniqueIdentifier>{b9b832ac-0477-47d5-879e-74bfed3094ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\patch">
+      <UniqueIdentifier>{465074e8-6932-4f75-9767-431658e02ed0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\patchclient">
+      <UniqueIdentifier>{f7e28948-fd7b-4416-bbb0-8062f1ad887b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\property">
+      <UniqueIdentifier>{39c47ec3-282e-4506-9a0d-7fa252f87a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\PropertyDimenServer">
+      <UniqueIdentifier>{de51bb5e-75c2-4dea-9732-4ddd4ac7a7b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\queryStatServer">
+      <UniqueIdentifier>{9617aeb6-0273-4914-b8c8-813cecf2638a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\registry">
+      <UniqueIdentifier>{1a9c289c-163c-42e5-9367-20f0d345d71f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\stat">
+      <UniqueIdentifier>{7e8c09c4-c425-4739-b0d1-d401d2f97e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\xmlproxy">
+      <UniqueIdentifier>{97d54e22-cf5a-4a3e-afe6-8b02ac2d0caa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\xmltrans">
+      <UniqueIdentifier>{f428f9e4-9ff8-4ef8-b613-bbf18324d59e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\src\queryStatServer\client">
+      <UniqueIdentifier>{fa0335d7-1a30-40c7-9ca1-7a366b7635a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\bin">
+      <UniqueIdentifier>{90ba05ac-89b1-4e84-ac9c-b2f614ae8fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\lib">
+      <UniqueIdentifier>{a38af338-1263-4c84-af60-77ca8bddf96f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\lib32">
+      <UniqueIdentifier>{9fe56491-4ccd-415a-8876-aead4ff54201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\lib64">
+      <UniqueIdentifier>{a5961b6f-abd0-426e-9ff9-4946513a99da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\script">
+      <UniqueIdentifier>{c50e018c-d100-4e23-b48d-02380390d5f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\script\install_taf">
+      <UniqueIdentifier>{57365bc9-5552-4816-9f74-0b271fe14f86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="taf\script\install_taf\taf">
+      <UniqueIdentifier>{ba74ec9b-1c10-4c7f-9166-f8e01fba0831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN">
+      <UniqueIdentifier>{1db57a1b-a77e-40ef-a143-642846147efe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN\SecretUiServer">
+      <UniqueIdentifier>{4ce065e7-bdee-45e4-a078-53fdf55199c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN\UserInfoServer">
+      <UniqueIdentifier>{ab1adef5-3b8b-40d9-a844-f3195219c428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN\CircleServer">
+      <UniqueIdentifier>{10e30b3b-fde7-4122-9878-1fbe175bb6ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN\GetSecretServer">
+      <UniqueIdentifier>{f91ba082-63e2-4ce9-b5a6-188f4d2e0d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN\LbsServer">
+      <UniqueIdentifier>{8d500695-14eb-40f7-8594-131bb4879682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN\MsgServer">
+      <UniqueIdentifier>{36788f01-ef4a-48bb-9772-c4cd6806bfbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN\PostServer">
+      <UniqueIdentifier>{aaa46748-1100-4d83-8a8f-ff81f57bc4d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QUAN\SecretServer">
+      <UniqueIdentifier>{c2d62454-6f14-47df-8330-b9ca06cb9c16}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\taf\conf\admin.config.conf">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\Makefile">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\node.config.conf">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\registry.config.conf">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\taf.config">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\taf.default">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\taf.notify">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\taf.patch">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\taf.property">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\conf\taf.stat">
+      <Filter>taf\conf</Filter>
+    </None>
+    <None Include="..\taf\include\Makefile">
+      <Filter>taf\include</Filter>
+    </None>
+    <None Include="..\taf\include\config\Makefile">
+      <Filter>taf\include\config</Filter>
+    </None>
+    <None Include="..\taf\include\hessian\Makefile">
+      <Filter>taf\include\hessian</Filter>
+    </None>
+    <None Include="..\taf\include\jce\Makefile">
+      <Filter>taf\include\jce</Filter>
+    </None>
+    <None Include="..\taf\include\jce\RequestF.jce">
+      <Filter>taf\include\jce</Filter>
+    </None>
+    <None Include="..\taf\include\jmem\Makefile">
+      <Filter>taf\include\jmem</Filter>
+    </None>
+    <None Include="..\taf\include\log\Makefile">
+      <Filter>taf\include\log</Filter>
+    </None>
+    <None Include="..\taf\include\nodeF\Makefile">
+      <Filter>taf\include\nodeF</Filter>
+    </None>
+    <None Include="..\taf\include\notify\Makefile">
+      <Filter>taf\include\notify</Filter>
+    </None>
+    <None Include="..\taf\include\parse\Makefile">
+      <Filter>taf\include\parse</Filter>
+    </None>
+    <None Include="..\taf\include\patch\Makefile">
+      <Filter>taf\include\patch</Filter>
+    </None>
+    <None Include="..\taf\include\servant\Makefile">
+      <Filter>taf\include\servant</Filter>
+    </None>
+    <None Include="..\taf\include\util\Makefile">
+      <Filter>taf\include\util</Filter>
+    </None>
+    <None Include="..\taf\jce\config\Config.jce">
+      <Filter>taf\jce\config</Filter>
+    </None>
+    <None Include="..\taf\jce\config\Makefile">
+      <Filter>taf\jce\config</Filter>
+    </None>
+    <None Include="..\taf\jce\log\Log.jce">
+      <Filter>taf\jce\log</Filter>
+    </None>
+    <None Include="..\taf\jce\log\Makefile">
+      <Filter>taf\jce\log</Filter>
+    </None>
+    <None Include="..\taf\jce\node\.cvsignore">
+      <Filter>taf\jce\node</Filter>
+    </None>
+    <None Include="..\taf\jce\node\Makefile">
+      <Filter>taf\jce\node</Filter>
+    </None>
+    <None Include="..\taf\jce\node\Node.jce">
+      <Filter>taf\jce\node</Filter>
+    </None>
+    <None Include="..\taf\jce\node\Node.mk">
+      <Filter>taf\jce\node</Filter>
+    </None>
+    <None Include="..\taf\jce\node\NodeDescriptor.jce">
+      <Filter>taf\jce\node</Filter>
+    </None>
+    <None Include="..\taf\jce\nodeF\Makefile">
+      <Filter>taf\jce\nodeF</Filter>
+    </None>
+    <None Include="..\taf\jce\nodeF\NodeF.jce">
+      <Filter>taf\jce\nodeF</Filter>
+    </None>
+    <None Include="..\taf\jce\notify\Makefile">
+      <Filter>taf\jce\notify</Filter>
+    </None>
+    <None Include="..\taf\jce\notify\Notify.jce">
+      <Filter>taf\jce\notify</Filter>
+    </None>
+    <None Include="..\taf\jce\patch\Makefile">
+      <Filter>taf\jce\patch</Filter>
+    </None>
+    <None Include="..\taf\jce\patch\Patch.jce">
+      <Filter>taf\jce\patch</Filter>
+    </None>
+    <None Include="..\taf\jce\property\Makefile">
+      <Filter>taf\jce\property</Filter>
+    </None>
+    <None Include="..\taf\jce\property\PropertyDB.jce">
+      <Filter>taf\jce\property</Filter>
+    </None>
+    <None Include="..\taf\jce\property\PropertyDB.mk">
+      <Filter>taf\jce\property</Filter>
+    </None>
+    <None Include="..\taf\jce\querystat\Makefile">
+      <Filter>taf\jce\querystat</Filter>
+    </None>
+    <None Include="..\taf\jce\querystat\QueryStatServant.jce">
+      <Filter>taf\jce\querystat</Filter>
+    </None>
+    <None Include="..\taf\jce\querystat\QueryStatServant.mk">
+      <Filter>taf\jce\querystat</Filter>
+    </None>
+    <None Include="..\taf\jce\registry\.cvsignore">
+      <Filter>taf\jce\registry</Filter>
+    </None>
+    <None Include="..\taf\jce\registry\AdminReg.jce">
+      <Filter>taf\jce\registry</Filter>
+    </None>
+    <None Include="..\taf\jce\registry\Makefile">
+      <Filter>taf\jce\registry</Filter>
+    </None>
+    <None Include="..\taf\jce\registry\Registry.jce">
+      <Filter>taf\jce\registry</Filter>
+    </None>
+    <None Include="..\taf\jce\registry\Registry.mk">
+      <Filter>taf\jce\registry</Filter>
+    </None>
+    <None Include="..\taf\jce\registry\RegistryDescriptor.jce">
+      <Filter>taf\jce\registry</Filter>
+    </None>
+    <None Include="..\taf\jce\servant\AdminF.jce">
+      <Filter>taf\jce\servant</Filter>
+    </None>
+    <None Include="..\taf\jce\servant\BaseF.jce">
+      <Filter>taf\jce\servant</Filter>
+    </None>
+    <None Include="..\taf\jce\servant\BusF.jce">
+      <Filter>taf\jce\servant</Filter>
+    </None>
+    <None Include="..\taf\jce\servant\EndpointF.jce">
+      <Filter>taf\jce\servant</Filter>
+    </None>
+    <None Include="..\taf\jce\servant\Makefile">
+      <Filter>taf\jce\servant</Filter>
+    </None>
+    <None Include="..\taf\jce\servant\PropertyF.jce">
+      <Filter>taf\jce\servant</Filter>
+    </None>
+    <None Include="..\taf\jce\servant\QueryF.jce">
+      <Filter>taf\jce\servant</Filter>
+    </None>
+    <None Include="..\taf\jce\servant\StatF.jce">
+      <Filter>taf\jce\servant</Filter>
+    </None>
+    <None Include="..\taf\jce\stat\Makefile">
+      <Filter>taf\jce\stat</Filter>
+    </None>
+    <None Include="..\taf\jce\stat\Stat.mk">
+      <Filter>taf\jce\stat</Filter>
+    </None>
+    <None Include="..\taf\jce\stat\StatQuery.jce">
+      <Filter>taf\jce\stat</Filter>
+    </None>
+    <None Include="..\taf\jce\Makefile">
+      <Filter>taf\jce</Filter>
+    </None>
+    <None Include="..\taf\src\Makefile">
+      <Filter>taf\src</Filter>
+    </None>
+    <None Include="..\taf\src\adminclient\.cvsignore">
+      <Filter>taf\src\adminclient</Filter>
+    </None>
+    <None Include="..\taf\src\adminclient\Grammar.y">
+      <Filter>taf\src\adminclient</Filter>
+    </None>
+    <None Include="..\taf\src\adminclient\Makefile">
+      <Filter>taf\src\adminclient</Filter>
+    </None>
+    <None Include="..\taf\src\adminclient\Scanner.l">
+      <Filter>taf\src\adminclient</Filter>
+    </None>
+    <None Include="..\taf\src\config\Makefile">
+      <Filter>taf\src\config</Filter>
+    </None>
+    <None Include="..\taf\src\hce2cpp\.cvsignore">
+      <Filter>taf\src\hce2cpp</Filter>
+    </None>
+    <None Include="..\taf\src\hce2cpp\hce.l">
+      <Filter>taf\src\hce2cpp</Filter>
+    </None>
+    <None Include="..\taf\src\hce2cpp\hce.y">
+      <Filter>taf\src\hce2cpp</Filter>
+    </None>
+    <None Include="..\taf\src\hce2cpp\Makefile">
+      <Filter>taf\src\hce2cpp</Filter>
+    </None>
+    <None Include="..\taf\src\jce2arraycpp\Makefile">
+      <Filter>taf\src\jce2arraycpp</Filter>
+    </None>
+    <None Include="..\taf\src\jce2as\Makefile">
+      <Filter>taf\src\jce2as</Filter>
+    </None>
+    <None Include="..\taf\src\jce2c\Makefile">
+      <Filter>taf\src\jce2c</Filter>
+    </None>
+    <None Include="..\taf\src\jce2cpp\.cvsignore">
+      <Filter>taf\src\jce2cpp</Filter>
+    </None>
+    <None Include="..\taf\src\jce2cpp\Makefile">
+      <Filter>taf\src\jce2cpp</Filter>
+    </None>
+    <None Include="..\taf\src\jce2cs\Makefile">
+      <Filter>taf\src\jce2cs</Filter>
+    </None>
+    <None Include="..\taf\src\jce2hpp\.cvsignore">
+      <Filter>taf\src\jce2hpp</Filter>
+    </None>
+    <None Include="..\taf\src\jce2hpp\Makefile">
+      <Filter>taf\src\jce2hpp</Filter>
+    </None>
+    <None Include="..\taf\src\jce2java\.cvsignore">
+      <Filter>taf\src\jce2java</Filter>
+    </None>
+    <None Include="..\taf\src\jce2java\Makefile">
+      <Filter>taf\src\jce2java</Filter>
+    </None>
+    <None Include="..\taf\src\jce2js\Makefile">
+      <Filter>taf\src\jce2js</Filter>
+    </None>
+    <None Include="..\taf\src\jce2kjava\Makefile">
+      <Filter>taf\src\jce2kjava</Filter>
+    </None>
+    <None Include="..\taf\src\jce2mcarecpp\Makefile">
+      <Filter>taf\src\jce2mcarecpp</Filter>
+    </None>
+    <None Include="..\taf\src\jce2objectc\Makefile">
+      <Filter>taf\src\jce2objectc</Filter>
+    </None>
+    <None Include="..\taf\src\jce2param\.cvsignore">
+      <Filter>taf\src\jce2param</Filter>
+    </None>
+    <None Include="..\taf\src\jce2param\jce2param">
+      <Filter>taf\src\jce2param</Filter>
+    </None>
+    <None Include="..\taf\src\jce2param\Makefile">
+      <Filter>taf\src\jce2param</Filter>
+    </None>
+    <None Include="..\taf\src\jce2php\Makefile">
+      <Filter>taf\src\jce2php</Filter>
+    </None>
+    <None Include="..\taf\src\jce2symcpp\Makefile">
+      <Filter>taf\src\jce2symcpp</Filter>
+    </None>
+    <None Include="..\taf\src\jceAnalyzer\Makefile">
+      <Filter>taf\src\jceAnalyzer</Filter>
+    </None>
+    <None Include="..\taf\src\libconfig\.cvsignore">
+      <Filter>taf\src\libconfig</Filter>
+    </None>
+    <None Include="..\taf\src\libconfig\Makefile">
+      <Filter>taf\src\libconfig</Filter>
+    </None>
+    <None Include="..\taf\src\libhessian\.cvsignore">
+      <Filter>taf\src\libhessian</Filter>
+    </None>
+    <None Include="..\taf\src\libhessian\Makefile">
+      <Filter>taf\src\libhessian</Filter>
+    </None>
+    <None Include="..\taf\src\liblog\.cvsignore">
+      <Filter>taf\src\liblog</Filter>
+    </None>
+    <None Include="..\taf\src\liblog\Makefile">
+      <Filter>taf\src\liblog</Filter>
+    </None>
+    <None Include="..\taf\src\libnodeF\.cvsignore">
+      <Filter>taf\src\libnodeF</Filter>
+    </None>
+    <None Include="..\taf\src\libnodeF\Makefile">
+      <Filter>taf\src\libnodeF</Filter>
+    </None>
+    <None Include="..\taf\src\libnotify\Makefile">
+      <Filter>taf\src\libnotify</Filter>
+    </None>
+    <None Include="..\taf\src\libparse\.cvsignore">
+      <Filter>taf\src\libparse</Filter>
+    </None>
+    <None Include="..\taf\src\libparse\jce.l">
+      <Filter>taf\src\libparse</Filter>
+    </None>
+    <None Include="..\taf\src\libparse\jce.y">
+      <Filter>taf\src\libparse</Filter>
+    </None>
+    <None Include="..\taf\src\libparse\Makefile">
+      <Filter>taf\src\libparse</Filter>
+    </None>
+    <None Include="..\taf\src\libpatch\.cvsignore">
+      <Filter>taf\src\libpatch</Filter>
+    </None>
+    <None Include="..\taf\src\libpatch\Makefile">
+      <Filter>taf\src\libpatch</Filter>
+    </None>
+    <None Include="..\taf\src\libservant\.cvsignore">
+      <Filter>taf\src\libservant</Filter>
+    </None>
+    <None Include="..\taf\src\libservant\Makefile">
+      <Filter>taf\src\libservant</Filter>
+    </None>
+    <None Include="..\taf\src\libutil\.cvsignore">
+      <Filter>taf\src\libutil</Filter>
+    </None>
+    <None Include="..\taf\src\libutil\Makefile">
+      <Filter>taf\src\libutil</Filter>
+    </None>
+    <None Include="..\taf\src\log\.cvsignore">
+      <Filter>taf\src\log</Filter>
+    </None>
+    <None Include="..\taf\src\log\Makefile">
+      <Filter>taf\src\log</Filter>
+    </None>
+    <None Include="..\taf\src\xmltrans\Makefile">
+      <Filter>taf\src\xmltrans</Filter>
+    </None>
+    <None Include="..\taf\src\xmlproxy\Makefile">
+      <Filter>taf\src\xmlproxy</Filter>
+    </None>
+    <None Include="..\taf\src\xmlproxy\taf.tafxmlproxy.config.conf">
+      <Filter>taf\src\xmlproxy</Filter>
+    </None>
+    <None Include="..\taf\src\xmlproxy\tafxmlproxy.conf">
+      <Filter>taf\src\xmlproxy</Filter>
+    </None>
+    <None Include="..\taf\src\stat\.cvsignore">
+      <Filter>taf\src\stat</Filter>
+    </None>
+    <None Include="..\taf\src\stat\Makefile">
+      <Filter>taf\src\stat</Filter>
+    </None>
+    <None Include="..\taf\src\registry\.cvsignore">
+      <Filter>taf\src\registry</Filter>
+    </None>
+    <None Include="..\taf\src\registry\Makefile">
+      <Filter>taf\src\registry</Filter>
+    </None>
+    <None Include="..\taf\src\registry\routerProxy.jce">
+      <Filter>taf\src\registry</Filter>
+    </None>
+    <None Include="..\taf\src\queryStatServer\makefile">
+      <Filter>taf\src\queryStatServer</Filter>
+    </None>
+    <None Include="..\taf\src\queryStatServer\makefile.target">
+      <Filter>taf\src\queryStatServer</Filter>
+    </None>
+    <None Include="..\taf\src\queryStatServer\QueryStatServer">
+      <Filter>taf\src\queryStatServer</Filter>
+    </None>
+    <None Include="..\taf\src\queryStatServer\client\main.cpp.bak">
+      <Filter>taf\src\queryStatServer\client</Filter>
+    </None>
+    <None Include="..\taf\src\queryStatServer\client\makefile">
+      <Filter>taf\src\queryStatServer\client</Filter>
+    </None>
+    <None Include="..\taf\src\queryStatServer\client\queryStatServant.jce">
+      <Filter>taf\src\queryStatServer\client</Filter>
+    </None>
+    <None Include="..\taf\src\PropertyDimenServer\Makefile">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </None>
+    <None Include="..\taf\src\PropertyDimenServer\Makefile.bak">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </None>
+    <None Include="..\taf\src\PropertyDimenServer\PropertyDimen.jce">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </None>
+    <None Include="..\taf\src\PropertyDimenServer\ReportPropertyDimen.jce">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </None>
+    <None Include="..\taf\src\property\Makefile">
+      <Filter>taf\src\property</Filter>
+    </None>
+    <None Include="..\taf\src\patchclient\.cvsignore">
+      <Filter>taf\src\patchclient</Filter>
+    </None>
+    <None Include="..\taf\src\patchclient\Makefile">
+      <Filter>taf\src\patchclient</Filter>
+    </None>
+    <None Include="..\taf\src\patch\.cvsignore">
+      <Filter>taf\src\patch</Filter>
+    </None>
+    <None Include="..\taf\src\patch\Makefile">
+      <Filter>taf\src\patch</Filter>
+    </None>
+    <None Include="..\taf\src\notify\.cvsignore">
+      <Filter>taf\src\notify</Filter>
+    </None>
+    <None Include="..\taf\src\notify\Makefile">
+      <Filter>taf\src\notify</Filter>
+    </None>
+    <None Include="..\taf\src\node\.cvsignore">
+      <Filter>taf\src\node</Filter>
+    </None>
+    <None Include="..\taf\src\node\Makefile">
+      <Filter>taf\src\node</Filter>
+    </None>
+    <None Include="..\taf\bin\.cvsignore">
+      <Filter>taf\bin</Filter>
+    </None>
+    <None Include="..\taf\bin\hessian2hce.sh">
+      <Filter>taf\bin</Filter>
+    </None>
+    <None Include="..\taf\bin\jutil-1.0.2.jar">
+      <Filter>taf\bin</Filter>
+    </None>
+    <None Include="..\taf\bin\Makefile">
+      <Filter>taf\bin</Filter>
+    </None>
+    <None Include="..\taf\bin\taf_create.sh">
+      <Filter>taf\bin</Filter>
+    </None>
+    <None Include="..\taf\%40">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\inc.mk">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\make.rules">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\make.rules.lp64">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\Makefile">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\makefile.taf">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\makefile.taf.tmp">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\scan.sh">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\taf.mk">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\taf.vpj">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\taf.vpw">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\taf.vpwhist">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\taf.vtg">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\tags">
+      <Filter>taf</Filter>
+    </None>
+    <None Include="..\taf\lib\Makefile">
+      <Filter>taf\lib</Filter>
+    </None>
+    <None Include="..\taf\lib32\Makefile">
+      <Filter>taf\lib32</Filter>
+    </None>
+    <None Include="..\taf\lib64\Makefile">
+      <Filter>taf\lib64</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\backup_table.sh">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\create_table.sh">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\create_table.sh.bak">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\db_config.sql">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\db_ice.sql">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\db_system.sql">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\db_taf.sql">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\db_taf_stat.sql">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\install_taf.sh.bak">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\install_taf_yy.sh">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\taf_install.sh">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\taf\script\install_taf\tmp">
+      <Filter>taf\script\install_taf</Filter>
+    </None>
+    <None Include="..\QUAN\SecretUiServer\makefile">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </None>
+    <None Include="..\QUAN\SecretUiServer\SecretUi.jce">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </None>
+    <None Include="..\QUAN\CircleServer\build.sh">
+      <Filter>QUAN\CircleServer</Filter>
+    </None>
+    <None Include="..\QUAN\CircleServer\Circle.jce">
+      <Filter>QUAN\CircleServer</Filter>
+    </None>
+    <None Include="..\QUAN\CircleServer\makefile">
+      <Filter>QUAN\CircleServer</Filter>
+    </None>
+    <None Include="..\QUAN\GetSecretServer\GetSecret.jce">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </None>
+    <None Include="..\QUAN\GetSecretServer\makefile">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </None>
+    <None Include="..\QUAN\LbsServer\Lbs.jce">
+      <Filter>QUAN\LbsServer</Filter>
+    </None>
+    <None Include="..\QUAN\LbsServer\makefile">
+      <Filter>QUAN\LbsServer</Filter>
+    </None>
+    <None Include="..\QUAN\MsgServer\gen_java.sh">
+      <Filter>QUAN\MsgServer</Filter>
+    </None>
+    <None Include="..\QUAN\MsgServer\gen_objc.sh">
+      <Filter>QUAN\MsgServer</Filter>
+    </None>
+    <None Include="..\QUAN\MsgServer\makefile">
+      <Filter>QUAN\MsgServer</Filter>
+    </None>
+    <None Include="..\QUAN\MsgServer\Msg.jce">
+      <Filter>QUAN\MsgServer</Filter>
+    </None>
+    <None Include="..\QUAN\SecretServer\Buildjceprx.sh">
+      <Filter>QUAN\SecretServer</Filter>
+    </None>
+    <None Include="..\QUAN\SecretServer\gen_java.sh">
+      <Filter>QUAN\SecretServer</Filter>
+    </None>
+    <None Include="..\QUAN\SecretServer\gen_objc.sh">
+      <Filter>QUAN\SecretServer</Filter>
+    </None>
+    <None Include="..\QUAN\SecretServer\makefile">
+      <Filter>QUAN\SecretServer</Filter>
+    </None>
+    <None Include="..\QUAN\SecretServer\Secret.jce">
+      <Filter>QUAN\SecretServer</Filter>
+    </None>
+    <None Include="..\QUAN\SecretServer\SecretBase.jce">
+      <Filter>QUAN\SecretServer</Filter>
+    </None>
+    <None Include="..\QUAN\PostServer\makefile">
+      <Filter>QUAN\PostServer</Filter>
+    </None>
+    <None Include="..\QUAN\PostServer\Post.jce">
+      <Filter>QUAN\PostServer</Filter>
+    </None>
+    <None Include="..\QUAN\UserInfoServer\gen_java.sh">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </None>
+    <None Include="..\QUAN\UserInfoServer\gen_objc.sh">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </None>
+    <None Include="..\QUAN\UserInfoServer\makefile">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </None>
+    <None Include="..\QUAN\UserInfoServer\UserInfo.jce">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\taf\conf\taf.log">
+      <Filter>taf\conf</Filter>
+    </Text>
+    <Text Include="..\taf\include\db_mbox_tables_app.txt">
+      <Filter>taf\include</Filter>
+    </Text>
+    <Text Include="..\taf\src\xmltrans\readme.txt">
+      <Filter>taf\src\xmltrans</Filter>
+    </Text>
+    <Text Include="..\taf\readme.txt">
+      <Filter>taf</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\taf\include\config\Config.h">
+      <Filter>taf\include\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\config\taf_config.h">
+      <Filter>taf\include\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\hessian\HessianInput.h">
+      <Filter>taf\include\hessian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\hessian\HessianOutput.h">
+      <Filter>taf\include\hessian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\hessian\HessianProxy.h">
+      <Filter>taf\include\hessian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\hessian\HessianStringStream.h">
+      <Filter>taf\include\hessian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\hessian\HessianWrappers.h">
+      <Filter>taf\include\hessian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\Jce.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\jce_arraycpp.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\Jce_c.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\Jce_json.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\Jce_mcare.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\Jce_sym.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\JceDisplayer.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\JceType.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\RequestF.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\RequestF_mcare.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\RequestF_sym.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\wup.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\wup_c.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\wup_mcare.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\wup_sym.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jce\wup_sym_compact.h">
+      <Filter>taf\include\jce</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jmem\jmem_hashmap.h">
+      <Filter>taf\include\jmem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jmem\jmem_hashmap_compact.h">
+      <Filter>taf\include\jmem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jmem\jmem_multi_hashmap.h">
+      <Filter>taf\include\jmem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jmem\jmem_policy.h">
+      <Filter>taf\include\jmem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jmem\jmem_queue.h">
+      <Filter>taf\include\jmem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\jmem\jmem_rbtree.h">
+      <Filter>taf\include\jmem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\log\Log.h">
+      <Filter>taf\include\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\log\taf_logger.h">
+      <Filter>taf\include\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\nodeF\NodeF.h">
+      <Filter>taf\include\nodeF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\nodeF\taf_nodeF.h">
+      <Filter>taf\include\nodeF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\notify\Notify.h">
+      <Filter>taf\include\notify</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\notify\taf_notify.h">
+      <Filter>taf\include\notify</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\parse\element.h">
+      <Filter>taf\include\parse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\parse\parse.h">
+      <Filter>taf\include\parse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\patch\Patch.h">
+      <Filter>taf\include\patch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\patch\taf_patch.h">
+      <Filter>taf\include\patch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AdapterProxy.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AdminF.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AdminServant.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AppCache.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\Application.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AppProtocol.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AsyncProcThread.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AutoLog.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AutoRef.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\AutoTimeLog.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\BaseF.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\BaseNotify.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\BusF.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\Communicator.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\CommunicatorFactory.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\Connector.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\EndpointF.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\EndpointInfo.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\FDReactor.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\FutureCall.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\Global.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\Integer_sequence.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\JceCurrent.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\LockedSingleton.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\LogHelperBase.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\Message.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\NetworkUtil.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\NotifyObserver.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\ObjectProxy.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\ObjectProxyFactory.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\PropertyF.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\PropertyReport.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\QueryEndpoint.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\QueryF.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\QueueTimeout.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\RollLogHelper.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\Servant.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\ServantHandle.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\ServantHelper.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\ServantProxy.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\ServantProxyFactory.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\StatF.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\StatReport.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\TafAsyncExperiment.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\TafCallbacks.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\TafResponse.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\TafReturn.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\TafReturnDeprecated.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\Transceiver.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\TupleAssign.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\servant\TupleExpand.h">
+      <Filter>taf\include\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\atomic_asm.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_atomic.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_autoptr.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_base64.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_bitmap.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_cgi.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_clientsocket.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_common.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_config.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_consistent_hash.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_des.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_dyn_object.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_encoder.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_epoll_server.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_epoller.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_ex.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_fifo.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_file.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_file_mutex.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_functor.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_hash_fun.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_hashmap.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_hashmap_compact.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_http.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_http_async.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_json.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_lock.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_logger.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_loki.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_malloc_chunk.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_md5.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_mem_chunk.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_mem_queue.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_mem_vector.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_mmap.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_monitor.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_multi_hashmap.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_mysql.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_option.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_pack.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_parsepara.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_rbtree.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_sem_mutex.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_shm.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_singleton.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_socket.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_squeue.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_tea.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_thread.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_thread_cond.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_thread_mutex.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_thread_pool.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_thread_queue.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_thread_rwlock.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_timeout_queue.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\include\util\tc_timeprovider.h">
+      <Filter>taf\include\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\config\Config.h">
+      <Filter>taf\jce\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\log\Log.h">
+      <Filter>taf\jce\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\node\Node.h">
+      <Filter>taf\jce\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\node\NodeDescriptor.h">
+      <Filter>taf\jce\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\nodeF\NodeF.h">
+      <Filter>taf\jce\nodeF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\notify\Notify.h">
+      <Filter>taf\jce\notify</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\patch\Patch.h">
+      <Filter>taf\jce\patch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\property\PropertyDB.h">
+      <Filter>taf\jce\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\querystat\QueryStatServant.h">
+      <Filter>taf\jce\querystat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\registry\AdminReg.h">
+      <Filter>taf\jce\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\registry\Registry.h">
+      <Filter>taf\jce\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\registry\RegistryDescriptor.h">
+      <Filter>taf\jce\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\servant\AdminF.h">
+      <Filter>taf\jce\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\servant\BaseF.h">
+      <Filter>taf\jce\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\servant\BusF.h">
+      <Filter>taf\jce\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\servant\EndpointF.h">
+      <Filter>taf\jce\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\servant\PropertyF.h">
+      <Filter>taf\jce\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\servant\QueryF.h">
+      <Filter>taf\jce\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\servant\StatF.h">
+      <Filter>taf\jce\servant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\jce\stat\StatQuery.h">
+      <Filter>taf\jce\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\adminclient\Client.h">
+      <Filter>taf\src\adminclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\adminclient\Grammar.hpp">
+      <Filter>taf\src\adminclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\adminclient\Parser.h">
+      <Filter>taf\src\adminclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\config\ConfigImp.h">
+      <Filter>taf\src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\config\ConfigServer.h">
+      <Filter>taf\src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\hce2cpp\element.h">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\hce2cpp\hce.tab.hpp">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\hce2cpp\hce2cpp.h">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\hce2cpp\parse.h">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2arraycpp\jce2arraycpp.h">
+      <Filter>taf\src\jce2arraycpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2as\jce2as.h">
+      <Filter>taf\src\jce2as</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2c\jce2c.h">
+      <Filter>taf\src\jce2c</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2cpp\jce2cpp.h">
+      <Filter>taf\src\jce2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2cpp\jce2hpp.h">
+      <Filter>taf\src\jce2cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2cs\jce2cs.h">
+      <Filter>taf\src\jce2cs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2hpp\jce2hpp.h">
+      <Filter>taf\src\jce2hpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2java\jce2java.h">
+      <Filter>taf\src\jce2java</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2js\jce2js.h">
+      <Filter>taf\src\jce2js</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2kjava\jce2kjava.h">
+      <Filter>taf\src\jce2kjava</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2kjava\jce2kjavap.h">
+      <Filter>taf\src\jce2kjava</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2mcarecpp\jce2mcarecpp.h">
+      <Filter>taf\src\jce2mcarecpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2objectc\jce2oc.h">
+      <Filter>taf\src\jce2objectc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2php\jce2php.h">
+      <Filter>taf\src\jce2php</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jce2symcpp\jce2symcpp.h">
+      <Filter>taf\src\jce2symcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jceAnalyzer\jceAnalyzer.h">
+      <Filter>taf\src\jceAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jceAnalyzer\tmpWupRequestF.h">
+      <Filter>taf\src\jceAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\jceAnalyzer\wupRequestF.h">
+      <Filter>taf\src\jceAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\libparse\jce.tab.hpp">
+      <Filter>taf\src\libparse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\log\LogImp.h">
+      <Filter>taf\src\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\log\LogServer.h">
+      <Filter>taf\src\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmltrans\Markup.h">
+      <Filter>taf\src\xmltrans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmltrans\xmltrans.h">
+      <Filter>taf\src\xmltrans</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmlproxy\Markup.h">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmlproxy\TransFunc.h">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmlproxy\TransProxyManager.h">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmlproxy\XmlProxyCallback.h">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmlproxy\XmlProxyImp.h">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmlproxy\XmlProxyProtocol.h">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\xmlproxy\XmlProxyServer.h">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\stat\ReapSSDThread.h">
+      <Filter>taf\src\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\stat\StatDbManager.h">
+      <Filter>taf\src\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\stat\StatHashMap.h">
+      <Filter>taf\src\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\stat\StatImp.h">
+      <Filter>taf\src\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\stat\StatQueryHashMap.h">
+      <Filter>taf\src\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\stat\StatQueryImp.h">
+      <Filter>taf\src\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\stat\StatServer.h">
+      <Filter>taf\src\stat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\AdminRegImp.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\CheckSettingState.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\DbHandle.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\QueryImp.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\ReapThread.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\RegistryImp.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\RegistryProcThread.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\RegistryServer.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\routerProxy.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\registry\RouterProxyCallback.h">
+      <Filter>taf\src\registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\queryStatServer\DbProxy.h">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\queryStatServer\DbThread.h">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\queryStatServer\JSON_parser.h">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\queryStatServer\QueryStatServantImp.h">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\queryStatServer\QueryStatServer.h">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\queryStatServer\RequestDecoder.h">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\PropertyDimenServer\DbManager.h">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\PropertyDimenServer\PropertyDimenHashMap.h">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\PropertyDimenServer\PropertyDimenImp.h">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\PropertyDimenServer\PropertyDimenServer.h">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\PropertyDimenServer\ReapThread.h">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\property\PropertyDbManager.h">
+      <Filter>taf\src\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\property\PropertyHashMap.h">
+      <Filter>taf\src\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\property\PropertyImp.h">
+      <Filter>taf\src\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\property\PropertyReapThread.h">
+      <Filter>taf\src\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\property\PropertyServer.h">
+      <Filter>taf\src\property</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\patch\PatchCache.h">
+      <Filter>taf\src\patch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\patch\PatchImp.h">
+      <Filter>taf\src\patch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\patch\PatchServer.h">
+      <Filter>taf\src\patch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\notify\NotifyImp.h">
+      <Filter>taf\src\notify</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\notify\NotifyServer.h">
+      <Filter>taf\src\notify</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\Activator.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\BatchPatchThread.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandAddFile.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandDestroy.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandDownload.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandLoad.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandLoadPatch.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandNotify.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandPatch.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandStart.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\CommandStop.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\KeepAliveThread.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\NodeImp.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\NodeServer.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\PlatformInfo.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\PropertyReporter.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\RegistryProxy.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\ServerCommand.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\ServerFactory.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\ServerImp.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\ServerLimitResource.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\taf\src\node\ServerObject.h">
+      <Filter>taf\src\node</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretUiServer\CircleCallback.h">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretUiServer\MsgCallback.h">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretUiServer\SecretCallback.h">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretUiServer\SecretComm.h">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretUiServer\SecretUi.h">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretUiServer\SecretUiImp.h">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretUiServer\SecretUiServer.h">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretUiServer\UserInfoCallback.h">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\Circle.h">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\Circle.hpp">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\CircleCache.h">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\CircleImp.h">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\CircleServer.h">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\CircleSharedCache.h">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\CommHashMap.h">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\DbHandle.h">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\CircleServer\Project.h">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\GetSecretServer\ConstValue.h">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\GetSecretServer\DbHandle.h">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\GetSecretServer\GetSecret.h">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\GetSecretServer\GetSecret.hpp">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\GetSecretServer\GetSecretCallback.h">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\GetSecretServer\GetSecretImp.h">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\GetSecretServer\GetSecretServer.h">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\GetSecretServer\SharedCallback.h">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\LbsServer\LbsImp.h">
+      <Filter>QUAN\LbsServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\LbsServer\LbsServer.h">
+      <Filter>QUAN\LbsServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\LbsServer\Project.h">
+      <Filter>QUAN\LbsServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\MsgServer\DbHandle.h">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\MsgServer\Msg.h">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\MsgServer\MsgImp.h">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\MsgServer\MsgServer.h">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\MsgServer\redisclient.h">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretServer\Base.h">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretServer\CommHashMap.h">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretServer\ConstValue.h">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretServer\DbHandle.h">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretServer\Secret.h">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretServer\SecretBase.h">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretServer\SecretImp.h">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\SecretServer\SecretServer.h">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\PostServer\CommHashMap.h">
+      <Filter>QUAN\PostServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\PostServer\DbHandle.h">
+      <Filter>QUAN\PostServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\PostServer\KeywordCb.h">
+      <Filter>QUAN\PostServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\PostServer\Post.h">
+      <Filter>QUAN\PostServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\PostServer\Post.hpp">
+      <Filter>QUAN\PostServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\PostServer\PostCache.h">
+      <Filter>QUAN\PostServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\PostServer\PostImp.h">
+      <Filter>QUAN\PostServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\PostServer\PostServer.h">
+      <Filter>QUAN\PostServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\anet.h">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\AsyncWork.h">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\CommHashMap.h">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\DbHandle.h">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\redisclient.h">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\UserInfo.h">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\UserInfo.hpp">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\UserInfoImp.h">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\QUAN\UserInfoServer\UserInfoServer.h">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\taf\include\jce\Jce_c.c">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\include\jce\Jce_mcare.cpp">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\include\jce\Jce_sym.cpp">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\include\jce\RequestF_mcare.cpp">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\include\jce\RequestF_sym.cpp">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\include\jce\wup_c.c">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\include\jce\wup_mcare.cpp">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\include\jce\wup_sym.cpp">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\include\jce\wup_sym_compact.cpp">
+      <Filter>taf\include\jce</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\config\Config.cpp">
+      <Filter>taf\jce\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\log\Log.cpp">
+      <Filter>taf\jce\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\node\Node.cpp">
+      <Filter>taf\jce\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\nodeF\NodeF.cpp">
+      <Filter>taf\jce\nodeF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\notify\Notify.cpp">
+      <Filter>taf\jce\notify</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\patch\Patch.cpp">
+      <Filter>taf\jce\patch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\querystat\QueryStatServant.cpp">
+      <Filter>taf\jce\querystat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\registry\AdminReg.cpp">
+      <Filter>taf\jce\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\registry\Registry.cpp">
+      <Filter>taf\jce\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\servant\AdminF.cpp">
+      <Filter>taf\jce\servant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\servant\PropertyF.cpp">
+      <Filter>taf\jce\servant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\servant\QueryF.cpp">
+      <Filter>taf\jce\servant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\servant\StatF.cpp">
+      <Filter>taf\jce\servant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\jce\stat\StatQuery.cpp">
+      <Filter>taf\jce\stat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\adminclient\Client.cpp">
+      <Filter>taf\src\adminclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\adminclient\Grammar.cpp">
+      <Filter>taf\src\adminclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\adminclient\Parser.cpp">
+      <Filter>taf\src\adminclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\adminclient\Scanner.cpp">
+      <Filter>taf\src\adminclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\config\Config.cpp">
+      <Filter>taf\src\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\config\ConfigImp.cpp">
+      <Filter>taf\src\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\config\ConfigServer.cpp">
+      <Filter>taf\src\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\config\main.cpp">
+      <Filter>taf\src\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\hce2cpp\element.cpp">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\hce2cpp\hce.tab.cpp">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\hce2cpp\hce2cpp.cpp">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\hce2cpp\lex.yy.cpp">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\hce2cpp\main.cpp">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\hce2cpp\parse.cpp">
+      <Filter>taf\src\hce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2arraycpp\jce2arraycpp.cpp">
+      <Filter>taf\src\jce2arraycpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2arraycpp\main.cpp">
+      <Filter>taf\src\jce2arraycpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2as\jce2as.cpp">
+      <Filter>taf\src\jce2as</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2as\main.cpp">
+      <Filter>taf\src\jce2as</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2c\jce2c.cpp">
+      <Filter>taf\src\jce2c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2c\main.cpp">
+      <Filter>taf\src\jce2c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2cpp\jce2cpp.cpp">
+      <Filter>taf\src\jce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2cpp\jce2hpp.cpp">
+      <Filter>taf\src\jce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2cpp\main.cpp">
+      <Filter>taf\src\jce2cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2cs\jce2cs.cpp">
+      <Filter>taf\src\jce2cs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2cs\main.cpp">
+      <Filter>taf\src\jce2cs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2hpp\jce2hpp.cpp">
+      <Filter>taf\src\jce2hpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2hpp\main.cpp">
+      <Filter>taf\src\jce2hpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2java\jce2java.cpp">
+      <Filter>taf\src\jce2java</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2java\main.cpp">
+      <Filter>taf\src\jce2java</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2js\jce2js.cpp">
+      <Filter>taf\src\jce2js</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2js\main.cpp">
+      <Filter>taf\src\jce2js</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2kjava\jce2kjava.cpp">
+      <Filter>taf\src\jce2kjava</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2kjava\jce2kjavap.cpp">
+      <Filter>taf\src\jce2kjava</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2kjava\main.cpp">
+      <Filter>taf\src\jce2kjava</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2mcarecpp\jce2mcarecpp.cpp">
+      <Filter>taf\src\jce2mcarecpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2mcarecpp\main.cpp">
+      <Filter>taf\src\jce2mcarecpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2objectc\jce2oc.cpp">
+      <Filter>taf\src\jce2objectc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2objectc\main.cpp">
+      <Filter>taf\src\jce2objectc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2param\main.cpp">
+      <Filter>taf\src\jce2param</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2php\jce2php.cpp">
+      <Filter>taf\src\jce2php</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2php\main.cpp">
+      <Filter>taf\src\jce2php</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2symcpp\jce2symcpp.cpp">
+      <Filter>taf\src\jce2symcpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jce2symcpp\main.cpp">
+      <Filter>taf\src\jce2symcpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jceAnalyzer\jceAnalyzer.cpp">
+      <Filter>taf\src\jceAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\jceAnalyzer\main.cpp">
+      <Filter>taf\src\jceAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libconfig\taf_config.cpp">
+      <Filter>taf\src\libconfig</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libhessian\HessianInput.cpp">
+      <Filter>taf\src\libhessian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libhessian\HessianOutput.cpp">
+      <Filter>taf\src\libhessian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libhessian\HessianProxy.cpp">
+      <Filter>taf\src\libhessian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libhessian\HessianWrappers.cpp">
+      <Filter>taf\src\libhessian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\liblog\taf_logger.cpp">
+      <Filter>taf\src\liblog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libnodeF\NodeF.cpp">
+      <Filter>taf\src\libnodeF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libnodeF\taf_nodeF.cpp">
+      <Filter>taf\src\libnodeF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libnotify\taf_notify.cpp">
+      <Filter>taf\src\libnotify</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libparse\element.cpp">
+      <Filter>taf\src\libparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libparse\jce.tab.cpp">
+      <Filter>taf\src\libparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libparse\lex.yy.cpp">
+      <Filter>taf\src\libparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libparse\parse.cpp">
+      <Filter>taf\src\libparse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libpatch\taf_patch.cpp">
+      <Filter>taf\src\libpatch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\AdapterProxy.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\AdminF.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\AdminServant.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\AppCache.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\Application.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\AppProtocol.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\AsyncProcThread.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\BaseNotify.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\Communicator.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\Connector.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\EndpointInfo.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\FDReactor.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\Global.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\JceCurrent.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\Message.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\NetworkUtil.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\NotifyObserver.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\ObjectProxy.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\ObjectProxyFactory.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\PropertyF.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\PropertyReport.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\QueryEndpoint.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\QueryF.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\QueueTimeout.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\Servant.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\ServantHandle.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\ServantHelper.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\ServantProxy.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\ServantProxyFactory.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\StatF.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\StatReport.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libservant\Transceiver.cpp">
+      <Filter>taf\src\libservant</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_base64.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_bitmap.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_cgi.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_clientsocket.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_common.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_config.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_des.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_dyn_object.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_encoder.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_epoll_server.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_epoller.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_ex.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_fifo.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_file.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_file_mutex.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_hashmap.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_hashmap_compact.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_http.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_http_async.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_json.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_logger.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_malloc_chunk.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_md5.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_mem_chunk.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_mem_queue.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_mmap.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_multi_hashmap.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_mysql.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_option.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_pack.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_parsepara.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_rbtree.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_sem_mutex.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_shm.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_socket.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_tea.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_thread.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_thread_cond.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_thread_mutex.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_thread_pool.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_thread_rwlock.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\libutil\tc_timeprovider.cpp">
+      <Filter>taf\src\libutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\log\Log.cpp">
+      <Filter>taf\src\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\log\LogImp.cpp">
+      <Filter>taf\src\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\log\LogServer.cpp">
+      <Filter>taf\src\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\log\main.cpp">
+      <Filter>taf\src\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\xmltrans\Markup.cpp">
+      <Filter>taf\src\xmltrans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\xmltrans\xmltrans.cpp">
+      <Filter>taf\src\xmltrans</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\xmlproxy\Markup.cpp">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\xmlproxy\TransFunc.cpp">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\xmlproxy\TransProxyManager.cpp">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\xmlproxy\XmlProxyCallback.cpp">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\xmlproxy\XmlProxyImp.cpp">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\xmlproxy\XmlProxyServer.cpp">
+      <Filter>taf\src\xmlproxy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\stat\main.cpp">
+      <Filter>taf\src\stat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\stat\ReapSSDThread.cpp">
+      <Filter>taf\src\stat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\stat\StatDbManager.cpp">
+      <Filter>taf\src\stat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\stat\StatImp.cpp">
+      <Filter>taf\src\stat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\stat\StatQueryImp.cpp">
+      <Filter>taf\src\stat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\stat\StatServer.cpp">
+      <Filter>taf\src\stat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\AdminRegImp.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\CheckSettingState.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\DbHandle.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\main.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\QueryImp.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\ReapThread.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\RegistryImp.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\RegistryProcThread.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\RegistryServer.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\routerProxy.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\registry\RouterProxyCallback.cpp">
+      <Filter>taf\src\registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\queryStatServer\DbProxy.cpp">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\queryStatServer\DbThread.cpp">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\queryStatServer\decodejson.cpp">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\queryStatServer\JSON_parser.c">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\queryStatServer\QueryStatServantImp.cpp">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\queryStatServer\QueryStatServer.cpp">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\queryStatServer\RequestDecoder.cpp">
+      <Filter>taf\src\queryStatServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\queryStatServer\client\main.cpp">
+      <Filter>taf\src\queryStatServer\client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\PropertyDimenServer\DbManager.cpp">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\PropertyDimenServer\main.cpp">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\PropertyDimenServer\PropertyDimenImp.cpp">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\PropertyDimenServer\PropertyDimenServer.cpp">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\PropertyDimenServer\ReapThread.cpp">
+      <Filter>taf\src\PropertyDimenServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\property\main.cpp">
+      <Filter>taf\src\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\property\PropertyDbManager.cpp">
+      <Filter>taf\src\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\property\PropertyImp.cpp">
+      <Filter>taf\src\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\property\PropertyReapThread.cpp">
+      <Filter>taf\src\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\property\PropertyServer.cpp">
+      <Filter>taf\src\property</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\patchclient\patchclient.cpp">
+      <Filter>taf\src\patchclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\patch\main.cpp">
+      <Filter>taf\src\patch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\patch\Patch.cpp">
+      <Filter>taf\src\patch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\patch\PatchCache.cpp">
+      <Filter>taf\src\patch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\patch\PatchImp.cpp">
+      <Filter>taf\src\patch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\patch\PatchServer.cpp">
+      <Filter>taf\src\patch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\notify\main.cpp">
+      <Filter>taf\src\notify</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\notify\Notify.cpp">
+      <Filter>taf\src\notify</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\notify\NotifyImp.cpp">
+      <Filter>taf\src\notify</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\notify\NotifyServer.cpp">
+      <Filter>taf\src\notify</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\Activator.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\BatchPatchThread.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\KeepAliveThread.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\main.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\NodeImp.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\NodeServer.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\PlatformInfo.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\ServerFactory.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\ServerImp.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\ServerLimitResource.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\taf\src\node\ServerObject.cpp">
+      <Filter>taf\src\node</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretUiServer\CircleCallback.cpp">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretUiServer\MsgCallback.cpp">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretUiServer\SecretCallback.cpp">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretUiServer\SecretUi.cpp">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretUiServer\SecretUiImp.cpp">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretUiServer\SecretUiServer.cpp">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretUiServer\UserInfoCallback.cpp">
+      <Filter>QUAN\SecretUiServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\CircleServer\CircleCache.cpp">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\CircleServer\CircleImp.cpp">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\CircleServer\CircleServer.cpp">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\CircleServer\DbHandle.cpp">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\CircleServer\Project.cpp">
+      <Filter>QUAN\CircleServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\GetSecretServer\DbHandle.cpp">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\GetSecretServer\GetSecret.cpp">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\GetSecretServer\GetSecretCallback.cpp">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\GetSecretServer\GetSecretImp.cpp">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\GetSecretServer\GetSecretServer.cpp">
+      <Filter>QUAN\GetSecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\LbsServer\LbsImp.cpp">
+      <Filter>QUAN\LbsServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\LbsServer\LbsServer.cpp">
+      <Filter>QUAN\LbsServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\LbsServer\Project.cpp">
+      <Filter>QUAN\LbsServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\MsgServer\DbHandle.cpp">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\MsgServer\Msg.cpp">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\MsgServer\MsgImp.cpp">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\MsgServer\MsgServer.cpp">
+      <Filter>QUAN\MsgServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretServer\DbHandle.cpp">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretServer\Secret.cpp">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretServer\SecretImp.cpp">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\SecretServer\SecretServer.cpp">
+      <Filter>QUAN\SecretServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\PostServer\DbHandle.cpp">
+      <Filter>QUAN\PostServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\PostServer\Post.cpp">
+      <Filter>QUAN\PostServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\PostServer\PostCache.cpp">
+      <Filter>QUAN\PostServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\PostServer\PostImp.cpp">
+      <Filter>QUAN\PostServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\PostServer\PostServer.cpp">
+      <Filter>QUAN\PostServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\UserInfoServer\DbHandle.cpp">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\UserInfoServer\UserInfoImp.cpp">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\QUAN\UserInfoServer\UserInfoServer.cpp">
+      <Filter>QUAN\UserInfoServer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\taf\src\xmlproxy\XmlProxy.xsl">
+      <Filter>taf\src\xmlproxy</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>
